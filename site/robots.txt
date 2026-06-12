@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://YOURSUBDOMAIN.example.com/sitemap.xml
+
+# AI crawlers welcome. Structured brief at /llms.txt

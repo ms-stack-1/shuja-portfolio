@@ -1,0 +1,14 @@
+# PRIVATE: never push to GitHub
+/engine/
+/.claude/
+
+# secrets
+.env
+.env.*
+*-credentials.json
+*.key
+
+# noise
+node_modules/
+.DS_Store
+Thumbs.db

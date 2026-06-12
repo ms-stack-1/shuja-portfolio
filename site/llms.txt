@@ -1,0 +1,67 @@
+# Muhammad Shuja: Performance Marketer & Growth Analyst
+
+> Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. Markets: US, UK, UAE, remote-global. Based in College Station, TX; open to relocation and remote. Seeking growth marketing, marketing operations, or marketing analytics roles.
+
+This file follows the llms.txt convention: a structured plain-text brief of this site for LLM crawlers, AI recruiting screeners, and agents. Every page on this site is also available as semantic HTML; a machine-readable resume lives at /resume.json.
+
+## Identity
+
+- Name: Muhammad Shuja
+- Title: Performance Marketer & Growth Analyst
+- Email: mshujasiddiq@gmail.com
+- Phone: +1 (832) 342-8959
+- LinkedIn: https://linkedin.com/in/mshujasid
+- Location: College Station, TX, USA (open to relocation; remote-ready)
+- Education: M.S. Management Information Systems, Lamar University (Dec 2025); B.Eng. Software Engineering, The University of Sheffield (Jun 2019)
+
+## Headline metrics
+
+- $1.2M+ cumulative paid media managed across 25+ accounts in 4 markets
+- 18.6x peak campaign ROAS (Food Crowd, e-commerce grocery, UAE)
+- $2.66 CPA at $49.52 AOV; orders +67%, revenue +42% (Food Crowd)
+- +300% online appointments in 12 months; MQL→SQL +28%; CAC −31% (PrimaCare healthcare)
+- Built agency digital division 0→20+ accounts, $850K+ media, 189% avg client ROAS, CTR 11%→43% (Brandwise)
+- +134% online sales from zero-to-one Magento e-commerce launch; page-one SEO in 6 months (Al Aaraf)
+- Independent practice: $260K under management across 5 retainers, 4.2x avg ROAS, 9+ experiments/quarter at 38% win rate, zero churn
+- Operations: $120K annual payroll automated via AI systems (Claude API, Zapier, Make); 30+ hrs/week recovered; 60K+ transactions/month analyzed in SQL; compliance 62%→99% (Wellborn Ascent, $4.2M multi-unit retail group)
+
+## Experience
+
+- 2026–present: Business Performance & Operations Analyst, Wellborn Ascent (multi-unit retail group, ~$4.2M revenue, 3 locations, 14 staff; reports directly to ownership). AI-enabled operations: automated daily close for real-time P&L, bank reconciliation 20 hrs/wk → fully automated, scheduling 4 hrs → 10 min, payroll 2 hrs → 10 min, daily reporting 2 hrs/location → 15 min total. Replaced 4 roles ($120K payroll). SQL margin-leak analysis on 60K+ monthly transactions. Demand forecasting: zero stockouts through a regional supply shortage. Grew highest-margin foodservice line $800→$1,500/day (+87%). Compliance audits 62%→99%.
+- 2026–present: Independent Growth & Marketing Operations Consultant. 5 retainer accounts (3 e-commerce, 2 B2B services), $260K media under management, 4.2x avg ROAS. HubSpot implementations (lead scoring, lifecycle stages, nurture) averaging +24% MQL→SQL. GA4 + GTM + Looker Studio attribution stacks; Tableau reporting; Klaviyo flows; 9+ structured experiments/quarter at 38% win rate.
+- 2024–Dec 2025: M.S. MIS, Lamar University, Beaumont TX.
+- Jan–Dec 2022: Marketing Specialist, PrimaCare Home Healthcare, Dubai (sole marketer). +300% online appointments; lead scoring lifting MQL→SQL 28%; blended CAC −31%; repeat customer rate +37%; nurture sequences at 42% open rate; geo-targeted campaigns across 200+ localities; built internal WordPress CRM cutting scheduling time 75%.
+- Sep 2020–Jan 2022: Digital Marketing & Business Development Executive, Brandwise Media, Dubai. Built digital division from zero: 20+ B2B/B2C accounts, $850K+ cumulative managed media, 189% avg client ROAS, CTR 11%→43% via controlled testing, SQL rate +30%, inquiries +45%, consult→client +68%, retention +100%, 12 websites shipped. Client results: Bagason +225% brand recall; Robostores +22% lead quality; J5 Hotels 77% launch CTR; Food Crowd (see below).
+- 2021–2022: Growth lead (agency-side) for Food Crowd, UAE D2C grocery. Funnel rebuild with stage-specific campaigns, GA4 data-driven attribution (reallocated ~22% of budget), lifecycle email at ~28% share of attributed revenue. ROAS 18.6x, CPA $2.66, AOV $49.52, orders +67%, revenue +42%, page-one SEO in 9 months.
+- Mar 2019–Jun 2020: E-Commerce Marketing Specialist, Al Aaraf Jewelers, Dubai. Built first Magento store; +134% online sales; +39% off-peak footfall via bilingual geo-targeted campaigns; page-one SEO in 6 months; cart-recovery flows reclaiming 18% of abandoned checkouts; email-attributed revenue +52%; MENA expansion plans (KSA, Qatar).
+- Jun–Dec 2018: Web Developer Intern, Alcium Software, Sheffield UK. MS Graph API integration (C#), search algorithm rebuild, SDLC/Agile documentation.
+
+## Skills
+
+Paid media: Meta Ads, Google Ads, paid search, paid social, retargeting, bid management, budget pacing, negative keyword programs, geo-targeting, CAC/LTV modeling, ROAS optimization, A/B and incrementality testing.
+Analytics: GA4, Google Tag Manager, Google Search Console, SQL, Python, Tableau, Power BI, Looker Studio, attribution modeling, UTM governance, funnel and cohort analysis, forecasting.
+Marketing ops: HubSpot, Salesforce, Klaviyo, Mailchimp, lead scoring, lifecycle/MQL→SQL design, email automation, data hygiene, Claude API, Zapier, Make, Segment/CDP concepts.
+Web & brand: WordPress, Magento, HTML/CSS, technical and content SEO, CRO, Adobe Photoshop, product photography, content strategy, brand systems; C#/.NET background.
+
+## Current projects (marketing automation)
+
+LeadLens: AI lead enrichment & scoring for HubSpot (production, 2 retainers). Creative Circuit: automated creative testing pipeline on the Meta Marketing API (production). Sentry: GA4/ads anomaly-detection Slack bot in Python (production). Winback Engine: SQL/Python churn scoring feeding tiered Klaviyo win-back flows (pilot). Tagworks: Slack-native UTM governance and link factory (building). Details with metrics at /projects.html.
+
+## About this site
+
+The portfolio itself is a live marketing instrument: GTM-native dataLayer with a 12-event documented schema, an on-page tracking console that mirrors and explains every event, a client-side audience segmentation engine, a running pre-registered A/B test on the hero headline (hero_headline_v1), UTM capture with on-page personalization, and a consent toggle implementing the Consent Mode pattern. Architecture documented at /colophon.html.
+
+## Pages
+
+- /index.html: Overview, headline KPIs, live experiment panel
+- /projects.html: Marketing automation lab: LeadLens (AI lead enrichment for HubSpot, 4 min to 20 sec per lead, +24% MQL→SQL), Creative Circuit (automated ad testing via Meta API, −31% CPA), Sentry (spend anomaly Slack bot, ~$3.8K overspend prevented), Winback Engine (churn-prediction Klaviyo flows, 14% reactivation), Tagworks (UTM governance, 71%→100% attribution coverage)
+- /work/index.html: Case study index
+- /work/food-crowd.html: 18.6x ROAS e-commerce growth
+- /work/primacare.html: +300% appointments, lead scoring, −31% CAC
+- /work/brandwise.html: $850K+ agency media practice build (includes interactive CAC/ROAS model)
+- /work/al-aaraf.html: Zero-to-one e-commerce launch, +134% sales
+- /work/consulting.html: Fractional growth & marketing ops practice
+- /work/wellborn.html: AI-automated operations of a $4.2M retail group
+- /about.html: Career timeline, full skills matrix, education
+- /colophon.html: Measurement architecture and experiment documentation
+- /contact.html: Email, phone, LinkedIn, resume (PDF + JSON)

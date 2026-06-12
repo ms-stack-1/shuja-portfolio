@@ -1,0 +1,122 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Muhammad Shuja",
+    "label": "Performance Marketer & Growth Analyst",
+    "email": "mshujasiddiq@gmail.com",
+    "phone": "+1 (832) 342-8959",
+    "summary": "Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. $1.2M+ cumulative paid media managed across 25+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
+    "location": { "city": "College Station", "region": "TX", "countryCode": "US" },
+    "profiles": [
+      { "network": "LinkedIn", "username": "mshujasid", "url": "https://linkedin.com/in/mshujasid" }
+    ]
+  },
+  "work": [
+    {
+      "name": "Wellborn Ascent",
+      "position": "Business Performance & Operations Analyst",
+      "startDate": "2026-02",
+      "summary": "Multi-unit retail group, ~$4.2M annual revenue, 3 locations, 14 staff; reporting directly to ownership.",
+      "highlights": [
+        "Built AI-enabled operations system (Claude API, Zapier, Make, Slack interface) replacing 4 roles and cutting $120K in annual payroll",
+        "Automated daily close for real-time P&L visibility; bank reconciliation 20 hrs/week to fully automated with 100% discrepancy accountability",
+        "Scheduling 4 hrs to 10 min weekly with zero conflicts; payroll 2 hrs to 10 min with zero timecard disputes; reporting 2 hrs/location to 15 min total",
+        "Query 60K+ monthly transactions in SQL to surface margin leaks and variance by location and employee",
+        "Demand forecasting model: zero stockouts including through a regional supply shortage",
+        "Grew highest-margin in-store foodservice line from $800 to $1,500/day (+87%) via menu redesign, staff training, promotional activation",
+        "Raised brand compliance audit scores from 62% to 99% across all locations; maintain 99% automation reliability"
+      ]
+    },
+    {
+      "name": "Independent Practice",
+      "position": "Fractional Growth & Marketing Operations Consultant",
+      "startDate": "2026-01",
+      "summary": "Retainer practice for e-commerce and B2B services clients, US remote.",
+      "highlights": [
+        "$260K media under management across 5 retainer accounts (3 e-commerce, 2 B2B services); 4.2x average client ROAS; zero churn",
+        "HubSpot Marketing Hub implementations with lead scoring and lifecycle architecture averaging +24% MQL-to-SQL lift",
+        "GA4 + GTM + Looker Studio attribution stacks with documented event schemas and UTM governance; Tableau executive reporting",
+        "Structured experimentation program: 9+ tests per quarter at 38% win rate, all documented; Klaviyo lifecycle flows for e-commerce accounts"
+      ]
+    },
+    {
+      "name": "PrimaCare Home Healthcare (Dubai)",
+      "position": "Marketing Specialist",
+      "startDate": "2022-01",
+      "endDate": "2022-12",
+      "summary": "Sole marketer for an at-home healthcare booking platform.",
+      "highlights": [
+        "Grew online appointments +300% in 12 months via end-to-end paid search and paid social management",
+        "Built lead-scoring model lifting MQL-to-SQL conversion +28%; blended CAC down 31%",
+        "Repeat customer rate +37%; segmented email nurture at 42% average open rate",
+        "Geo-targeted campaigns across 200+ localities; built internal WordPress CRM cutting appointment scheduling time 75%",
+        "Developed brand identity and produced print, web, and social content in-house"
+      ]
+    },
+    {
+      "name": "Brandwise Media (Dubai)",
+      "position": "Digital Marketing & Business Development Executive",
+      "startDate": "2020-09",
+      "endDate": "2022-01",
+      "summary": "Built the agency's digital division from zero.",
+      "highlights": [
+        "Scaled to 20+ B2B/B2C accounts with $850K+ cumulative managed media; 189% average client ROAS",
+        "Controlled testing program lifted average CTR from 11% to 43%",
+        "Full-funnel redesign raised sales-qualified lead rate +30%, inquiries +45%, consultation-to-client conversion +68%, retention +100%",
+        "Shipped 12 websites across e-commerce, hospitality, F&B, B2B, edtech; led photographers, designers, writers, SEO specialists",
+        "Food Crowd (D2C grocery): funnel rebuild with stage-specific campaigns, GA4 data-driven attribution reallocating ~22% of budget, lifecycle email at ~28% of attributed revenue: ROAS 18.6x, CPA $2.66, AOV $49.52, orders +67%, revenue +42%",
+        "Client results: Bagason Industries +225% brand recall; Robostores +22% lead quality; J5 Hotels 77% launch CTR"
+      ]
+    },
+    {
+      "name": "Al Aaraf Jewelers (Dubai)",
+      "position": "E-Commerce Marketing Specialist",
+      "startDate": "2019-03",
+      "endDate": "2020-06",
+      "summary": "Zero-to-one e-commerce launch for a luxury jewelry retailer.",
+      "highlights": [
+        "Built the company's first e-commerce store on Magento: catalog, payments, shipping integrations",
+        "Online sales +134% vs pre-launch baseline; page-one rankings on high-competition keywords within 6 months",
+        "Bilingual (EN/AR) geo-targeted campaigns lifted off-peak store footfall +39%",
+        "Abandoned-cart flows recovered 18% of lost checkouts; email-attributed revenue +52%",
+        "Developed MENA expansion plans for Saudi Arabia and Qatar"
+      ]
+    },
+    {
+      "name": "Alcium Software (Sheffield, UK)",
+      "position": "Web Developer (Intern)",
+      "startDate": "2018-06",
+      "endDate": "2018-12",
+      "highlights": [
+        "Integrated MS Graph API features in C# for CRM serving real estate and government clients",
+        "Rebuilt search algorithm; produced SDLC/Agile documentation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Lamar University",
+      "area": "Management Information Systems",
+      "studyType": "M.S.",
+      "endDate": "2025-12"
+    },
+    {
+      "institution": "The University of Sheffield",
+      "area": "Software Engineering",
+      "studyType": "B.Eng.",
+      "endDate": "2019-06"
+    }
+  ],
+  "skills": [
+    { "name": "Paid Media & Growth", "keywords": ["Meta Ads", "Google Ads", "Paid Search", "Paid Social", "Retargeting", "Bid Management", "Budget Pacing", "Negative Keywords", "Geo-targeting", "CAC/LTV Modeling", "ROAS Optimization", "A/B Testing", "Incrementality Testing"] },
+    { "name": "Analytics & Measurement", "keywords": ["GA4", "Google Tag Manager", "Google Search Console", "SQL", "Python", "Tableau", "Power BI", "Looker Studio", "Attribution Modeling", "UTM Governance", "Funnel Analysis", "Cohort Analysis", "Forecasting"] },
+    { "name": "Marketing Operations & Automation", "keywords": ["HubSpot", "Salesforce", "Klaviyo", "Mailchimp", "Lead Scoring", "Lifecycle Design", "MQL/SQL Architecture", "Email Automation", "Data Hygiene", "Claude API", "Zapier", "Make", "Segment/CDP"] },
+    { "name": "Web, Content & Brand", "keywords": ["WordPress", "Magento", "HTML/CSS", "Technical SEO", "Content SEO", "CRO", "Adobe Photoshop", "Product Photography", "Content Strategy", "Brand Systems", "C#/.NET"] }
+  ],
+  "languages": [
+    { "language": "English", "fluency": "Native or bilingual" },
+    { "language": "Urdu", "fluency": "Native or bilingual" },
+    { "language": "Arabic", "fluency": "Professional working" }
+  ],
+  "meta": { "canonical": "https://YOURSUBDOMAIN.example.com/resume.json", "version": "1.0", "lastModified": "2026-06-10" }
+}
