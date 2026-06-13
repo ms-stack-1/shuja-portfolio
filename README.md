@@ -77,8 +77,11 @@ calculator interaction, consent changes, blog read-completion, and roadmap poll 
 votes. On top of the raw stream sits a small rules engine that scores behavior into an
 audience segment in real time and explains, in the console, why the visitor landed in it.
 
-Consent follows the Consent Mode pattern: a single flag gates the stream, the on-page
-toggle and the first-load banner both write it, and every push respects it.
+Consent follows the Consent Mode pattern. Until an explicit choice is made, events are
+buffered in memory and never reach the dataLayer. On Allow, the consent event is pushed
+first so GTM is in a granted state before the buffered queue replays in original order; on
+Decline, the buffer is discarded and future pushes are silently dropped. The on-page toggle
+and the first-load banner both write the state, and every push respects it.
 
 ### Build-in-public surfaces
 
@@ -190,7 +193,9 @@ of `site/` with no build step on the hosting side.
 - **Transparency as the product.** The site shows visitors their own tracking in plain
   language instead of hiding it. The measurement model that runs a client engagement is the
   same one documented on the colophon.
-- **Privacy by default.** Consent gates the dataLayer, the choice is respected everywhere,
-  and no visitor data is sold or shared. No secrets live in the repository.
+- **Privacy by default.** Pre-consent events are buffered and never flushed until the
+  visitor makes an explicit choice; nothing reaches the dataLayer before they decide. On
+  decline, the buffer is discarded and subsequent pushes are dropped. No visitor data is
+  sold or shared, and no secrets live in the repository.
 
 © 2026 Muhammad Shuja.

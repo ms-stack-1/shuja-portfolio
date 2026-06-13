@@ -11,19 +11,49 @@
   window.dataLayer = window.dataLayer || [];
   var PAGE = document.body.getAttribute("data-page") || "unknown";
   var storedChoice = localStorage.getItem("ms_consent_choice");
-  var consent = sessionStorage.getItem("ms_consent");
-  if (consent === null) {
-    consent = storedChoice || "granted";
-    sessionStorage.setItem("ms_consent", consent);
+  var sessionConsent = sessionStorage.getItem("ms_consent");
+  var consentState; // "pending" | "granted" | "denied"
+  if (sessionConsent !== null) {
+    consentState = sessionConsent;                      // honour within-session toggle
+  } else if (storedChoice !== null) {
+    consentState = storedChoice;                        // returning visitor with durable choice
+    sessionStorage.setItem("ms_consent", consentState);
+  } else {
+    consentState = "pending";                           // first-time visitor: hold the buffer
+    sessionStorage.setItem("ms_consent", "pending");
   }
   var T0 = Date.now();
+  var pendingQueue = [];                                // pre-consent buffer, capped at 500
+
+  function flushOrBuffer(payload) {
+    if (consentState === "granted") {
+      window.dataLayer.push(payload);
+    } else if (consentState === "pending") {
+      if (pendingQueue.length < 500) pendingQueue.push(payload);
+    }
+    // denied: drop silently
+  }
+
+  function setConsentState(state, via) {
+    consentState = state;
+    localStorage.setItem("ms_consent_choice", state);
+    sessionStorage.setItem("ms_consent", state);
+    if (state === "granted") {
+      // Consent event first so GTM is in granted state before queued events replay
+      window.dataLayer.push({ event: "consent_change", state: "granted", via: via || "banner", ts: Date.now() });
+      for (var i = 0; i < pendingQueue.length; i++) window.dataLayer.push(pendingQueue[i]);
+      pendingQueue = [];
+    } else if (state === "denied") {
+      pendingQueue = [];
+    }
+    if (window.__msPaintToggle) window.__msPaintToggle();
+  }
 
   function push(event, detail) {
-    if (sessionStorage.getItem("ms_consent") === "denied") return;
     var payload = Object.assign({ event: event, page: PAGE, ts: Date.now() }, detail || {});
-    window.dataLayer.push(payload);
     logToConsole(event, detail);
     runSegmentation(event, detail);
+    flushOrBuffer(payload);
   }
 
   /* ---------- 1. Tracking console UI ---------- */
@@ -88,12 +118,10 @@
     }
     paintToggle();
     tg.addEventListener("click", function () {
-      var now = sessionStorage.getItem("ms_consent") === "denied" ? "granted" : "denied";
-      sessionStorage.setItem("ms_consent", now);
-      paintToggle();
-      // consent_change is always logged so the OFF action itself is visible
-      logToConsole("consent_change", { state: now });
-      window.dataLayer.push({ event: "consent_change", state: now, ts: Date.now() });
+      var now = consentState === "denied" ? "granted" : "denied";
+      // always log to console so the toggle action is visible regardless of state
+      logToConsole("consent_change", { state: now, via: "toggle" });
+      setConsentState(now, "toggle");
     });
   }
 
@@ -153,7 +181,7 @@
       segNameEl.textContent = seg[0];
       segWhyEl.textContent = seg[1];
       logToConsole("segment_update", { segment: seg[0] });
-      window.dataLayer.push({ event: "segment_update", segment: seg[0], ts: Date.now() });
+      flushOrBuffer({ event: "segment_update", segment: seg[0], page: PAGE, ts: Date.now() });
     } else if (segNameEl) {
       segNameEl.textContent = seg[0]; segWhyEl.textContent = seg[1];
     }
@@ -308,8 +336,8 @@
       $("r-verdict").textContent = roas >= breakeven
         ? "Above breakeven ROAS of " + breakeven.toFixed(2) + "x at this margin. Scale spend until marginal CAC erodes the gap, then rebalance toward retention."
         : "Below the " + breakeven.toFixed(2) + "x breakeven this margin demands. Fix CVR or AOV before adding budget; more spend just buys losses faster.";
-      if (!touched) { touched = true; } else { push("calc_interaction", { roas: roas.toFixed(2) }); touched = "done"; }
-      if (touched === "done") { /* only push once per session via segmentation guard */ }
+      if (!touched) { touched = true; }
+      else if (touched !== "done") { push("calc_interaction", { roas: roas.toFixed(2) }); touched = "done"; }
     }
     inputs.forEach(function (i) { i.addEventListener("input", recalc); });
     recalc();
@@ -377,12 +405,9 @@
     document.body.appendChild(el);
     requestAnimationFrame(function () { el.classList.add("show"); });
     function choose(state) {
-      localStorage.setItem("ms_consent_choice", state);
-      sessionStorage.setItem("ms_consent", state);
       el.classList.remove("show");
-      if (window.__msPaintToggle) window.__msPaintToggle();
       logToConsole("consent_change", { state: state, via: "banner" });
-      window.dataLayer.push({ event: "consent_change", state: state, via: "banner", ts: Date.now() });
+      setConsentState(state, "banner");
     }
     el.querySelector("#cs-yes").addEventListener("click", function () { choose("granted"); });
     el.querySelector("#cs-no").addEventListener("click", function () { choose("denied"); });
