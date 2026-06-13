@@ -1,0 +1,11 @@
+{
+  "name": "shuja-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Instrumented portfolio site and content engine.",
+  "author": "Muhammad Shuja",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node tests/run.mjs"
+  }
+}
