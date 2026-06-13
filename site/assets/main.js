@@ -41,7 +41,10 @@
     calc_interaction: "You used the CAC model. Marked as an analytics-minded visitor.",
     consent_change: "Consent state changed. All tags respect this flag (Consent Mode pattern).",
     theme_change: "UI preference captured. In a real funnel this becomes a personalization dimension.",
-    exit_intent: "Exit-intent trigger (cursor left viewport top). Classic last-chance overlay moment."
+    exit_intent: "Exit-intent trigger (cursor left viewport top). Classic last-chance overlay moment.",
+    article_read: "Read-completion event: 75% scroll + 30s on a blog post. Separates actual readers from headline bouncers.",
+    poll_view: "Roadmap poll seen. Top of the build-in-public loop; the denominator for vote click-through.",
+    roadmap_vote_click: "Click-through to the live roadmap poll. The audience co-authoring the build is a conversion event here."
   };
 
   var logEl, segNameEl, segWhyEl, tcOpen = false;
@@ -216,6 +219,8 @@
           if (e.isIntersecting && !seen[e.target.id]) {
             seen[e.target.id] = 1;
             push("section_view", { section: e.target.id });
+            var v = e.target.querySelector("[data-vote]");
+            if (v) push("poll_view", { poll: v.getAttribute("data-vote") });
             io.unobserve(e.target);
           }
         });
@@ -228,6 +233,7 @@
       var a = ev.target.closest("a,button");
       if (!a) return;
       if (a.hasAttribute("data-cta")) push("cta_click", { cta: a.getAttribute("data-cta") });
+      if (a.hasAttribute("data-vote")) push("roadmap_vote_click", { poll: a.getAttribute("data-vote") });
       if (a.hasAttribute("data-resume")) push("resume_intent", { format: a.getAttribute("data-resume") });
       if (a.tagName === "A" && a.host && a.host !== location.host) push("outbound_click", { to: a.host });
     });
@@ -307,6 +313,24 @@
     }
     inputs.forEach(function (i) { i.addEventListener("input", recalc); });
     recalc();
+  }
+
+  /* ---------- 7b. Blog read-completion ---------- */
+  function wireArticle() {
+    if (PAGE.indexOf("blog_") !== 0 || PAGE === "blog_index") return;
+    if (!document.querySelector("[data-article]")) return;
+    var timeOk = false, scrollOk = false, fired = false;
+    function check() {
+      if (fired || !timeOk || !scrollOk) return;
+      fired = true;
+      push("article_read", { slug: PAGE.slice(5), seconds: Math.round((Date.now() - T0) / 1000) });
+    }
+    setTimeout(function () { timeOk = true; check(); }, 30000);
+    window.addEventListener("scroll", function () {
+      if (scrollOk) return;
+      var h = document.documentElement;
+      if (Math.round((h.scrollTop + window.innerHeight) / h.scrollHeight * 100) >= 75) { scrollOk = true; check(); }
+    }, { passive: true });
   }
 
   /* ---------- 8. Nav ---------- */
@@ -429,5 +453,6 @@
     wireEvents();
     wireVisuals();
     wireCalc();
+    wireArticle();
   });
 })();

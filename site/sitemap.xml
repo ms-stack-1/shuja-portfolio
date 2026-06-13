@@ -12,4 +12,7 @@
   <url><loc>https://YOURSUBDOMAIN.example.com/about.html</loc></url>
   <url><loc>https://YOURSUBDOMAIN.example.com/colophon.html</loc></url>
   <url><loc>https://YOURSUBDOMAIN.example.com/contact.html</loc></url>
+  <url><loc>https://YOURSUBDOMAIN.example.com/blog/index.html</loc></url>
+  <url><loc>https://YOURSUBDOMAIN.example.com/blog/git-based-blog-instead-of-cms.html</loc></url>
+  <url><loc>https://YOURSUBDOMAIN.example.com/roadmap.html</loc></url>
 </urlset>

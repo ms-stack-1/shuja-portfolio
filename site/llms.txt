@@ -49,7 +49,7 @@ LeadLens: AI lead enrichment & scoring for HubSpot (production, 2 retainers). Cr
 
 ## About this site
 
-The portfolio itself is a live marketing instrument: GTM-native dataLayer with a 12-event documented schema, an on-page tracking console that mirrors and explains every event, a client-side audience segmentation engine, a running pre-registered A/B test on the hero headline (hero_headline_v1), UTM capture with on-page personalization, and a consent toggle implementing the Consent Mode pattern. Architecture documented at /colophon.html.
+The portfolio itself is a live marketing instrument: GTM-native dataLayer with a 15-event documented schema, an on-page tracking console that mirrors and explains every event, a client-side audience segmentation engine, a running pre-registered A/B test on the hero headline (hero_headline_v1), UTM capture with on-page personalization, and a consent toggle implementing the Consent Mode pattern. Architecture documented at /colophon.html.
 
 ## Pages
 
@@ -65,3 +65,6 @@ The portfolio itself is a live marketing instrument: GTM-native dataLayer with a
 - /about.html: Career timeline, full skills matrix, education
 - /colophon.html: Measurement architecture and experiment documentation
 - /contact.html: Email, phone, LinkedIn, resume (PDF + JSON)
+- /blog/index.html: Blog index: build-in-public teardowns, marketing case studies, frameworks
+- /blog/git-based-blog-instead-of-cms.html: Why a marketer chose a git-based blog over a CMS: full tracking control, zero subscription, and a publishing pipeline that is itself proof of work.
+- /roadmap.html: Public, audience-voted build roadmap: building / built / planned
