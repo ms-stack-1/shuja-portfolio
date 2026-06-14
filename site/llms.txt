@@ -22,13 +22,11 @@ This file follows the llms.txt convention: a structured plain-text brief of this
 - +300% online appointments in 12 months; MQL→SQL +28%; CAC −31% (PrimaCare healthcare)
 - Built agency digital division 0→20+ accounts, $850K+ media, 189% avg client ROAS, CTR 11%→43% (Brandwise)
 - +134% online sales from zero-to-one Magento e-commerce launch; page-one SEO in 6 months (Al Aaraf)
-- Independent practice: $260K under management across 5 retainers, 4.2x avg ROAS, 9+ experiments/quarter at 38% win rate, zero churn
 - Operations: $120K annual payroll automated via AI systems (Claude API, Zapier, Make); 30+ hrs/week recovered; 60K+ transactions/month analyzed in SQL; compliance 62%→99% (Wellborn Ascent, $4.2M multi-unit retail group)
 
 ## Experience
 
 - 2026–present: Business Performance & Operations Analyst, Wellborn Ascent (multi-unit retail group, ~$4.2M revenue, 3 locations, 14 staff; reports directly to ownership). AI-enabled operations: automated daily close for real-time P&L, bank reconciliation 20 hrs/wk → fully automated, scheduling 4 hrs → 10 min, payroll 2 hrs → 10 min, daily reporting 2 hrs/location → 15 min total. Replaced 4 roles ($120K payroll). SQL margin-leak analysis on 60K+ monthly transactions. Demand forecasting: zero stockouts through a regional supply shortage. Grew highest-margin foodservice line $800→$1,500/day (+87%). Compliance audits 62%→99%.
-- 2026–present: Independent Growth & Marketing Operations Consultant. 5 retainer accounts (3 e-commerce, 2 B2B services), $260K media under management, 4.2x avg ROAS. HubSpot implementations (lead scoring, lifecycle stages, nurture) averaging +24% MQL→SQL. GA4 + GTM + Looker Studio attribution stacks; Tableau reporting; Klaviyo flows; 9+ structured experiments/quarter at 38% win rate.
 - 2024–Dec 2025: M.S. MIS, Lamar University, Beaumont TX.
 - Jan–Dec 2022: Marketing Specialist, PrimaCare Home Healthcare, Dubai (sole marketer). +300% online appointments; lead scoring lifting MQL→SQL 28%; blended CAC −31%; repeat customer rate +37%; nurture sequences at 42% open rate; geo-targeted campaigns across 200+ localities; built internal WordPress CRM cutting scheduling time 75%.
 - Sep 2020–Jan 2022: Digital Marketing & Business Development Executive, Brandwise Media, Dubai. Built digital division from zero: 20+ B2B/B2C accounts, $850K+ cumulative managed media, 189% avg client ROAS, CTR 11%→43% via controlled testing, SQL rate +30%, inquiries +45%, consult→client +68%, retention +100%, 12 websites shipped. Client results: Bagason +225% brand recall; Robostores +22% lead quality; J5 Hotels 77% launch CTR; Food Crowd (see below).
@@ -45,7 +43,7 @@ Web & brand: WordPress, Magento, HTML/CSS, technical and content SEO, CRO, Adobe
 
 ## Current projects (marketing automation)
 
-LeadLens: AI lead enrichment & scoring for HubSpot (production, 2 retainers). Creative Circuit: automated creative testing pipeline on the Meta Marketing API (production). Sentry: GA4/ads anomaly-detection Slack bot in Python (production). Winback Engine: SQL/Python churn scoring feeding tiered Klaviyo win-back flows (pilot). Tagworks: Slack-native UTM governance and link factory (building). Details with metrics at /projects.html.
+LeadLens: AI lead enrichment & scoring for HubSpot (production). Creative Circuit: automated creative testing pipeline on the Meta Marketing API (production). Sentry: GA4/ads anomaly-detection Slack bot in Python (production). Winback Engine: SQL/Python churn scoring feeding tiered Klaviyo win-back flows (pilot). Tagworks: Slack-native UTM governance and link factory (building). Details with metrics at /projects.html.
 
 ## About this site
 
@@ -60,11 +58,10 @@ The portfolio itself is a live marketing instrument: GTM-native dataLayer with a
 - /work/primacare.html: +300% appointments, lead scoring, −31% CAC
 - /work/brandwise.html: $850K+ agency media practice build (includes interactive CAC/ROAS model)
 - /work/al-aaraf.html: Zero-to-one e-commerce launch, +134% sales
-- /work/consulting.html: Fractional growth & marketing ops practice
 - /work/wellborn.html: AI-automated operations of a $4.2M retail group
 - /about.html: Career timeline, full skills matrix, education
 - /colophon.html: Measurement architecture and experiment documentation
 - /contact.html: Email, phone, LinkedIn, resume (PDF + JSON)
-- /blog/index.html: Blog index: build-in-public teardowns, marketing case studies, frameworks
-- /blog/git-based-blog-instead-of-cms.html: Why a marketer chose a git-based blog over a CMS: full tracking control, zero subscription, and a publishing pipeline that is itself proof of work.
 - /roadmap.html: Public, audience-voted build roadmap: building / built / planned
+- /blog/index.html: Blog index: build-in-public teardowns, marketing case studies, frameworks
+- /blog/git-based-blog-vs-cms.html: Why a marketer chose a git-based blog over a CMS: full tracking control, zero subscription, and a publishing pipeline that is itself proof of work.

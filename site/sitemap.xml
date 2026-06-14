@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOURSUBDOMAIN.example.com/</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/projects.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/index.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/food-crowd.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/primacare.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/brandwise.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/al-aaraf.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/wellborn.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/work/consulting.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/about.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/colophon.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/contact.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/blog/index.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/blog/git-based-blog-instead-of-cms.html</loc></url>
-  <url><loc>https://YOURSUBDOMAIN.example.com/roadmap.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/projects.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/index.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/food-crowd.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/primacare.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/brandwise.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/al-aaraf.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/work/wellborn.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/about.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/colophon.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/contact.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/roadmap.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/blog/index.html</loc></url>
+  <url><loc>https://shuja.gridbyteops.com/blog/git-based-blog-vs-cms.html</loc></url>
 </urlset>

@@ -1,5 +1,7 @@
 # Muhammad Shuja: Portfolio and Content Engine
 
+**Live site: [shuja-portfolio-site.pages.dev](https://shuja-portfolio-site.pages.dev)**
+
 A personal site that doubles as a working marketing instrument, paired with a private
 content engine that runs the build-in-public side of a job hunt. The portfolio, the
 analytics layer, the blog, and the public roadmap are all treated as one marketing entity:

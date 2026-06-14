@@ -1,11 +1,11 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
   "basics": {
     "name": "Muhammad Shuja",
     "label": "Performance Marketer & Growth Analyst",
     "email": "mshujasiddiq@gmail.com",
     "phone": "+1 (832) 342-8959",
-    "summary": "Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. $1.2M+ cumulative paid media managed across 25+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
+    "summary": "Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. $940K+ cumulative paid media managed across 20+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
     "location": { "city": "College Station", "region": "TX", "countryCode": "US" },
     "profiles": [
       { "network": "LinkedIn", "username": "mshujasid", "url": "https://linkedin.com/in/mshujasid" }
@@ -25,18 +25,6 @@
         "Demand forecasting model: zero stockouts including through a regional supply shortage",
         "Grew highest-margin in-store foodservice line from $800 to $1,500/day (+87%) via menu redesign, staff training, promotional activation",
         "Raised brand compliance audit scores from 62% to 99% across all locations; maintain 99% automation reliability"
-      ]
-    },
-    {
-      "name": "Independent Practice",
-      "position": "Fractional Growth & Marketing Operations Consultant",
-      "startDate": "2026-01",
-      "summary": "Retainer practice for e-commerce and B2B services clients, US remote.",
-      "highlights": [
-        "$260K media under management across 5 retainer accounts (3 e-commerce, 2 B2B services); 4.2x average client ROAS; zero churn",
-        "HubSpot Marketing Hub implementations with lead scoring and lifecycle architecture averaging +24% MQL-to-SQL lift",
-        "GA4 + GTM + Looker Studio attribution stacks with documented event schemas and UTM governance; Tableau executive reporting",
-        "Structured experimentation program: 9+ tests per quarter at 38% win rate, all documented; Klaviyo lifecycle flows for e-commerce accounts"
       ]
     },
     {
@@ -118,5 +106,5 @@
     { "language": "Urdu", "fluency": "Native or bilingual" },
     { "language": "Arabic", "fluency": "Professional working" }
   ],
-  "meta": { "canonical": "https://YOURSUBDOMAIN.example.com/resume.json", "version": "1.0", "lastModified": "2026-06-10" }
+  "meta": { "canonical": "https://shuja.gridbyteops.com/resume.json", "version": "1.0", "lastModified": "2026-06-10" }
 }
