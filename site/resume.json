@@ -5,7 +5,7 @@
     "label": "Performance Marketer & Growth Analyst",
     "email": "mshujasiddiq@gmail.com",
     "phone": "+1 (832) 342-8959",
-    "summary": "Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. $940K+ cumulative paid media managed across 20+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
+    "summary": "Performance marketer and growth analyst with 4 years across paid media, marketing analytics, marketing operations, and AI automation. $940K+ cumulative paid media managed across 20+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
     "location": { "city": "College Station", "region": "TX", "countryCode": "US" },
     "profiles": [
       { "network": "LinkedIn", "username": "mshujasid", "url": "https://linkedin.com/in/mshujasid" }
@@ -24,7 +24,7 @@
         "Query 60K+ monthly transactions in SQL to surface margin leaks and variance by location and employee",
         "Demand forecasting model: zero stockouts including through a regional supply shortage",
         "Grew highest-margin in-store foodservice line from $800 to $1,500/day (+87%) via menu redesign, staff training, promotional activation",
-        "Raised brand compliance audit scores from 62% to 99% across all locations; maintain 99% automation reliability"
+        "Raised brand compliance audit scores from 60% to 99% across all locations; maintain 99% automation reliability"
       ]
     },
     {
@@ -86,6 +86,7 @@
       "institution": "Lamar University",
       "area": "Management Information Systems",
       "studyType": "M.S.",
+      "startDate": "2023-01",
       "endDate": "2025-12"
     },
     {
@@ -98,8 +99,9 @@
   "skills": [
     { "name": "Paid Media & Growth", "keywords": ["Meta Ads", "Google Ads", "Paid Search", "Paid Social", "Retargeting", "Bid Management", "Budget Pacing", "Negative Keywords", "Geo-targeting", "CAC/LTV Modeling", "ROAS Optimization", "A/B Testing", "Incrementality Testing"] },
     { "name": "Analytics & Measurement", "keywords": ["GA4", "Google Tag Manager", "Google Search Console", "SQL", "Python", "Tableau", "Power BI", "Looker Studio", "Attribution Modeling", "UTM Governance", "Funnel Analysis", "Cohort Analysis", "Forecasting"] },
-    { "name": "Marketing Operations & Automation", "keywords": ["HubSpot", "Salesforce", "Klaviyo", "Mailchimp", "Lead Scoring", "Lifecycle Design", "MQL/SQL Architecture", "Email Automation", "Data Hygiene", "Claude API", "Zapier", "Make", "Segment/CDP"] },
-    { "name": "Web, Content & Brand", "keywords": ["WordPress", "Magento", "HTML/CSS", "Technical SEO", "Content SEO", "CRO", "Adobe Photoshop", "Product Photography", "Content Strategy", "Brand Systems", "C#/.NET"] }
+    { "name": "Marketing Operations & Automation", "keywords": ["HubSpot", "Salesforce", "Klaviyo", "Mailchimp", "Lead Scoring", "Lifecycle Design", "MQL/SQL Architecture", "Email Automation", "Data Hygiene", "Claude API", "Zapier", "Make", "n8n", "Segment/CDP"] },
+    { "name": "Web, Content & Brand", "keywords": ["WordPress", "Magento", "HTML/CSS", "Technical SEO", "Content SEO", "CRO", "Adobe Photoshop", "Adobe After Effects", "Adobe Premiere Pro", "Product Photography", "Content Strategy", "Brand Systems", "C#/.NET"] },
+    { "name": "AI Tools", "keywords": ["Claude API", "Claude Code", "Claude Design", "Codex", "Cursor AI", "AI-powered workflows", "Subagents", "Token optimization"] }
   ],
   "languages": [
     { "language": "English", "fluency": "Native or bilingual" },

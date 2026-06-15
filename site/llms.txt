@@ -1,6 +1,6 @@
 # Muhammad Shuja: Performance Marketer & Growth Analyst
 
-> Performance marketer and growth analyst with 6+ years across paid media, marketing analytics, marketing operations, and AI automation. Markets: US, UK, UAE, remote-global. Based in College Station, TX; open to relocation and remote. Seeking growth marketing, marketing operations, or marketing analytics roles.
+> Performance marketer and growth analyst with 4 years across paid media, marketing analytics, marketing operations, and AI automation. Markets: US, UK, UAE, remote-global. Based in College Station, TX; open to relocation and remote. Seeking growth marketing, marketing operations, or marketing analytics roles.
 
 This file follows the llms.txt convention: a structured plain-text brief of this site for LLM crawlers, AI recruiting screeners, and agents. Every page on this site is also available as semantic HTML; a machine-readable resume lives at /resume.json.
 
@@ -16,18 +16,18 @@ This file follows the llms.txt convention: a structured plain-text brief of this
 
 ## Headline metrics
 
-- $1.2M+ cumulative paid media managed across 25+ accounts in 4 markets
+- $940K+ cumulative paid media managed across 20+ accounts in 4 markets
 - 18.6x peak campaign ROAS (Food Crowd, e-commerce grocery, UAE)
 - $2.66 CPA at $49.52 AOV; orders +67%, revenue +42% (Food Crowd)
 - +300% online appointments in 12 months; MQL→SQL +28%; CAC −31% (PrimaCare healthcare)
 - Built agency digital division 0→20+ accounts, $850K+ media, 189% avg client ROAS, CTR 11%→43% (Brandwise)
 - +134% online sales from zero-to-one Magento e-commerce launch; page-one SEO in 6 months (Al Aaraf)
-- Operations: $120K annual payroll automated via AI systems (Claude API, Zapier, Make); 30+ hrs/week recovered; 60K+ transactions/month analyzed in SQL; compliance 62%→99% (Wellborn Ascent, $4.2M multi-unit retail group)
+- Operations: $120K annual payroll automated via AI systems (Claude API, Zapier, Make); 30+ hrs/week recovered; 60K+ transactions/month analyzed in SQL; compliance 60%→99% (Wellborn Ascent, $4.2M multi-unit retail group)
 
 ## Experience
 
-- 2026–present: Business Performance & Operations Analyst, Wellborn Ascent (multi-unit retail group, ~$4.2M revenue, 3 locations, 14 staff; reports directly to ownership). AI-enabled operations: automated daily close for real-time P&L, bank reconciliation 20 hrs/wk → fully automated, scheduling 4 hrs → 10 min, payroll 2 hrs → 10 min, daily reporting 2 hrs/location → 15 min total. Replaced 4 roles ($120K payroll). SQL margin-leak analysis on 60K+ monthly transactions. Demand forecasting: zero stockouts through a regional supply shortage. Grew highest-margin foodservice line $800→$1,500/day (+87%). Compliance audits 62%→99%.
-- 2024–Dec 2025: M.S. MIS, Lamar University, Beaumont TX.
+- 2026–present: Business Performance & Operations Analyst, Wellborn Ascent (multi-unit retail group, ~$4.2M revenue, 3 locations, 14 staff; reports directly to ownership). AI-enabled operations: automated daily close for real-time P&L, bank reconciliation 20 hrs/wk → fully automated, scheduling 4 hrs → 10 min, payroll 2 hrs → 10 min, daily reporting 2 hrs/location → 15 min total. Replaced 4 roles ($120K payroll). SQL margin-leak analysis on 60K+ monthly transactions. Demand forecasting: zero stockouts through a regional supply shortage. Grew highest-margin foodservice line $800→$1,500/day (+87%). Compliance audits 60%→99%.
+- Jan 2023–Dec 2025: M.S. MIS, Lamar University, Beaumont TX.
 - Jan–Dec 2022: Marketing Specialist, PrimaCare Home Healthcare, Dubai (sole marketer). +300% online appointments; lead scoring lifting MQL→SQL 28%; blended CAC −31%; repeat customer rate +37%; nurture sequences at 42% open rate; geo-targeted campaigns across 200+ localities; built internal WordPress CRM cutting scheduling time 75%.
 - Sep 2020–Jan 2022: Digital Marketing & Business Development Executive, Brandwise Media, Dubai. Built digital division from zero: 20+ B2B/B2C accounts, $850K+ cumulative managed media, 189% avg client ROAS, CTR 11%→43% via controlled testing, SQL rate +30%, inquiries +45%, consult→client +68%, retention +100%, 12 websites shipped. Client results: Bagason +225% brand recall; Robostores +22% lead quality; J5 Hotels 77% launch CTR; Food Crowd (see below).
 - 2021–2022: Growth lead (agency-side) for Food Crowd, UAE D2C grocery. Funnel rebuild with stage-specific campaigns, GA4 data-driven attribution (reallocated ~22% of budget), lifecycle email at ~28% share of attributed revenue. ROAS 18.6x, CPA $2.66, AOV $49.52, orders +67%, revenue +42%, page-one SEO in 9 months.
