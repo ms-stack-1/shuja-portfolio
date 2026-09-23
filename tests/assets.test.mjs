@@ -99,3 +99,31 @@ describe("assets: no dead domain in metadata", () => {
       "dead domain still present: " + offenders.map((p) => p.rel).join(", "));
   });
 });
+
+/* Cloudflare Pages 308-redirects /foo.html -> /foo and /dir/index.html -> /dir/.
+   If canonical/og:url still carry .html they point at a redirect, and LinkedIn
+   refuses to build a preview rather than follow it. */
+describe("assets: canonical URLs match what the host serves", () => {
+  it("no canonical or og:url ends in .html", () => {
+    for (const p of pages) {
+      const can = (p.html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
+      const ogu = metaProperty(p.html, "og:url");
+      assert.ok(can, `${p.rel}: missing canonical`);
+      assert.ok(!/\.html$/.test(can), `${p.rel}: canonical points at a redirect -> ${can}`);
+      assert.ok(!/\.html$/.test(ogu), `${p.rel}: og:url points at a redirect -> ${ogu}`);
+    }
+  });
+
+  it("canonical and og:url agree on every page", () => {
+    for (const p of pages) {
+      const can = (p.html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
+      assert.equal(metaProperty(p.html, "og:url"), can, `${p.rel}: og:url != canonical`);
+    }
+  });
+
+  it("no sitemap <loc> ends in .html", () => {
+    const xml = readSite("sitemap.xml");
+    const bad = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => /\.html$/.test(u));
+    assert.equal(bad.length, 0, "sitemap URLs point at redirects: " + bad.join(", "));
+  });
+});

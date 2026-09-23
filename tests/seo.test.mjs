@@ -8,12 +8,16 @@ import { join } from "node:path";
 const pages = htmlPages();
 
 /* Normalize a site URL path to a site-relative file path.
-   "/" -> "index.html", "/work/index.html" -> "work/index.html". */
+   URLs are clean (Cloudflare Pages 308s /foo.html -> /foo), so reverse that
+   mapping back to the file on disk:
+   "/" -> "index.html", "/work/" -> "work/index.html", "/about" -> "about.html". */
 function toRel(path) {
   let p = path;
   if (p.startsWith(DOMAIN)) p = p.slice(DOMAIN.length);
   if (p === "/" || p === "") return "index.html";
-  return p.replace(/^\//, "");
+  p = p.replace(/^\//, "");
+  if (p.endsWith("/")) return p + "index.html";
+  return /\.[a-z0-9]+$/i.test(p) ? p : p + ".html";
 }
 
 describe("sitemap.xml", () => {

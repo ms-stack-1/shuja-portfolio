@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shuja-portfolio-site.pages.dev/</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/projects.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/index.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/food-crowd.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/primacare.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/brandwise.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/al-aaraf.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/work/wellborn.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/about.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/colophon.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/contact.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/roadmap.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/blog/index.html</loc></url>
-  <url><loc>https://shuja-portfolio-site.pages.dev/blog/git-based-blog-vs-cms.html</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/projects</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/food-crowd</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/primacare</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/brandwise</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/al-aaraf</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/work/wellborn</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/about</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/colophon</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/contact</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/roadmap</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/blog/</loc></url>
+  <url><loc>https://shuja-portfolio-site.pages.dev/blog/git-based-blog-vs-cms</loc></url>
 </urlset>
