@@ -74,7 +74,8 @@
     exit_intent: "Exit-intent trigger (cursor left viewport top). Classic last-chance overlay moment.",
     article_read: "Read-completion event: 75% scroll + 30s on a blog post. Separates actual readers from headline bouncers.",
     poll_view: "Roadmap poll seen. Top of the build-in-public loop; the denominator for vote click-through.",
-    roadmap_vote_click: "Click-through to the live roadmap poll. The audience co-authoring the build is a conversion event here."
+    roadmap_vote_click: "Click-through to the live roadmap poll. The audience co-authoring the build is a conversion event here.",
+    funnel_stage: "Funnel stage advanced. This is the progression a lifecycle campaign would branch on — and the stage is read off your real behaviour, not a timer."
   };
 
   var logEl, segNameEl, segWhyEl, tcOpen = false;
@@ -152,6 +153,7 @@
   var S = JSON.parse(sessionStorage.getItem("ms_signals") || "{}");
   S.pages = S.pages || []; S.cases = S.cases || 0; S.depth = S.depth || 0;
   S.contact = S.contact || false; S.resume = S.resume || false; S.calc = S.calc || false;
+  S.converted = S.converted || false; S.stageMax = S.stageMax || 1;
 
   function saveS() { sessionStorage.setItem("ms_signals", JSON.stringify(S)); }
 
@@ -165,6 +167,9 @@
   }
 
   function runSegmentation(event, detail) {
+    /* updateStage() pushes funnel_stage through push(), which calls back into
+       here. Without this the two recurse until the tab dies. */
+    if (event === "funnel_stage") return;
     var changed = false;
     if (event === "page_view") {
       if (S.pages.indexOf(PAGE) === -1) { S.pages.push(PAGE); changed = true; }
@@ -174,6 +179,12 @@
     if (event === "scroll_depth" && detail && detail.percent > S.depth) { S.depth = detail.percent; changed = true; }
     if (event === "resume_intent" && !S.resume) { S.resume = true; changed = true; }
     if (event === "calc_interaction" && !S.calc) { S.calc = true; changed = true; }
+    /* Conversion needs a click record, and it has to be set before the early
+       return below: a cta_click changes nothing else, so a rule placed after
+       it would never run. */
+    if (event === "cta_click" && !S.converted && detail && CONVERT_CTA.test(detail.cta || "")) {
+      S.converted = true; changed = true;
+    }
     if (!changed) return;
     saveS();
     var seg = classify();
@@ -184,6 +195,123 @@
       flushOrBuffer({ event: "segment_update", segment: seg[0], page: PAGE, ts: Date.now() });
     } else if (segNameEl) {
       segNameEl.textContent = seg[0]; segWhyEl.textContent = seg[1];
+    }
+    updateStage();
+  }
+
+  /* ---------- 2b. Funnel stage tracker ----------
+     The visitor is the lead. Stages are read off the same ms_signals the
+     segmentation engine uses, so nothing new is measured and nothing is
+     invented. Two rules of five ignore scroll entirely, and none of them
+     promote on time elapsed: dwell is not commitment, and a funnel that
+     advances just because you sat there is decoration.
+
+     Stage answers "how far has this person committed?". classify() answers
+     "what treatment would they get?". Different questions, one signal set,
+     so both are kept rather than one derived from the other. */
+  var CONVERT_CTA = /^(hero_contact|home_bottom_contact|contact_|exit_email|footer_linkedin)/;
+  var STAGES = [
+    { id: "awareness",     label: "Awareness",     action: "Cold. Prospecting creative only; no spend beyond reach." },
+    { id: "interest",      label: "Interest",      action: "One soft retargeting impression, frequency-capped." },
+    { id: "consideration", label: "Consideration", action: "Custom audience. Case-study carousel within 48h." },
+    { id: "intent",        label: "Intent",        action: "Booking-link creative. Stop selling, start scheduling." },
+    { id: "conversion",    label: "Conversion",    action: "Suppressed from prospecting. Direct outreach instead." }
+  ];
+
+  /* Highest match wins. Pure function of S so it can be reasoned about. */
+  function stageOf(sig) {
+    if (sig.resume || sig.converted) return 5;
+    if (sig.contact || sig.calc) return 4;
+    if (sig.cases >= 2 || (sig.cases >= 1 && sig.depth >= 75)) return 3;
+    if (sig.depth >= 50 || sig.pages.length >= 2 || sig.cases >= 1) return 2;
+    return 1;
+  }
+
+  /* The measured reason for the current stage. A stage with no visible
+     evidence is decoration, so every reading names what caused it. */
+  function stageEvidence(sig) {
+    var bits = [];
+    if (sig.resume) bits.push("resume pulled");
+    if (sig.converted) bits.push("contact CTA clicked");
+    if (sig.contact) bits.push("contact page reached");
+    if (sig.calc) bits.push("CAC model used");
+    if (sig.cases) bits.push(sig.cases + (sig.cases === 1 ? " case study" : " case studies"));
+    if (sig.pages.length > 1) bits.push(sig.pages.length + " pages");
+    if (sig.depth) bits.push(sig.depth + "% depth");
+    return bits.length ? bits.slice(0, 3).join(" · ") : "just arrived";
+  }
+
+  function updateStage() {
+    var now = stageOf(S);
+    /* Monotonic: never walk someone backwards. */
+    if (now < S.stageMax) now = S.stageMax;
+    var advanced = now > S.stageMax;
+    if (advanced) { S.stageMax = now; saveS(); }
+    paintStage(now, advanced);
+    if (advanced) {
+      push("funnel_stage", {
+        stage: STAGES[now - 1].id,
+        stage_index: now,
+        reason: stageEvidence(S)
+      });
+    }
+  }
+
+  var dockEl = null, dockItems = [], dockLive = null, dockEvid = null;
+
+  function buildStageDock() {
+    var nav = document.createElement("nav");
+    nav.id = "fd";
+    nav.setAttribute("aria-label", "Your funnel stage");
+
+    /* An ordered list, so a screen reader conveys "3 of 5" structurally
+       rather than relying on colour or position. */
+    var ol = document.createElement("ol");
+    ol.className = "fd-list";
+    for (var i = 0; i < STAGES.length; i++) {
+      var li = document.createElement("li");
+      li.className = "fd-item";
+      li.innerHTML = '<span class="fd-dot" aria-hidden="true"></span><span class="fd-label">' +
+        STAGES[i].label + "</span>";
+      ol.appendChild(li);
+      dockItems.push(li);
+    }
+    nav.appendChild(ol);
+
+    var ev = document.createElement("p");
+    ev.className = "fd-evidence";
+    nav.appendChild(ev);
+    dockEvid = ev;
+
+    /* Announcements go in their own hidden region. Putting aria-live on the
+       list would re-announce all five items on every repaint. */
+    var live = document.createElement("p");
+    live.className = "fd-sr";
+    live.setAttribute("aria-live", "polite");
+    live.setAttribute("aria-atomic", "true");
+    nav.appendChild(live);
+    dockLive = live;
+
+    document.body.appendChild(nav);
+    dockEl = nav;
+    paintStage(stageOf(S) > S.stageMax ? stageOf(S) : S.stageMax, false);
+  }
+
+  function paintStage(stage, announce) {
+    if (!dockEl) return;
+    for (var i = 0; i < dockItems.length; i++) {
+      var on = i < stage, cur = i === stage - 1;
+      dockItems[i].className = "fd-item" + (on ? " done" : "") + (cur ? " current" : "");
+      if (cur) dockItems[i].setAttribute("aria-current", "step");
+      else dockItems[i].removeAttribute("aria-current");
+    }
+    var info = STAGES[stage - 1];
+    dockEvid.textContent = stageEvidence(S);
+    dockEvid.title = info.action;
+    dockEl.setAttribute("data-stage", info.id);
+    if (announce && dockLive) {
+      dockLive.textContent = "Funnel stage " + stage + " of 5: " + info.label +
+        ". Because: " + stageEvidence(S) + ".";
     }
   }
 
@@ -230,7 +358,13 @@
       var h = document.documentElement;
       var pct = Math.round((h.scrollTop + window.innerHeight) / h.scrollHeight * 100);
       marks.forEach(function (m) {
-        if (pct >= m && !fired[m]) { fired[m] = 1; push("scroll_depth", { percent: m }); }
+        if (pct >= m && !fired[m]) {
+          fired[m] = 1;
+          push("scroll_depth", { percent: m });
+          /* Case studies are the longest reads on the site. Once someone is
+             into one, the concept steps aside and gives the proof the screen. */
+          if (m >= 25 && /^case_/.test(PAGE)) document.body.classList.add("fd-tuck");
+        }
       });
     }, { passive: true });
 
@@ -472,6 +606,7 @@
   /* ---------- init ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     buildConsole();
+    buildStageDock();
     wireNav();
     wireTheme();
     wireConsent();
