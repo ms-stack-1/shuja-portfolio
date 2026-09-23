@@ -614,3 +614,171 @@ body.fd-tuck .fd-label,body.fd-tuck .fd-evidence{display:none}
 @media (prefers-reduced-motion:reduce){
   #fd,.fd-item,.fd-dot{transition:none}
 }
+
+/* ============================================================
+   THE FUNNEL: the page narrows as the reader commits.
+   Each section declares its stage; the stage sets the measure.
+   This is the concept made structural rather than decorative -
+   the layout itself is the funnel the copy talks about.
+   ============================================================ */
+:root{
+  --fw-awareness:100%;
+  --fw-interest:1240px;
+  --fw-consideration:1020px;
+  --fw-intent:820px;
+  --fw-conversion:620px;
+}
+[data-stage-band]{position:relative;transition:none}
+[data-stage-band] > .wrap{
+  max-width:var(--band-w,var(--maxw));
+  transition:max-width .5s cubic-bezier(.16,1,.3,1);
+}
+[data-stage-band="awareness"]     > .wrap{--band-w:1320px}
+[data-stage-band="interest"]      > .wrap{--band-w:var(--fw-interest)}
+[data-stage-band="consideration"] > .wrap{--band-w:var(--fw-consideration)}
+[data-stage-band="intent"]        > .wrap{--band-w:var(--fw-intent)}
+[data-stage-band="conversion"]    > .wrap{--band-w:var(--fw-conversion)}
+
+/* The walls. Hairlines that angle inward between bands, so the taper is
+   visible as a shape and not just as changing margins. */
+[data-stage-band]::before,[data-stage-band]::after{
+  content:"";position:absolute;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,transparent,var(--accent-line) 18%,var(--accent-line) 82%,transparent);
+  opacity:.5;pointer-events:none;
+}
+[data-stage-band]::before{left:max(12px,calc(50% - var(--band-w,var(--maxw))/2 - 26px))}
+[data-stage-band]::after{right:max(12px,calc(50% - var(--band-w,var(--maxw))/2 - 26px))}
+@media (max-width:900px){
+  [data-stage-band]::before,[data-stage-band]::after{display:none}
+  [data-stage-band] > .wrap{--band-w:100%!important}
+}
+
+/* Stage marker: names the band the reader is in, in the funnel's own terms. */
+.band-mark{
+  display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  font-family:var(--font-mono);font-size:.74rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--faint);
+}
+.band-mark b{color:var(--accent-text);font-weight:700}
+.band-mark::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,var(--accent-line),transparent);
+}
+.band-mark .n{
+  font-variant-numeric:tabular-nums;color:var(--muted);
+  border:1px solid var(--line-strong);border-radius:99px;padding:1px 8px;
+}
+
+/* ---------- HERO: the live instrument ----------
+   The page opens by measuring the reader instead of asserting at them.
+   Session panel first, claim second, face third: the thesis is demonstrated
+   before it is stated. */
+.hero{padding:clamp(40px,6vw,76px) 0 clamp(44px,6vw,72px);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(30px,4.5vw,58px);align-items:start}
+
+.sess{
+  border:1px solid var(--accent-line);border-radius:var(--r-lg);
+  background:linear-gradient(180deg,var(--accent-dim),transparent 70%),var(--surface);
+  padding:0;overflow:hidden;max-width:520px;box-shadow:var(--shadow-panel);
+}
+.sess-top{
+  display:flex;align-items:center;gap:9px;padding:9px 14px;
+  border-bottom:1px solid var(--line);background:var(--bg-3);
+  font-family:var(--font-mono);font-size:.74rem;color:var(--muted);
+}
+.sess-top .live{
+  width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 0 3px var(--green-dim);animation:pulse 1.8s infinite;flex:none;
+}
+.sess-top b{color:var(--text);font-weight:700;letter-spacing:.02em}
+.sess-top .sp{margin-left:auto;color:var(--faint)}
+.sess-rows{display:grid}
+.sess-row{
+  display:grid;grid-template-columns:86px 1fr;gap:12px;align-items:center;
+  padding:8px 14px;font-family:var(--font-mono);font-size:.78rem;
+  border-top:1px solid var(--line);
+}
+.sess-row:first-child{border-top:0}
+.sess-row .k{color:var(--faint);letter-spacing:.04em}
+.sess-row .v{color:var(--text);font-weight:700}
+.sess-row .v.accent{color:var(--accent-text)}
+/* stage pips: the reader's position, in the hero, from the first second */
+.pips{display:flex;gap:5px;align-items:center}
+.pip{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--line-strong);transition:background .3s,border-color .3s,box-shadow .3s}
+.pip.on{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.pips .nm{margin-left:8px;font-size:.74rem;color:var(--accent-text);font-weight:700;letter-spacing:.04em}
+
+.hero h1{
+  margin-top:26px;font-size:clamp(2.35rem,5.2vw,3.7rem);
+  letter-spacing:-.022em;line-height:1.05;max-width:17ch;
+}
+.hero h1 .hl{color:var(--accent-text);display:inline-block}
+.hero .sub{margin-top:18px;font-size:clamp(1rem,1.3vw,1.1rem);color:var(--prose);max-width:54ch;text-wrap:pretty}
+.hero-ctas{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* Portrait: smaller, squarer, subordinate to the instrument. */
+.hero-photo{position:relative;align-self:start;max-width:260px;margin-left:auto}
+.hero-photo img{border-radius:var(--r-lg)}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{display:none}
+  .sess{max-width:none}
+}
+
+/* ---------- MOTION ----------
+   Scroll-driven where the browser supports it, IntersectionObserver
+   everywhere else, and nothing at all under reduced motion. The reveal
+   never gates content: .rv is visible by default (see REVEAL above). */
+
+/* Reveals vary by what they reveal, rather than one uniform 16px lift on
+   every section, which is the tell. */
+.js-reveal .hero-stats.rv{transform:translateY(22px) scale(.985)}
+.js-reveal .hero-stats.rv.in{transform:none}
+.js-reveal .tiles.rv{transform:translateY(14px)}
+.js-reveal .cards.rv{transform:translateY(10px)}
+
+/* Stagger inside a revealed group: the funnel filling, one cell at a time. */
+.js-reveal .hero-stats.rv .hstat,
+.js-reveal .tiles.rv .tile,
+.js-reveal .cards.rv .card{opacity:0;transform:translateY(12px)}
+.js-reveal .hero-stats.rv.in .hstat,
+.js-reveal .tiles.rv.in .tile,
+.js-reveal .cards.rv.in .card{
+  opacity:1;transform:none;
+  transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1);
+}
+.js-reveal .rv.in > *:nth-child(1){transition-delay:0ms}
+.js-reveal .rv.in > *:nth-child(2){transition-delay:60ms}
+.js-reveal .rv.in > *:nth-child(3){transition-delay:120ms}
+.js-reveal .rv.in > *:nth-child(4){transition-delay:180ms}
+.js-reveal .rv.in > *:nth-child(5){transition-delay:240ms}
+.js-reveal .rv.in > *:nth-child(6){transition-delay:300ms}
+
+/* Buttons and cards answer the pointer. */
+.btn{transition:transform .18s cubic-bezier(.16,1,.3,1),border-color .18s,background .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.card{transition:transform .28s cubic-bezier(.16,1,.3,1),border-color .2s,box-shadow .28s}
+.card:hover{transform:translateY(-3px)}
+.hstat{transition:background .18s,transform .28s cubic-bezier(.16,1,.3,1)}
+.hstat:hover{transform:translateY(-2px)}
+
+/* Progressive upgrade: on browsers with scroll-driven animations the band
+   walls brighten as their section crosses the viewport. Purely additive -
+   the IO path above is what actually carries the reveal everywhere. */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    [data-stage-band]::before,[data-stage-band]::after{
+      animation:band-wall linear both;
+      animation-timeline:view();
+      animation-range:entry 10% cover 40%;
+    }
+    @keyframes band-wall{from{opacity:0}to{opacity:.5}}
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .btn:hover,.card:hover,.hstat:hover{transform:none}
+  .js-reveal .rv.in > *{transition:none}
+}

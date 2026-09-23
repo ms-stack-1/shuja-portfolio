@@ -58,19 +58,31 @@ tracking console still mirrors the full dataLayer.  -->
 </nav>
 <main>
 <!-- HERO -->
-<header class="hero">
+<header class="hero" data-stage-band="awareness">
   <div class="wrap hero-grid">
     <div>
-      <span class="chip"><span class="dot"></span> Open to marketing analyst &amp; growth roles · College Station, TX · will relocate</span><br>
-      <span class="chip utm" id="utm-chip"></span>
+      <!-- The instrument, before the claim. This panel is live: every row is
+           read from the same session state the rest of the site runs on. -->
+      <div class="sess" id="sess">
+        <div class="sess-top"><span class="live"></span><b>SESSION</b> <span id="sess-id">·</span>
+          <span class="sp" id="sess-clock">00:00</span></div>
+        <div class="sess-rows">
+          <div class="sess-row"><span class="k">entry</span><span class="v" id="sess-entry">direct</span></div>
+          <div class="sess-row"><span class="k">stage</span><span class="v">
+            <span class="pips" id="sess-pips" aria-hidden="true"></span></span></div>
+          <div class="sess-row"><span class="k">measured</span><span class="v accent" id="sess-evid">just arrived</span></div>
+        </div>
+      </div>
+
       <h1 id="hero-headline">Marketing that <span class="hl">proves its own math.</span></h1>
       <p class="sub">I'm Muhammad Shuja, a performance marketer and growth analyst. Four years of paid media,
       funnel analytics, marketing operations and AI automation across the US, UK, UAE and remote-global clients.
-      Every claim on this site has a number attached, and the site itself is tracking you right now.
-      Open the console, bottom right.</p>
+      That panel is not a mockup — you are moving through my funnel right now, and the site is showing you
+      its own working.</p>
       <div class="hero-ctas">
         <a class="btn" href="work/index.html" data-cta="hero_see_work">See the work →</a>
         <a class="btn ghost" href="contact.html" data-cta="hero_contact">Get in touch</a>
+        <span class="chip utm" id="utm-chip"></span>
       </div>
     </div>
     <div class="hero-photo">
@@ -97,7 +109,7 @@ tracking console still mirrors the full dataLayer.  -->
 </div>
 
 <!-- LIVE EXPERIMENT -->
-<section id="experiment" data-track-section>
+<section id="experiment" data-track-section data-stage-band="interest">
   <div class="wrap rv">
     <div class="exp-panel">
       <span class="badge-live">live experiment</span>
@@ -116,10 +128,10 @@ tracking console still mirrors the full dataLayer.  -->
 </section>
 
 <!-- KPI DASHBOARD -->
-<section id="kpis" data-track-section>
+<section id="kpis" data-track-section data-stage-band="interest">
   <div class="wrap">
     <div class="section-head rv">
-      <div class="eyebrow">career_kpis · all-time</div>
+      <div class="band-mark"><span class="n">02</span> <b>Interest</b> · the numbers, before the narrative</div>
       <h2>The numbers, before the narrative.</h2>
       <p>Twelve metrics across six engagements. Every one is unpacked in a case study.</p>
     </div>
@@ -218,10 +230,10 @@ tracking console still mirrors the full dataLayer.  -->
 </section>
 
 <!-- CASE STUDY CARDS -->
-<section id="featured" data-track-section>
+<section id="featured" data-track-section data-stage-band="consideration">
   <div class="wrap">
     <div class="section-head rv">
-      <div class="eyebrow">case_studies · 6 engagements</div>
+      <div class="band-mark"><span class="n">03</span> <b>Consideration</b> · six engagements you can interrogate</div>
       <h2>Where the numbers came from.</h2>
     </div>
     <div class="cards rv">
@@ -260,10 +272,10 @@ tracking console still mirrors the full dataLayer.  -->
 </section>
 
 <!-- TOOLS WALL -->
-<section id="tools" data-track-section>
+<section id="tools" data-track-section data-stage-band="intent">
   <div class="wrap">
     <div class="section-head rv">
-      <div class="eyebrow">stack · 24 tools</div>
+      <div class="band-mark"><span class="n">04</span> <b>Intent</b> · what I actually run</div>
       <h2>Tools I can use.</h2>
       <p>The full working stack. Hover over any tool to light it up, or tap it on a phone.</p>
     </div>
@@ -300,12 +312,12 @@ tracking console still mirrors the full dataLayer.  -->
 </section>
 
 <!-- CTA -->
-<section id="home-cta" data-track-section>
+<section id="home-cta" data-track-section data-stage-band="conversion">
   <div class="wrap rv">
     <div class="next-case">
       <div>
         <h2>Hiring for a growth, marketing ops, or analyst seat?</h2>
-        <p class="lede" style="margin-top:8px">You've been segmented already. Check the console. Skip the retargeting and just talk to me.</p>
+        <p class="lede" style="margin-top:8px">You reached the narrow end. The dock on the right has been scoring you the whole way down, and the console shows every signal it used. Skip the retargeting sequence and just talk to me.</p>
       </div>
       <a class="btn" href="contact.html" data-cta="home_bottom_contact">Get in touch →</a>
     </div>

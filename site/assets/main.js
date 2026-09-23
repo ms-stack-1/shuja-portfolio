@@ -298,6 +298,7 @@
   }
 
   function paintStage(stage, announce) {
+    paintSession(stage);
     if (!dockEl) return;
     for (var i = 0; i < dockItems.length; i++) {
       var on = i < stage, cur = i === stage - 1;
@@ -313,6 +314,79 @@
       dockLive.textContent = "Funnel stage " + stage + " of 5: " + info.label +
         ". Because: " + stageEvidence(S) + ".";
     }
+  }
+
+  /* ---------- 2c. Hero session panel ----------
+     The homepage opens by showing the reader their own session. Everything
+     here is read from live state: the id is derived from the session, the
+     clock is real elapsed time, entry comes from the referrer or UTM, and
+     the pips are the same stage the dock shows. Nothing is simulated. */
+  var pipsEl = null, evidEl = null;
+
+  function sessionId() {
+    var id = sessionStorage.getItem("ms_sid");
+    if (!id) {
+      id = "0x" + Math.floor(Math.random() * 0xfffff).toString(16).toUpperCase();
+      sessionStorage.setItem("ms_sid", id);
+    }
+    return id;
+  }
+
+  function entryLabel() {
+    try {
+      var u = JSON.parse(sessionStorage.getItem("ms_utm") || "null");
+      if (u && u.source) return (u.source + " / " + (u.medium || "utm")).toLowerCase();
+    } catch (e) {}
+    var r = document.referrer;
+    if (!r) return "direct";
+    try {
+      var h = new URL(r).hostname.replace(/^www\./, "");
+      if (h === location.hostname) return "internal";
+      return h + " / referral";
+    } catch (e) { return "direct"; }
+  }
+
+  function buildSession() {
+    var host = document.getElementById("sess");
+    if (!host) return;
+    document.getElementById("sess-id").textContent = sessionId();
+    document.getElementById("sess-entry").textContent = entryLabel();
+    pipsEl = document.getElementById("sess-pips");
+    evidEl = document.getElementById("sess-evid");
+
+    for (var i = 0; i < STAGES.length; i++) {
+      var d = document.createElement("span");
+      d.className = "pip";
+      pipsEl.appendChild(d);
+    }
+    var nm = document.createElement("span");
+    nm.className = "nm";
+    pipsEl.appendChild(nm);
+
+    /* The clock is the one thing here that ticks on its own. Pause it when
+       the tab is hidden: a timer nobody is watching is wasted work, and on
+       this site of all places the instrument should not burn cycles idle. */
+    var clock = document.getElementById("sess-clock");
+    var tick = null;
+    function paintClock() {
+      var t = Math.floor((Date.now() - T0) / 1000);
+      clock.textContent = ("0" + Math.floor(t / 60)).slice(-2) + ":" + ("0" + (t % 60)).slice(-2);
+    }
+    function runClock(on) {
+      if (on && !tick) { paintClock(); tick = setInterval(paintClock, 1000); }
+      else if (!on && tick) { clearInterval(tick); tick = null; }
+    }
+    document.addEventListener("visibilitychange", function () { runClock(!document.hidden); });
+    runClock(!document.hidden);
+    paintSession(S.stageMax || 1);
+  }
+
+  function paintSession(stage) {
+    if (!pipsEl) return;
+    var pips = pipsEl.querySelectorAll(".pip");
+    for (var i = 0; i < pips.length; i++) pips[i].className = "pip" + (i < stage ? " on" : "");
+    pipsEl.querySelector(".nm").textContent = STAGES[stage - 1].label.toUpperCase();
+    if (evidEl) evidEl.textContent = stageEvidence(S);
   }
 
   /* ---------- 3. A/B experiment: hero headline ---------- */
@@ -614,6 +688,9 @@
     wireTools();
     runExperiment();
     handleUTM();
+    /* after handleUTM: the session panel reports the entry source, which is
+       not known until UTMs have been parsed off the query string. */
+    buildSession();
     wireEvents();
     wireVisuals();
     wireCalc();
