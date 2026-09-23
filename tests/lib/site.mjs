@@ -11,7 +11,7 @@ export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..")
 export const SITE = join(ROOT, "site");
 export const ASSETS = join(SITE, "assets");
 
-export const DOMAIN = "https://YOURSUBDOMAIN.example.com";
+export const DOMAIN = "https://shuja-portfolio-site.pages.dev";
 export const GTM_ID = "GTM-XXXXXXX";
 
 export function read(absPath) {

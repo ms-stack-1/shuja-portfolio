@@ -1,16 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colophon: How This Site Works | Muhammad Shuja</title>
 <meta name="description" content="This portfolio is a live marketing instrument: GTM-native dataLayer, on-page tracking console, a running A/B test, UTM personalization, and a machine-readable layer for AI screeners.">
-<link rel="canonical" href="https://shuja.gridbyteops.com/colophon.html">
+<link rel="canonical" href="https://shuja-portfolio-site.pages.dev/colophon.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Colophon: How This Site Works | Muhammad Shuja">
 <meta property="og:description" content="This portfolio is a live marketing instrument: GTM-native dataLayer, on-page tracking console, a running A/B test, UTM personalization, and a machine-readable layer for AI screeners.">
-<meta property="og:image" content="https://shuja.gridbyteops.com/assets/headshot.webp">
-<meta property="og:url" content="https://shuja.gridbyteops.com/colophon.html">
+<meta property="og:image" content="https://shuja-portfolio-site.pages.dev/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muhammad Shuja, performance marketer and growth analyst — $272K paid media, 189% average ROAS, +300% appointments">
+<meta property="og:site_name" content="Muhammad Shuja">
+<meta property="og:url" content="https://shuja-portfolio-site.pages.dev/colophon.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,19 +153,6 @@ tracking console still mirrors the full dataLayer.  -->
   </div>
 </section>
 
-<section data-track-section id="co_gtm">
-  <div class="wrap rv">
-    <div class="section-head"><div class="eyebrow">deployment notes</div><h2>Wiring it live.</h2></div>
-    <div class="prose">
-      <p>The site ships GTM-ready with a placeholder container ID. Go-live checklist: create a GTM container and replace
-      <code>GTM-PGK6K9RN</code> in each page head (two places); add GA4 via a configuration tag on All Pages; deploy the Meta
-      Pixel as a Custom HTML tag with custom events mapped from the schema table above; mark <code>resume_intent</code> and
-      <code>cta_click</code> as conversions; set the production domain in canonical/OG tags and <code>sitemap.xml</code>;
-      drop <code>shuja_resume.pdf</code> into <code>/assets</code>. The on-page console reads the dataLayer directly, so it works
-      identically before and after GTM is connected.</p>
-    </div>
-  </div>
-</section>
 
 <section>
   <div class="wrap rv">

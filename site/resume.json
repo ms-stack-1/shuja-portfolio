@@ -1,11 +1,11 @@
-﻿{
+{
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
   "basics": {
     "name": "Muhammad Shuja",
     "label": "Performance Marketer & Growth Analyst",
     "email": "mshujasiddiq@gmail.com",
     "phone": "+1 (832) 342-8959",
-    "summary": "Performance marketer and growth analyst with 4 years across paid media, marketing analytics, marketing operations, and AI automation. $940K+ cumulative paid media managed across 20+ accounts in 4 markets; 18.6x peak campaign ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
+    "summary": "Performance marketer and growth analyst with 4 years across paid media, marketing analytics, marketing operations, and AI automation. $272K cumulative paid media managed across 15-20 accounts in 4 markets; 189% average client ROAS; built an agency digital division from zero to $850K+ under management; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
     "location": { "city": "College Station", "region": "TX", "countryCode": "US" },
     "profiles": [
       { "network": "LinkedIn", "username": "mshujasid", "url": "https://linkedin.com/in/mshujasid" }
@@ -108,5 +108,5 @@
     { "language": "Urdu", "fluency": "Native or bilingual" },
     { "language": "Arabic", "fluency": "Professional working" }
   ],
-  "meta": { "canonical": "https://shuja.gridbyteops.com/resume.json", "version": "1.0", "lastModified": "2026-06-10" }
+  "meta": { "canonical": "https://shuja-portfolio-site.pages.dev/resume.json", "version": "1.0", "lastModified": "2026-06-10" }
 }

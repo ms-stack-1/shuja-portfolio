@@ -3,8 +3,9 @@
    The headshot bug was: pages referenced assets/headshot.jpg but only
    headshot.webp exists. These tests lock the fix so it cannot regress. */
 import { describe, it, assert } from "./harness.mjs";
-import { htmlPages, readSite, exists, ASSETS, metaProperty } from "./lib/site.mjs";
+import { htmlPages, readSite, exists, ASSETS, DOMAIN, metaProperty } from "./lib/site.mjs";
 import { join as pjoin } from "node:path";
+import { readFileSync } from "node:fs";
 
 const pages = htmlPages();
 
@@ -15,6 +16,7 @@ describe("assets: core files exist", () => {
     "favicon.svg",
     "resume.pdf",
     "headshot.webp",
+    "og-card.jpg",
   ];
   for (const f of required) {
     it(`assets/${f} exists`, () => {
@@ -43,11 +45,57 @@ describe("assets: headshot reference regression", () => {
     assert.match(m[1], /headshot\.webp$/);
   });
 
-  it("every og:image points at headshot.webp", () => {
+  /* og:image is deliberately NOT the webp. LinkedIn's crawler is unreliable
+     with WebP and aborts the preview, so the share card is a 1200x630 JPEG
+     while headshot.webp stays the on-page image. */
+  it("every og:image points at the JPEG share card", () => {
     for (const p of pages) {
       const og = metaProperty(p.html, "og:image");
       assert.ok(og, `${p.rel}: missing og:image`);
-      assert.match(og, /headshot\.webp$/, `${p.rel}: og:image not webp -> ${og}`);
+      assert.match(og, /\/assets\/og-card\.jpg$/, `${p.rel}: og:image not the jpg card -> ${og}`);
     }
+  });
+
+  it("every og:image is an absolute URL on this domain", () => {
+    for (const p of pages) {
+      const og = metaProperty(p.html, "og:image");
+      assert.ok(og.startsWith(DOMAIN + "/"), `${p.rel}: og:image not absolute on ${DOMAIN} -> ${og}`);
+    }
+  });
+
+  it("every page declares og:image dimensions, alt and site_name", () => {
+    for (const p of pages) {
+      assert.equal(metaProperty(p.html, "og:image:width"), "1200", `${p.rel}: bad og:image:width`);
+      assert.equal(metaProperty(p.html, "og:image:height"), "630", `${p.rel}: bad og:image:height`);
+      assert.ok(metaProperty(p.html, "og:image:alt"), `${p.rel}: missing og:image:alt`);
+      assert.ok(metaProperty(p.html, "og:site_name"), `${p.rel}: missing og:site_name`);
+    }
+  });
+
+  it("the share card is a 1200x630 JPEG", () => {
+    const buf = readFileSync(pjoin(ASSETS, "og-card.jpg"));
+    assert.equal(buf[0], 0xff, "og-card.jpg is not a JPEG (bad SOI)");
+    assert.equal(buf[1], 0xd8, "og-card.jpg is not a JPEG (bad SOI)");
+    let i = 2, w = 0, h = 0;
+    while (i < buf.length - 9) {
+      if (buf[i] !== 0xff) { i++; continue; }
+      const m = buf[i + 1];
+      if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) {
+        h = buf.readUInt16BE(i + 5); w = buf.readUInt16BE(i + 7); break;
+      }
+      i += 2 + buf.readUInt16BE(i + 2);
+    }
+    assert.equal(w, 1200, `og-card.jpg width ${w}`);
+    assert.equal(h, 630, `og-card.jpg height ${h}`);
+  });
+});
+
+/* The dead-domain regression: shuja.gridbyteops.com does not resolve, and
+   LinkedIn aborts the preview when og:image cannot be fetched. */
+describe("assets: no dead domain in metadata", () => {
+  it("no page references gridbyteops.com", () => {
+    const offenders = pages.filter((p) => p.html.includes("gridbyteops.com"));
+    assert.equal(offenders.length, 0,
+      "dead domain still present: " + offenders.map((p) => p.rel).join(", "));
   });
 });

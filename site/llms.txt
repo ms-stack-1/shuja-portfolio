@@ -16,7 +16,7 @@ This file follows the llms.txt convention: a structured plain-text brief of this
 
 ## Headline metrics
 
-- $940K+ cumulative paid media managed across 20+ accounts in 4 markets
+- $272K cumulative paid media managed across 15-20 accounts in 4 markets
 - 18.6x peak campaign ROAS (Food Crowd, e-commerce grocery, UAE)
 - $2.66 CPA at $49.52 AOV; orders +67%, revenue +42% (Food Crowd)
 - +300% online appointments in 12 months; MQL→SQL +28%; CAC −31% (PrimaCare healthcare)
