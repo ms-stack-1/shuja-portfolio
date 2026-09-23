@@ -14,7 +14,7 @@ describe("assets: core files exist", () => {
     "styles.css",
     "main.js",
     "favicon.svg",
-    "resume.pdf",
+    "shuja_resume.pdf",
     "headshot.webp",
     "og-card.jpg",
   ];
