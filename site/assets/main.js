@@ -270,7 +270,11 @@
   /* ---------- 6. Reveals + counters + hbar fills ---------- */
   function wireVisuals() {
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    /* Opt into the hidden start state only when this function will actually
+       reveal things. CSS keeps .rv visible by default, so if we never get
+       here (JS blocked or erroring earlier) the content still renders. */
     if ("IntersectionObserver" in window && !reduced) {
+      document.documentElement.classList.add("js-reveal");
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (!e.isIntersecting) return;

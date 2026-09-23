@@ -41,6 +41,14 @@
   --r-lg:14px;
   --r-sm:7px;
   --sp-section:clamp(64px,8vw,104px);
+  /* Stacking order, lowest to highest. The dock sits below the console so
+     that if they ever meet, the interactive element wins. */
+  --z-base:1;
+  --z-nav:60;
+  --z-dock:70;
+  --z-console:80;
+  --z-consent:90;
+  --z-modal:100;
 }
 html[data-theme="dark"]{
   /* DARK THEME — the reference instrument: deep blue-black, cyan accent, green live */
@@ -98,7 +106,7 @@ body::before{ /* faint dashboard grid, focused near the top fold */
   -webkit-mask-image:radial-gradient(125% 75% at 50% -5%,#000 38%,transparent 100%);
   mask-image:radial-gradient(125% 75% at 50% -5%,#000 38%,transparent 100%);
 }
-main{position:relative;z-index:1}
+main{position:relative;z-index:var(--z-base)}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--accent-text);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -123,7 +131,7 @@ section{padding:var(--sp-section) 0}
 
 /* ---------- NAV ---------- */
 .nav{
-  position:sticky;top:0;z-index:60;background:var(--navbg);backdrop-filter:blur(12px);
+  position:sticky;top:0;z-index:var(--z-nav);background:var(--navbg);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:62px;display:flex;align-items:center;gap:26px}
@@ -356,7 +364,7 @@ table.data .mono{color:var(--text)}
 
 /* ---------- TRACKING CONSOLE (live analytics instrument) ---------- */
 #tc-btn{
-  position:fixed;bottom:20px;right:20px;z-index:80;font-family:var(--font-mono);font-size:.74rem;
+  position:fixed;bottom:20px;right:20px;z-index:var(--z-console);font-family:var(--font-mono);font-size:.74rem;
   background:var(--panel);color:var(--accent-text);border:1px solid var(--accent-line);border-radius:99px;
   padding:9px 15px;cursor:pointer;display:flex;align-items:center;gap:9px;box-shadow:var(--shadow);
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .18s,transform .18s;
@@ -365,7 +373,7 @@ table.data .mono{color:var(--text)}
 #tc-btn .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-dim);animation:pulse 1.6s infinite}
 #tc-count{background:var(--accent-dim);color:var(--accent-text);border-radius:99px;padding:1px 8px;font-weight:700;min-width:20px;text-align:center}
 #tc{
-  position:fixed;bottom:70px;right:20px;z-index:80;width:min(430px,calc(100vw - 32px));
+  position:fixed;bottom:70px;right:20px;z-index:var(--z-console);width:min(430px,calc(100vw - 32px));
   background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--r-lg);
   box-shadow:var(--shadow-lg);display:none;overflow:hidden;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
 }
@@ -407,8 +415,12 @@ table.data .mono{color:var(--text)}
 .contact-card .v{font-family:var(--font-mono);font-size:1.05rem;margin-top:8px;word-break:break-all}
 
 /* ---------- REVEAL ---------- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
-.rv.in{opacity:1;transform:none}
+.rv{transition:opacity .6s,transform .6s}
+/* Content is visible by default and the hidden start state is opted into by
+   JS (html.js-reveal). Gating visibility on a class means a JS failure, a
+   hidden tab or a headless renderer ships a blank page. */
+.js-reveal .rv{opacity:0;transform:translateY(16px)}
+.js-reveal .rv.in{opacity:1;transform:none}
 
 /* ---------- COLOPHON ---------- */
 .schema-table td:nth-child(1){font-family:var(--font-mono);font-size:.8rem;color:var(--accent-text)!important}
@@ -450,7 +462,7 @@ code{font-family:var(--font-mono);font-size:.84em;background:var(--bg-2);border:
 
 /* ---------- CONSENT BANNER ---------- */
 #consent{
-  position:fixed;bottom:20px;left:20px;z-index:90;width:min(380px,calc(100vw - 40px));
+  position:fixed;bottom:20px;left:20px;z-index:var(--z-consent);width:min(380px,calc(100vw - 40px));
   background:var(--panel);border:1px solid var(--line-strong);border-radius:12px;box-shadow:var(--shadow-lg);
   padding:20px;display:none;
 }
@@ -462,7 +474,7 @@ code{font-family:var(--font-mono);font-size:.84em;background:var(--bg-2);border:
 #consent .btn{font-size:.8rem;padding:8px 14px}
 
 /* ---------- EXIT-INTENT MODAL ---------- */
-#exitm{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(10,14,26,.55);backdrop-filter:blur(4px)}
+#exitm{position:fixed;inset:0;z-index:var(--z-modal);display:none;align-items:center;justify-content:center;background:rgba(10,14,26,.55);backdrop-filter:blur(4px)}
 #exitm.show{display:flex}
 #exitm .box{
   width:min(560px,calc(100vw - 40px));background:var(--panel);border:1px solid var(--line-strong);
@@ -497,7 +509,7 @@ code{font-family:var(--font-mono);font-size:.84em;background:var(--bg-2);border:
 .hero h1{font-size:clamp(2.5rem,5.6vw,3.9rem);letter-spacing:-.02em}
 /* Reveals must never ship blank for reduced-motion or no-JS visitors. */
 @media (prefers-reduced-motion:reduce){
-  .rv{opacity:1;transform:none}
+  .js-reveal .rv{opacity:1;transform:none}
 }
 
 /* ---------- WORK HUB RESTYLE (case-study hub · data-page="work") ----------
