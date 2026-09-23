@@ -48,8 +48,21 @@ function clickEvent(host) {
   return { type: "click", target: { closest: () => anchor }, preventDefault() {} };
 }
 
-/* ---- one boot, then drive it; capture plain values for the assertions ---- */
-const dom = installDom({ dataPage: "home", elements: buildCalc });
+/* ---- boot 1: a first-time visitor, to observe the default consent state ---- */
+const virgin = installDom({ dataPage: "home", elements: buildCalc });
+try { (0, eval)(code); } catch (e) { /* asserted on the main boot below */ }
+const consentDefault = virgin.sessionStorage.getItem("ms_consent");
+virgin.uninstall();
+
+/* ---- boot 2: a returning visitor who already opted in. main.js resolves
+   consent as it evaluates, so the stored choice has to exist beforehand;
+   without it every event sits in the pre-consent buffer and never reaches
+   the dataLayer these assertions read. ---- */
+const dom = installDom({
+  dataPage: "home",
+  elements: buildCalc,
+  localStorageSeed: { ms_consent_choice: "granted" },
+});
 
 let loadError = null;
 try {
@@ -60,7 +73,6 @@ try {
   loadError = e;
 }
 
-const consentDefault = dom.sessionStorage.getItem("ms_consent");
 dom.fireDOMContentLoaded();
 
 const dl = dom.window.dataLayer || [];
@@ -79,14 +91,29 @@ const firedCalcInteraction = dl.some((e) => e && e.event === "calc_interaction")
 
 // Consent gate: denied blocks pushes, granted allows them.
 const host = dom.location.host;
+
+/* Granted visitor (this boot): a tracked click reaches the dataLayer. */
 const lenBefore = dl.length;
-dom.sessionStorage.setItem("ms_consent", "denied");
-dom.dispatchDocument("click", clickEvent(host));
-const lenAfterDenied = dl.length;
-dom.sessionStorage.setItem("ms_consent", "granted");
 dom.dispatchDocument("click", clickEvent(host));
 const lenAfterGranted = dl.length;
 const lastEvent = dl[dl.length - 1];
+
+/* Denied visitor: a separate boot, because consentState is resolved during
+   evaluation and lives in a closure. Writing sessionStorage from outside
+   would not change it, so the only honest way to exercise the gate is to
+   boot as someone who has already declined. */
+const deniedDom = installDom({
+  dataPage: "home",
+  elements: buildCalc,
+  localStorageSeed: { ms_consent_choice: "denied" },
+});
+try { (0, eval)(code); } catch (e) { /* asserted on the main boot */ }
+deniedDom.fireDOMContentLoaded();
+const deniedDl = deniedDom.window.dataLayer || [];
+const deniedLenBefore = deniedDl.length;
+deniedDom.dispatchDocument("click", clickEvent(deniedDom.location.host));
+const deniedLenAfter = deniedDl.length;
+deniedDom.uninstall();
 
 dom.uninstall();
 
@@ -94,8 +121,10 @@ describe("behavior: boot", () => {
   it("main.js executes without throwing", () => {
     assert.equal(loadError, null, loadError && loadError.stack);
   });
-  it("defaults consent to granted on first load", () => {
-    assert.equal(consentDefault, "granted");
+  /* A first-time visitor is held at "pending" so nothing reaches the dataLayer
+     before an explicit choice; "granted" only ever comes from a stored choice. */
+  it("defaults consent to pending on first load", () => {
+    assert.equal(consentDefault, "pending");
   });
   it("pushes page_view on DOMContentLoaded", () => {
     assert.ok(hadPageView, "no page_view in dataLayer after init");
@@ -108,7 +137,7 @@ describe("behavior: boot", () => {
 
 describe("behavior: consent gate (the core privacy invariant)", () => {
   it("denied consent blocks dataLayer pushes", () => {
-    assert.equal(lenAfterDenied, lenBefore, "a push slipped through while consent was denied");
+    assert.equal(deniedLenAfter, deniedLenBefore, "a push slipped through while consent was denied");
   });
   it("granted consent allows dataLayer pushes", () => {
     assert.equal(lenAfterGranted, lenBefore + 1, "expected exactly one push when granted");

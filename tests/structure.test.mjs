@@ -7,8 +7,10 @@ import { htmlPages, navBlock, footerBlock, countOccurrences, GTM_ID } from "./li
 const pages = htmlPages();
 
 describe("structure: every HTML page", () => {
+  /* Floor, not an exact count: the suite should not need editing to add a
+     blog post. It was 16 before a duplicate post was removed. */
   it("has at least one page", () => {
-    assert.ok(pages.length >= 16, `expected 16+ pages, found ${pages.length}`);
+    assert.ok(pages.length >= 15, `expected 15+ pages, found ${pages.length}`);
   });
 
   for (const p of pages) {
@@ -52,7 +54,7 @@ describe("structure: every HTML page", () => {
       it("embeds the GTM container block", () => {
         assert.ok(
           countOccurrences(html, GTM_ID) >= 2,
-          `expected the GTM placeholder ${GTM_ID} at least twice`
+          `expected the GTM container ${GTM_ID} at least twice`
         );
         assert.match(html, /googletagmanager\.com\/gtm\.js/i);
         assert.match(html, /<noscript>[\s\S]*googletagmanager\.com\/ns\.html/i);

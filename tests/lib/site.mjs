@@ -12,7 +12,7 @@ export const SITE = join(ROOT, "site");
 export const ASSETS = join(SITE, "assets");
 
 export const DOMAIN = "https://shuja-portfolio-site.pages.dev";
-export const GTM_ID = "GTM-XXXXXXX";
+export const GTM_ID = "GTM-PGK6K9RN";
 
 export function read(absPath) {
   return readFileSync(absPath, "utf8");

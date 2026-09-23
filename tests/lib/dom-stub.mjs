@@ -14,7 +14,8 @@
    ============================================================ */
 
 export function installDom(opts = {}) {
-  const { dataPage = "home", search = "", pathname = "/", host = "localhost" } = opts;
+  const { dataPage = "home", search = "", pathname = "/", host = "localhost",
+          localStorageSeed = {}, sessionStorageSeed = {} } = opts;
 
   const docListeners = Object.create(null);
   const winListeners = Object.create(null);
@@ -157,6 +158,10 @@ export function installDom(opts = {}) {
   };
   const localStorage = storage();
   const sessionStorage = storage();
+  /* Seeded before main.js evaluates, so a test can boot as a returning
+     visitor whose consent choice is already on record. */
+  for (const [k, v] of Object.entries(localStorageSeed)) localStorage.setItem(k, v);
+  for (const [k, v] of Object.entries(sessionStorageSeed)) sessionStorage.setItem(k, v);
   const location = { search, pathname, host };
 
   const saved = {
