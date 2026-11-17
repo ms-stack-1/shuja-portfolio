@@ -1,0 +1,734 @@
+{
+  "version": "2026.10.0",
+  "audience": "public",
+  "source_sha256": "4c3de6cb2de0dfbb251d6545472d16599dd34f8ef245ad017ed94657ffb6c8d6",
+  "identity": {
+    "name": "Muhammad Shuja",
+    "headline": "Digital and performance marketer",
+    "summary": "Digital and performance marketer, 5 years across paid search, paid social, SEO, e-commerce growth, and lifecycle marketing, spanning agency (B2B and B2C client portfolios), in-house healthcare, and direct-to-consumer e-commerce.",
+    "location": "College Station, TX",
+    "availability": "Open to relocation anywhere in the US and to remote",
+    "email": "mshujasiddiq@gmail.com",
+    "links": [
+      {
+        "id": "link-portfolio",
+        "label": "Portfolio",
+        "url": "https://shuja-portfolio-site.pages.dev"
+      },
+      {
+        "id": "link-github",
+        "label": "GitHub",
+        "url": "https://github.com/ms-stack-1"
+      },
+      {
+        "id": "link-linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/mshujasid"
+      }
+    ]
+  },
+  "experience": {
+    "years_claim": "5 years",
+    "tenure_basis": "Union of calendar months, inclusive, across roles that count toward tenure",
+    "gaps": [
+      {
+        "id": "gap-ms-lamar",
+        "from": "2023-01",
+        "to": "2026-01",
+        "reason": "Full-time M.S. in Management Information Systems at Lamar University"
+      }
+    ]
+  },
+  "roles": [
+    {
+      "id": "wellborn",
+      "employer": "Wellborn Ascent Inc",
+      "location": "College Station, TX",
+      "start": "2026-02",
+      "end": "present",
+      "title": "Marketing Operations & Automation Manager",
+      "counts_toward_tenure": true,
+      "facts": [
+        {
+          "id": "wb-ops-platform",
+          "text": "Built an AI-enabled operations platform (Claude API, Zapier/Make, Node.js, SQL, Slack interface) serving 3 sites and 14 users, reducing annual payroll cost by $120K by automating manual administrative workflows",
+          "figures": [
+            "$120K",
+            "3 sites",
+            "14 users"
+          ]
+        },
+        {
+          "id": "wb-slack-workflows",
+          "text": "Enabled 14 non-technical staff to trigger and manage workflows through natural-language Slack messages, removing the admin layer between frontline staff and ownership",
+          "figures": [
+            "14 staff"
+          ]
+        },
+        {
+          "id": "wb-reconciliation",
+          "text": "Automated financial reconciliation with the Claude API, recovering 20 hours per week and clearing a nine-month backlog in a single week, with schema validation so no malformed AI output reached the database",
+          "figures": [
+            "20 hours per week",
+            "nine-month backlog"
+          ]
+        },
+        {
+          "id": "wb-daily-reporting",
+          "text": "Cut daily reporting from 2 hours per site to 15 minutes across all 3, auto-flagging cash variance by responsible employee",
+          "figures": [
+            "2 hours per site",
+            "15 minutes"
+          ]
+        },
+        {
+          "id": "wb-kpi-tracking",
+          "text": "Cut multi-location KPI tracking from roughly 6 hours daily to 45 minutes through reporting automations",
+          "figures": [
+            "6 hours daily",
+            "45 minutes"
+          ]
+        },
+        {
+          "id": "wb-transaction-analysis",
+          "text": "Analyzed 60K+ monthly transactions in SQL to surface margin leakage and site-level performance gaps, informing pricing decisions",
+          "figures": [
+            "60K+ monthly transactions"
+          ]
+        },
+        {
+          "id": "wb-pricing-engine",
+          "text": "Built a Claude-powered pricing engine recommending retail price adjustments from real-time cost fluctuations, run as a proof of concept justified by the 60K+ transaction margin analysis",
+          "figures": [
+            "60K+ transactions"
+          ],
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "wb-discovery",
+          "text": "Ran discovery before each build: mapped the manual workflows with ownership and management roles (current state to future state), then prioritized automation candidates by the hours and cost each would recover",
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "wb-training",
+          "text": "Trained and onboarded the 14 staff on the Slack workflows personally, driving adoption among non-technical users",
+          "figures": [
+            "14 staff"
+          ],
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "wb-documentation",
+          "text": "Documented the automations: runbooks, user guides, and the workflow rules the Slack assistant works from",
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "wb-human-in-the-loop",
+          "text": "Built human-in-the-loop review into the AI workflows: output that fails schema validation, and AI drafts, go to a person for review before use",
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "wb-reliability",
+          "text": "Sustained 99% reliability across scheduled production automations with retry logic, deduplication, structured logging, and daily monitoring",
+          "figures": [
+            "99%"
+          ]
+        },
+        {
+          "id": "wb-forecasting",
+          "text": "Built inventory and demand forecasting logic triggering orders days in advance, holding zero stockouts through a regional supply shortage",
+          "figures": [
+            "zero stockouts"
+          ]
+        },
+        {
+          "id": "wb-brand-compliance",
+          "text": "Raised brand compliance audit scores from 60-65% to 99% across 3 locations by setting and enforcing brand and operational standards",
+          "figures": [
+            "60-65%",
+            "99%",
+            "3 locations"
+          ]
+        },
+        {
+          "id": "wb-brand-relaunch",
+          "text": "Relaunched an in-house food brand with redesigned menus, signage, and promotional activation, lifting daily revenue 87% (from roughly $800 to $1,500 daily average)",
+          "figures": [
+            "87%",
+            "$800",
+            "$1,500"
+          ]
+        },
+        {
+          "id": "wb-social-signage",
+          "text": "Launched a social media and promotional signage program supporting foot traffic and cross-sell revenue"
+        },
+        {
+          "id": "wb-ai-content",
+          "text": "Built AI content workflows (research, drafting, editing) using the Claude API"
+        },
+        {
+          "id": "wb-power-bi",
+          "text": "Built Power BI dashboards for ownership reporting"
+        },
+        {
+          "id": "wb-scope",
+          "text": "End-to-end ownership across 3 locations, reporting directly to ownership, with 14 staff reporting to this role (operational leadership, not marketing-team management)",
+          "figures": [
+            "3 locations",
+            "14 staff"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primacare",
+      "employer": "PrimaCare Home Healthcare Services",
+      "location": "Dubai, UAE",
+      "start": "2022-01",
+      "end": "2022-12",
+      "title": "Performance Marketing Manager",
+      "context": "Regulated healthcare services: an at-home healthcare booking platform",
+      "counts_toward_tenure": true,
+      "facts": [
+        {
+          "id": "pc-team",
+          "text": "Sole owner of the entire marketing function, with no reports and no hires"
+        },
+        {
+          "id": "pc-appointments",
+          "text": "Grew online appointments 300% in twelve months by owning paid media across Meta, Google, and retargeting, iterating on targeting and landing pages through controlled A/B tests",
+          "figures": [
+            "300%",
+            "twelve months"
+          ]
+        },
+        {
+          "id": "pc-paid-search",
+          "text": "Managed paid search on Google end to end: keyword research, bid management, negative keyword collection, and budget pacing"
+        },
+        {
+          "id": "pc-repeat-rate",
+          "text": "Increased repeat customer rate 37%, measured by repeat booking frequency, by aligning paid media messaging with the downstream customer experience alongside sales and operations",
+          "figures": [
+            "37%"
+          ]
+        },
+        {
+          "id": "pc-tracking",
+          "text": "Implemented Google Tag Manager and conversion tracking to measure CPA, ROAS, and funnel KPIs, sharpening budget decisions"
+        },
+        {
+          "id": "pc-kpi-targets",
+          "text": "Defined success metrics and KPI targets before launch, then reallocated budget toward high-performing segments after validating results across sufficient sample sizes"
+        },
+        {
+          "id": "pc-dashboards",
+          "text": "Built reporting dashboards joining ad platform data with CRM data, giving stakeholders a clear view of campaign performance and budget efficiency"
+        },
+        {
+          "id": "pc-geo-campaigns",
+          "text": "Executed geo-targeted campaigns across 200+ Dubai localities with tailored, bilingual creative, driving more qualified conversions in specific service areas",
+          "figures": [
+            "200+ localities"
+          ]
+        },
+        {
+          "id": "pc-email-funnel",
+          "text": "Built a content marketing funnel with email automation segmenting prospects by engagement level, moving them toward conversion"
+        },
+        {
+          "id": "pc-crm",
+          "text": "Built an internal WordPress booking and billing CRM, cutting appointment scheduling time 75%",
+          "figures": [
+            "75%"
+          ]
+        },
+        {
+          "id": "pc-requirements",
+          "text": "Gathered booking and billing workflow requirements with sales and operations staff before building that CRM",
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "pc-brand",
+          "text": "Developed brand identity and editorial voice from scratch across all marketing channels, and designed print, web, and social content in-house"
+        },
+        {
+          "id": "pc-reporting",
+          "text": "Presented funnel KPIs and performance reports with actionable recommendations to technical and non-technical stakeholders"
+        },
+        {
+          "id": "pc-sales-training",
+          "text": "Trained customer service and business development staff on upselling, cross-selling, and pitching service packages, translating campaign messaging into the sales conversation",
+          "confirmed": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "id": "brandwise",
+      "employer": "Brandwise Media & Marketing",
+      "location": "Dubai, UAE",
+      "start": "2020-09",
+      "end": "2022-01",
+      "title": "Digital Marketing & Performance Manager",
+      "context": "Agency serving 15-20 concurrent B2B and B2C client accounts",
+      "counts_toward_tenure": true,
+      "facts": [
+        {
+          "id": "bw-media-spend",
+          "text": "Managed USD 272,000 in cumulative paid search and paid social spend across 15-20 client accounts, allocating budgets on funnel performance, attribution insight, and keyword-level data",
+          "figures": [
+            "$272K",
+            "15-20 accounts"
+          ]
+        },
+        {
+          "id": "bw-roas",
+          "text": "Delivered 189% average ROAS across conversion campaigns using negative keyword lists and continuous bid optimization to cut wasted spend",
+          "figures": [
+            "189%"
+          ]
+        },
+        {
+          "id": "bw-ctr",
+          "text": "Lifted campaign click-through rate from 11% to 43% through structured creative and audience testing, setting success thresholds before scaling and adjusting bids on quality score data",
+          "figures": [
+            "11%",
+            "43%"
+          ]
+        },
+        {
+          "id": "bw-lead-quality",
+          "text": "Improved lead quality 30%, measured by sales-qualified lead rate, by redesigning full-funnel acquisition, refining segmentation to reach decision-makers and C-level buyers, and aligning messaging with buyer intent",
+          "figures": [
+            "30%"
+          ]
+        },
+        {
+          "id": "bw-retention",
+          "text": "Increased client retention 100% year over year by proposing forward roadmaps in the final month of each contract",
+          "figures": [
+            "100%"
+          ]
+        },
+        {
+          "id": "bw-paid-capability",
+          "text": "Built the agency's first paid media capability from zero: before this role the agency sold organic social media management only. Established the paid service line across paid search and paid social, retargeting, budget optimization, and CRO, then trained the wider team to deliver it and taught business development how to pitch and price it",
+          "confirmed": "2026-09-22"
+        },
+        {
+          "id": "bw-division",
+          "text": "Built the agency's digital marketing division from scratch: service portfolio (social media management, SEO, SMM, paid search and paid social, retargeting, CRO, web development, app development), prospecting, and training sales staff to pitch it"
+        },
+        {
+          "id": "bw-hiring",
+          "text": "Hired 2 marketers into the division, defining the roles, selecting the candidates, and onboarding them onto campaign setup and optimization workflows",
+          "figures": [
+            "2 marketers"
+          ],
+          "confirmed": "2026-09-22"
+        },
+        {
+          "id": "bw-mentoring",
+          "text": "Mentored 3 junior marketers on campaign setup, bidding, and optimization workflows",
+          "figures": [
+            "3 junior marketers"
+          ]
+        },
+        {
+          "id": "bw-creative-bench",
+          "text": "Managed photographers, designers, copywriters, SEO specialists, and models, directing social posts, ads, blogs, and product copy, while performing each of those functions when the bench was thin"
+        },
+        {
+          "id": "bw-testing-roadmaps",
+          "text": "Defined testing roadmaps for creative, targeting, and funnel structure with pre-set success thresholds guiding optimization and budget reallocation"
+        },
+        {
+          "id": "bw-websites",
+          "text": "Shipped 12 WordPress websites across e-commerce, travel and hospitality, F&B, retail, B2B corporate, and education technology, scoping each client's requirements and running each site from discovery through go-live",
+          "figures": [
+            "12 websites"
+          ],
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "bw-client-onboarding",
+          "text": "Ran kickoff and onboarding for new clients, including an audit of each account's tracking and ad setup",
+          "confirmed": "2026-09-28"
+        },
+        {
+          "id": "bw-inquiries",
+          "text": "Increased inquiries 45% and conversion to client 68% after the first consultation call",
+          "figures": [
+            "45%",
+            "68%"
+          ]
+        },
+        {
+          "id": "bw-pitch-portfolio",
+          "text": "Developed a marketing portfolio in Adobe Photoshop that won the agency three new client contracts",
+          "figures": [
+            "three new client contracts"
+          ]
+        },
+        {
+          "id": "bw-client-liaison",
+          "text": "Acted as primary liaison between clients, internal execution teams, and external partners, translating performance data into recommendations for technical and non-technical stakeholders"
+        },
+        {
+          "id": "bw-client-reports",
+          "text": "Delivered performance reports covering wins, improvement areas, roadmaps, and new campaign ideas to every client"
+        },
+        {
+          "id": "bw-client-food-crowd",
+          "scope": "Food Crowd",
+          "text": "Food Crowd (e-commerce grocery): rebuilt content strategy and funnel, launched stage-specific paid campaigns, produced video for an influencer box product line. CPA $2.66, AOV $49.52, ROAS 18.6, orders up 67%, revenue up 42%. Ranked them on Google page one for highly competitive keywords within 9 months through SEO",
+          "figures": [
+            "$2.66",
+            "$49.52",
+            "18.6x",
+            "67%",
+            "42%",
+            "9 months"
+          ]
+        },
+        {
+          "id": "bw-client-bagason",
+          "scope": "Bagason Industries",
+          "text": "Bagason Industries (FMCG): brand awareness campaigns across local supermarkets plus micro-influencer PR kits, driving 225% brand recall over a 12-month cycle, measured in Meta Ads Manager campaign reports",
+          "figures": [
+            "225%",
+            "12-month"
+          ]
+        },
+        {
+          "id": "bw-client-robostores",
+          "scope": "Robostores",
+          "text": "Robostores (B2B e-commerce fulfillment): lead generation on Meta and LinkedIn, content strategy with blogs and lead magnets, website redesign. Lead quality up 22%, measured by consultation meetings booked",
+          "figures": [
+            "22%"
+          ]
+        },
+        {
+          "id": "bw-client-j5-hotels",
+          "scope": "J5 Hotels",
+          "text": "J5 Hotels (hospitality): first website with online booking, cinematic photo and video content, social channel launch on Facebook, Instagram, and YouTube. Website CTR 77% at launch through targeted A/B testing",
+          "figures": [
+            "77%"
+          ]
+        },
+        {
+          "id": "bw-client-fnb-portfolio",
+          "text": "F&B and hospitality portfolio: organic social, paid social, content, and conversion campaigns for Forever Rose Cafe, Machu Picchu Restaurant, Late Lounge Cafe, Around Eleven Cafe, Lucerne Restaurant Abu Dhabi"
+        }
+      ]
+    },
+    {
+      "id": "al-aaraf",
+      "employer": "Al Aaraf Jewelers",
+      "location": "Dubai, UAE",
+      "start": "2019-03",
+      "end": "2020-06",
+      "title": "E-Commerce Marketing Manager",
+      "context": "Newly launched direct-to-consumer e-commerce jewelry brand (luxury retail)",
+      "counts_toward_tenure": true,
+      "facts": [
+        {
+          "id": "aa-team",
+          "text": "Sole owner of the entire marketing function for the brand, with no reports and no hires"
+        },
+        {
+          "id": "aa-online-sales",
+          "text": "Increased online sales 134% against the pre-launch baseline by implementing performance tracking and running structured A/B tests across landing pages and checkout flows alongside paid media targeting",
+          "figures": [
+            "134%"
+          ]
+        },
+        {
+          "id": "aa-seo",
+          "text": "Achieved first-page Google rankings for high-competition keywords within 6 months through technical and content SEO informed by keyword research and performance data",
+          "figures": [
+            "6 months"
+          ]
+        },
+        {
+          "id": "aa-footfall",
+          "text": "Increased offline store footfall 39% during off-peak seasons through geo-targeted, bilingual paid campaigns in premium locations, measured through location-based lift analysis",
+          "figures": [
+            "39%"
+          ]
+        },
+        {
+          "id": "aa-storefront",
+          "text": "Built the brand's first e-commerce storefront on Magento, enabling online sales"
+        },
+        {
+          "id": "aa-acquisition",
+          "text": "Owned customer acquisition strategy, paid media activation, campaign reporting, and funnel optimization for the brand"
+        },
+        {
+          "id": "aa-content",
+          "text": "Owned CMS, blog, email, and social content for the brand"
+        },
+        {
+          "id": "aa-photography",
+          "text": "Conducted product photography for listings and social content, and developed the product portfolio in Adobe Photoshop"
+        },
+        {
+          "id": "aa-ops-coordination",
+          "text": "Coordinated shipping providers, payment gateways, and customer service staff to deliver a seamless customer experience"
+        },
+        {
+          "id": "aa-expansion",
+          "text": "Developed regional expansion plans across MENA, starting with Saudi Arabia and Qatar, modeling opportunity from category and demand"
+        }
+      ]
+    },
+    {
+      "id": "alcium",
+      "employer": "Alcium Software Ltd",
+      "location": "Sheffield, UK",
+      "start": "2018-06",
+      "end": "2018-12",
+      "title": "Web Developer (Intern)",
+      "counts_toward_tenure": true,
+      "facts": [
+        {
+          "id": "al-graph-api",
+          "text": "Integrated the Microsoft Graph API into a CRM in C#, syncing Outlook calendar and email so users managed communications inside the system"
+        },
+        {
+          "id": "al-search",
+          "text": "Rebuilt the CRM search algorithm on Google-style indexing for faster, more accurate record lookups"
+        },
+        {
+          "id": "al-crm-features",
+          "text": "Improved CRM features for real estate and government clients, speeding data entry and reducing bugs"
+        },
+        {
+          "id": "al-sdlc",
+          "text": "Maintained change documentation under SDLC and Agile practice"
+        },
+        {
+          "id": "al-stack",
+          "text": "Stack: .NET, C#, SQL, Python"
+        }
+      ]
+    }
+  ],
+  "headline_metrics": [
+    {
+      "id": "hm-media-spend",
+      "label": "Paid media managed",
+      "figures": [
+        "$272K"
+      ],
+      "fact": "bw-media-spend"
+    },
+    {
+      "id": "hm-roas",
+      "label": "Average ROAS",
+      "figures": [
+        "189%"
+      ],
+      "fact": "bw-roas"
+    },
+    {
+      "id": "hm-appointments",
+      "label": "Appointment growth",
+      "figures": [
+        "300%"
+      ],
+      "fact": "pc-appointments"
+    },
+    {
+      "id": "hm-online-sales",
+      "label": "Online sales growth",
+      "figures": [
+        "134%"
+      ],
+      "fact": "aa-online-sales"
+    },
+    {
+      "id": "hm-ctr",
+      "label": "CTR lift",
+      "figures": [
+        "11%",
+        "43%"
+      ],
+      "fact": "bw-ctr"
+    },
+    {
+      "id": "hm-accounts",
+      "label": "Concurrent client accounts",
+      "figures": [
+        "15-20 accounts"
+      ],
+      "fact": "bw-media-spend"
+    }
+  ],
+  "scoped_metrics": [
+    {
+      "id": "sm-food-crowd-roas",
+      "label": "ROAS",
+      "figures": [
+        "18.6x"
+      ],
+      "scope": "Food Crowd",
+      "fact": "bw-client-food-crowd"
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-ms-mis",
+      "degree": "M.S. in Management Information Systems",
+      "institution": "Lamar University",
+      "location": "Beaumont, TX",
+      "start": "2023-01",
+      "end": "2025-12",
+      "coursework": [
+        "Python for Data Analytics",
+        "Business Intelligence",
+        "Data Visualization",
+        "Project Management"
+      ]
+    },
+    {
+      "id": "edu-beng-se",
+      "degree": "B.Eng. in Software Engineering",
+      "institution": "University of Sheffield",
+      "location": "Sheffield, UK",
+      "start": "2015-09",
+      "end": "2019-06"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-hubspot-marketing-hub",
+      "name": "HubSpot Marketing Hub"
+    },
+    {
+      "id": "cert-ga4",
+      "name": "Google Analytics (GA4)"
+    }
+  ],
+  "languages": [
+    {
+      "id": "lang-english",
+      "name": "English"
+    },
+    {
+      "id": "lang-arabic",
+      "name": "Arabic"
+    }
+  ],
+  "banned": [
+    {
+      "id": "money-850k",
+      "patterns": [
+        "\\$\\s?850\\s?K",
+        "\\$\\s?850,000"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "reason": "Unsupported paid media figure. The confirmed figure is $272K (2026-09-22 CV reconciliation)."
+    },
+    {
+      "id": "money-940k",
+      "patterns": [
+        "\\$\\s?940\\s?K",
+        "\\$\\s?940,000"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "reason": "Unsupported paid media figure. The confirmed figure is $272K."
+    },
+    {
+      "id": "tenure-6-years",
+      "patterns": [
+        "\\b(6|six)\\s*\\+?\\s*(years|yrs)\\b"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "reason": "The tenure claim is \"5 years\" (decided 2026-10-01)."
+    },
+    {
+      "id": "roas-18-6-unscoped",
+      "patterns": [
+        "\\b18\\.6\\s*x?"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "requires_context": "Food Crowd",
+      "reason": "18.6x ROAS was a single client's result and may appear only next to Food Crowd."
+    },
+    {
+      "id": "seven-figure-budgets",
+      "patterns": [
+        "\\b(seven|7)[- ]figure"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "reason": "The paid media ceiling is $272K cumulative across 15-20 accounts."
+    },
+    {
+      "id": "unverified-certifications",
+      "patterns": [
+        "\\bMeta Blueprint\\b",
+        "\\bGoogle Ad Manager Fundamentals\\b",
+        "\\bGoogle Ads\\s+(Search\\s+|Display\\s+)?certifi"
+      ],
+      "flags": "i",
+      "applies_to": "all",
+      "reason": "Not verified as held. Only HubSpot Marketing Hub and Google Analytics (GA4) are claimable."
+    },
+    {
+      "id": "titles-above-manager",
+      "patterns": [
+        "\\bDirector\\b",
+        "\\bHead\\b",
+        "\\bVP\\b",
+        "\\bVice President\\b",
+        "\\bLead\\b",
+        "\\bChief\\b"
+      ],
+      "flags": "i",
+      "applies_to": "titles",
+      "reason": "No shipped title is above Manager. The ceiling is the scale of the teams and budgets."
+    },
+    {
+      "id": "wellborn-paid-media-titles",
+      "patterns": [
+        "\\bPaid Media\\b",
+        "\\bPerformance Marketing\\b",
+        "\\bPPC\\b",
+        "\\bMedia Buy"
+      ],
+      "flags": "i",
+      "applies_to": "titles",
+      "role": "wellborn",
+      "reason": "No ad spend was managed at Wellborn, so its title is never a paid media or campaign title."
+    }
+  ],
+  "not_stated": [
+    {
+      "id": "work-authorization",
+      "topic": "Work authorization, visa status, and sponsorship",
+      "patterns": [
+        "\\bwork authori[sz]ation\\b",
+        "\\bauthori[sz]ed to work\\b",
+        "\\bvisa\\b",
+        "\\bsponsorship\\b",
+        "\\bH-?1B\\b",
+        "\\bgreen card\\b",
+        "\\bOptional Practical Training\\b",
+        "\\bSTEM OPT\\b",
+        "\\bpermanent resident\\b",
+        "\\bU\\.?S\\.? citizen"
+      ],
+      "flags": "i",
+      "reason": "Not stated anywhere (decided 2026-10-01)."
+    }
+  ],
+  "limits": []
+}

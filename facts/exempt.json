@@ -1,0 +1,8 @@
+[
+  {
+    "file": "site/colophon.html",
+    "figure": "40%",
+    "context": "Section ≥40% visible",
+    "reason": "Trigger threshold in the section_view event definition; describes the site's tracking, not a career result."
+  }
+]

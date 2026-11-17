@@ -29,6 +29,7 @@ Exit code is non-zero if any test fails, so it drops straight into CI.
 | `schema.test.mjs` | dataLayer event schema is consistent across `main.js` (EXPLAIN + push sites), the colophon table, and the `llms.txt` count |
 | `seo.test.mjs` | `sitemap.xml`, `llms.txt`, `robots.txt`, `resume.json` parse, are consistent, and only point at files that exist |
 | `behavior.test.mjs` | Loads `main.js` in a minimal DOM stub: boots without throwing, consent gates the dataLayer, the CAC/ROAS calculator math is correct |
+| `facts.test.mjs` | Career claims agree with the pinned `facts/facts.public.json`: every money/%/Nx figure belongs to the role it describes (or is in `facts/exempt.json`), no banned or not-stated pattern, `resume.json` titles and dates, the "5 years" claim |
 
 ## How the behavior tests work
 
