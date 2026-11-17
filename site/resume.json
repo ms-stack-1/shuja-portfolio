@@ -2,13 +2,21 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
   "basics": {
     "name": "Muhammad Shuja",
-    "label": "Performance Marketer & Growth Analyst",
+    "label": "Digital and Performance Marketer",
     "email": "mshujasiddiq@gmail.com",
     "phone": "+1 (832) 342-8959",
-    "summary": "Performance marketer and growth analyst with 5 years across paid media, marketing analytics, marketing operations, and AI automation. $272K cumulative paid media managed across 15-20 client accounts; 189% average client ROAS; built an agency's first paid media capability and digital division from zero; currently applying analyst rigor to a full P&L with AI-automated operations. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
-    "location": { "city": "College Station", "region": "TX", "countryCode": "US" },
+    "summary": "Digital and performance marketer with 5 years across paid search, paid social, SEO, e-commerce growth and lifecycle marketing, spanning agency work for B2B and B2C clients (including direct-to-consumer e-commerce) and in-house healthcare marketing. Managed about $272K in combined monthly client ad spend across 20-25 concurrent paid accounts; built an agency's first paid media capability from zero; now runs marketing operations and AI automation for a 3-location retail group. Engineer's training (B.Eng. Software Engineering), analyst's toolkit (M.S. MIS), marketer's track record.",
+    "location": {
+      "city": "College Station",
+      "region": "TX",
+      "countryCode": "US"
+    },
     "profiles": [
-      { "network": "LinkedIn", "username": "mshujasid", "url": "https://linkedin.com/in/mshujasid" }
+      {
+        "network": "LinkedIn",
+        "username": "mshujasid",
+        "url": "https://linkedin.com/in/mshujasid"
+      }
     ]
   },
   "work": [
@@ -18,13 +26,13 @@
       "startDate": "2026-02",
       "summary": "Multi-unit retail group, 3 locations, 14 staff; reporting directly to ownership.",
       "highlights": [
-        "Built AI-enabled operations system (Claude API, Zapier, Make, Slack interface) replacing 4 roles and cutting $120K in annual payroll",
-        "Automated daily close for real-time P&L visibility; bank reconciliation 20 hrs/week to fully automated with full discrepancy accountability",
-        "Scheduling 4 hrs to 10 min weekly with zero conflicts; payroll 2 hrs to 10 min with zero timecard disputes; reporting 2 hrs/location to 15 min total",
-        "Query 60K+ monthly transactions in SQL to surface margin leaks and variance by location and employee",
-        "Demand forecasting model: zero stockouts including through a regional supply shortage",
-        "Grew highest-margin in-store foodservice line from $800 to $1,500/day (+87%) via menu redesign, staff training, promotional activation",
-        "Raised brand compliance audit scores from 60-65% to 99% across all locations; maintain 99% automation reliability"
+        "Launched Meta and Google advertising from scratch across 3 locations, about $20K a month in actual spend; at unchanged $12,000 Meta spend, cost per recorded outcome fell from $28.57 to $20.00 (Aug to Sep 2026)",
+        "Built an AI-enabled operations platform (Claude API, Zapier/Make, Node.js, SQL, Slack interface) for 3 sites and 14 users, enabling about $105K in annualized wage reductions",
+        "Claude-assisted reconciliation across 6 bank accounts cleared a 9-month backlog in 1 week; flagged entries verified by hand",
+        "Cut daily reporting from 2 hours per site to 15 minutes across all 3, and multi-location KPI tracking from about 6 hours a day to 45 minutes",
+        "Analyze 60K+ monthly POS sales transactions in SQL to inform purchasing, pricing and site-level decisions; sales-based replenishment for about 150 items per store",
+        "Relaunched an in-house food brand, lifting daily revenue 87% (about $800 to $1,500); cut Store 1 discarded food from about $100 to $10 a day at retail value",
+        "Raised brand compliance audit scores from 60-65% to 99% across 3 locations"
       ]
     },
     {
@@ -34,40 +42,29 @@
       "endDate": "2022-12",
       "summary": "Sole marketer for an at-home healthcare booking platform.",
       "highlights": [
-        "Grew online appointments +300% in 12 months via end-to-end paid search and paid social management",
-        "Built a lead-scoring model routing qualified inquiries to the booking team",
-        "Repeat customer rate +37%; email nurture segmented by engagement level",
-        "Geo-targeted campaigns across 200+ localities; built internal WordPress CRM cutting appointment scheduling time 75%",
+        "Sole owner of the marketing function; managed about $15K a month in Google and Meta spend",
+        "Grew online appointments 300% over 2022 through Meta, Google and retargeting",
+        "Cut paid-media CAC from $105 to $75 at the same monthly spend (Feb-Mar vs Oct-Nov 2022), with CRM-verified, deduplicated customer attribution",
+        "Randomized booking-form A/B test raised inquiry conversion from 6.0% to 9.0% (2,000 visitors per arm)",
+        "37% increase in repeat paid-booking frequency per eligible existing customer (1.50 to 2.055)",
+        "Geo-targeted campaigns across 200+ localities; built an internal WordPress booking and billing CRM cutting appointment scheduling time 75%",
         "Developed brand identity and produced print, web, and social content in-house"
       ]
     },
     {
-      "name": "Brandwise Media (Dubai)",
+      "name": "Brandwise Media & Marketing (Dubai)",
       "position": "Digital Marketing & Performance Manager",
-      "startDate": "2020-09",
-      "endDate": "2022-01",
-      "summary": "Built the agency's digital division from zero.",
-      "highlights": [
-        "Scaled to 15-20 B2B/B2C accounts with $272K cumulative managed media; 189% average client ROAS",
-        "Controlled testing program lifted average CTR from 11% to 43%",
-        "Full-funnel redesign raised sales-qualified lead rate +30%, inquiries +45%, consultation-to-client conversion +68%, retention +100%",
-        "Shipped 12 websites across e-commerce, hospitality, F&B, B2B, edtech; led photographers, designers, writers, SEO specialists",
-        "Food Crowd (D2C grocery): funnel rebuild with stage-specific campaigns, GA4 data-driven attribution, lifecycle email: ROAS 18.6x, CPA $2.66, AOV $49.52, orders +67%, revenue +42%",
-        "Client results: Bagason Industries +225% brand recall; Robostores +22% lead quality; J5 Hotels 77% launch CTR"
-      ]
-    },
-    {
-      "name": "Al Aaraf Jewelers (Dubai)",
-      "position": "E-Commerce Marketing Manager",
       "startDate": "2019-03",
-      "endDate": "2020-06",
-      "summary": "Zero-to-one e-commerce launch for a luxury jewelry retailer.",
+      "endDate": "2022-12",
+      "summary": "Built the agency's first paid media capability and digital division from zero; 25-30-client portfolio.",
       "highlights": [
-        "Built the company's first e-commerce store on Magento: catalog, payments, shipping integrations",
-        "Online sales +134% vs pre-launch baseline; page-one rankings on high-competition keywords within 6 months",
-        "Bilingual (EN/AR) geo-targeted campaigns lifted off-peak store footfall +39%",
-        "Owned CMS, blog, email, and social content for the brand",
-        "Developed MENA expansion plans for Saudi Arabia and Qatar"
+        "Managed about $272K in combined monthly client ad spend (peaks near $320K) across 20-25 concurrent paid accounts, execution shared with the team",
+        "Hired 2 marketers into the division and mentored 3 junior marketers; trained business development to pitch and price paid media",
+        "Shipped 12 WordPress websites across e-commerce, travel and hospitality, F&B, retail, B2B corporate and edtech",
+        "Food Crowd (e-commerce grocery): 18.6x ROAS, $2.66 per attributed order, $49.52 AOV (Aug-Sep 2021); orders +67%, revenue +42% vs May-Jun",
+        "J5 Hotels: Meta link CTR 1.1% to 4.3% with room-specific creative and video",
+        "Robostores: lead-to-meeting rate 25% to 30.5% (+22% relative) at unchanged spend",
+        "Al Aaraf Jewelers (2019-20, sole marketer): built the first Magento store; digitally originated revenue +134%; eight keywords on Google page one in 6 months; off-peak showroom visits +39% year over year"
       ]
     },
     {
@@ -90,23 +87,123 @@
       "endDate": "2025-12"
     },
     {
-      "institution": "The University of Sheffield",
+      "institution": "University of Sheffield",
       "area": "Software Engineering",
       "studyType": "B.Eng.",
-      "endDate": "2019-06"
+      "endDate": "2019-06",
+      "startDate": "2015-09"
     }
   ],
   "skills": [
-    { "name": "Paid Media & Growth", "keywords": ["Meta Ads", "Google Ads", "Paid Search", "Paid Social", "Retargeting", "Bid Management", "Budget Pacing", "Negative Keywords", "Geo-targeting", "CAC/LTV Modeling", "ROAS Optimization", "A/B Testing", "Incrementality Testing"] },
-    { "name": "Analytics & Measurement", "keywords": ["GA4", "Google Tag Manager", "Google Search Console", "SQL", "Python", "Tableau", "Power BI", "Looker Studio", "Attribution Modeling", "UTM Governance", "Funnel Analysis", "Cohort Analysis", "Forecasting"] },
-    { "name": "Marketing Operations & Automation", "keywords": ["HubSpot", "Salesforce", "Klaviyo", "Mailchimp", "Lead Scoring", "Lifecycle Design", "MQL/SQL Architecture", "Email Automation", "Data Hygiene", "Claude API", "Zapier", "Make", "n8n", "Segment/CDP"] },
-    { "name": "Web, Content & Brand", "keywords": ["WordPress", "Magento", "HTML/CSS", "Technical SEO", "Content SEO", "CRO", "Adobe Photoshop", "Adobe After Effects", "Adobe Premiere Pro", "Product Photography", "Content Strategy", "Brand Systems", "C#/.NET"] },
-    { "name": "AI Tools", "keywords": ["Claude API", "Claude Code", "Claude Design", "Codex", "Cursor AI", "AI-powered workflows", "Subagents", "Token optimization"] }
+    {
+      "name": "Paid Media & Growth",
+      "keywords": [
+        "Meta Ads",
+        "Google Ads",
+        "Paid Search",
+        "Paid Social",
+        "Retargeting",
+        "Bid Management",
+        "Budget Pacing",
+        "Negative Keywords",
+        "Geo-targeting",
+        "CAC/LTV Modeling",
+        "ROAS Optimization",
+        "A/B Testing",
+        "Incrementality Testing"
+      ]
+    },
+    {
+      "name": "Analytics & Measurement",
+      "keywords": [
+        "GA4",
+        "Google Tag Manager",
+        "Google Search Console",
+        "SQL",
+        "Python",
+        "Tableau",
+        "Power BI",
+        "Looker Studio",
+        "Attribution Modeling",
+        "UTM Governance",
+        "Funnel Analysis",
+        "Cohort Analysis",
+        "Forecasting"
+      ]
+    },
+    {
+      "name": "Marketing Operations & Automation",
+      "keywords": [
+        "HubSpot",
+        "Salesforce",
+        "Klaviyo",
+        "Mailchimp",
+        "Lead Scoring",
+        "Lifecycle Design",
+        "MQL/SQL Architecture",
+        "Email Automation",
+        "Data Hygiene",
+        "Claude API",
+        "Zapier",
+        "Make",
+        "n8n",
+        "Segment/CDP"
+      ]
+    },
+    {
+      "name": "Web, Content & Brand",
+      "keywords": [
+        "WordPress",
+        "Magento",
+        "HTML/CSS",
+        "Technical SEO",
+        "Content SEO",
+        "CRO",
+        "Adobe Photoshop",
+        "Adobe After Effects",
+        "Adobe Premiere Pro",
+        "Product Photography",
+        "Content Strategy",
+        "Brand Systems",
+        "C#/.NET"
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "keywords": [
+        "Claude API",
+        "Claude Code",
+        "Claude Design",
+        "Codex",
+        "Cursor AI",
+        "AI-powered workflows",
+        "Subagents",
+        "Token optimization"
+      ]
+    }
   ],
   "languages": [
-    { "language": "English", "fluency": "Native or bilingual" },
-    { "language": "Urdu", "fluency": "Native or bilingual" },
-    { "language": "Arabic", "fluency": "Professional working" }
+    {
+      "language": "English"
+    },
+    {
+      "language": "Arabic"
+    }
   ],
-  "meta": { "canonical": "https://shuja-portfolio-site.pages.dev/resume.json", "version": "1.0", "lastModified": "2026-10-01" }
+  "meta": {
+    "canonical": "https://shuja-portfolio-site.pages.dev/resume.json",
+    "version": "1.0",
+    "lastModified": "2026-11-17",
+    "facts": "2026.11.5"
+  },
+  "certificates": [
+    {
+      "name": "HubSpot Marketing Hub",
+      "issuer": "HubSpot"
+    },
+    {
+      "name": "Google Analytics (GA4)",
+      "issuer": "Google"
+    }
+  ]
 }

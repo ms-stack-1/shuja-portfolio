@@ -82,12 +82,21 @@ for (const r of FACTS.roles)
 /* ---------- roles ---------- */
 
 /* Names a passage can use to point at a role: the employer's short name
-   ("PrimaCare", "Al Aaraf") or a client scoped under it ("Food Crowd"). */
+   ("PrimaCare", "Brandwise"), a client scoped under it ("Food Crowd"), or a
+   client listed in the role's clients[] ("Al Aaraf"). A listed client's
+   scope is the fact scope with the same name, if its facts carry one. */
+const clientName = (name) => name.replace(/\(.*?\)/g, "").trim();
 const NAMES = FACTS.roles.flatMap((r) => {
   const words = r.employer.split(/\s+/);
   const short = words[0].length <= 3 ? words.slice(0, 2).join(" ") : words[0];
-  const clients = [...new Set((r.facts || []).map((f) => f.scope).filter(Boolean))];
-  return [{ label: short, role: r.id, scope: null }, ...clients.map((c) => ({ label: c, role: r.id, scope: c }))];
+  const scopes = [...new Set((r.facts || []).map((f) => f.scope).filter(Boolean))];
+  const listed = (r.clients || []).map((c) => {
+    const full = clientName(c.name);
+    const scope = scopes.find((s) => s.toLowerCase() === full.toLowerCase()) || null;
+    return { label: full.split(/\s+/).slice(0, 2).join(" "), role: r.id, scope };
+  });
+  const names = [{ label: short, role: r.id, scope: null }, ...scopes.map((c) => ({ label: c, role: r.id, scope: c })), ...listed];
+  return names.filter((n, i) => names.findIndex((m) => m.label.toLowerCase() === n.label.toLowerCase()) === i);
 });
 
 /* The role and client a passage speaks about: what it names, when it names
@@ -127,11 +136,14 @@ function roleForEmployer(name) {
 
 /* A case-study slug is a role id, or a client scoped under one ("food-crowd"). */
 function pageOwner(slug) {
+  if (!slug) return { role: null, scope: null };
   const words = slug.replace(/-/g, " ");
   for (const r of FACTS.roles) {
     if (r.id === slug) return { role: r.id, scope: null };
     const f = (r.facts || []).find((f) => f.scope && f.scope.toLowerCase() === words);
     if (f) return { role: r.id, scope: f.scope };
+    const c = (r.clients || []).find((c) => clientName(c.name).toLowerCase().startsWith(words));
+    if (c) return { role: r.id, scope: NAMES.find((n) => n.role === r.id && n.label.toLowerCase() === words)?.scope || null };
   }
   return { role: null, scope: null };
 }

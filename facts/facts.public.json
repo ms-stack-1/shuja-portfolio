@@ -1,11 +1,11 @@
 {
-  "version": "2026.10.0",
+  "version": "2026.11.5",
   "audience": "public",
-  "source_sha256": "4c3de6cb2de0dfbb251d6545472d16599dd34f8ef245ad017ed94657ffb6c8d6",
+  "source_sha256": "c975d3f21c5f050d1c7528c14428a7678d28813a79c0c1f968c1005b741b0177",
   "identity": {
     "name": "Muhammad Shuja",
     "headline": "Digital and performance marketer",
-    "summary": "Digital and performance marketer, 5 years across paid search, paid social, SEO, e-commerce growth, and lifecycle marketing, spanning agency (B2B and B2C client portfolios), in-house healthcare, and direct-to-consumer e-commerce.",
+    "summary": "Digital and performance marketer, 5 years across paid search, paid social, SEO, e-commerce growth, and lifecycle marketing, spanning agency (B2B and B2C client portfolios, including direct-to-consumer e-commerce clients) and in-house healthcare marketing.",
     "location": "College Station, TX",
     "availability": "Open to relocation anywhere in the US and to remote",
     "email": "mshujasiddiq@gmail.com",
@@ -50,13 +50,47 @@
       "counts_toward_tenure": true,
       "facts": [
         {
-          "id": "wb-ops-platform",
-          "text": "Built an AI-enabled operations platform (Claude API, Zapier/Make, Node.js, SQL, Slack interface) serving 3 sites and 14 users, reducing annual payroll cost by $120K by automating manual administrative workflows",
+          "id": "wb-role-scope",
+          "text": "Owned paid media and operational automation across 3 retail locations, combining acquisition campaigns, promotional communications, financial reporting and inventory controls",
           "figures": [
-            "$120K",
+            "3 locations"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-paid-media",
+          "text": "Launched Meta and Google advertising from scratch across 3 retail locations, managing approximately $20K in monthly actual spend: $12K on Meta and $8K on Google; the allocated monthly ceiling was $45K, not actual spend",
+          "figures": [
+            "$20K",
+            "$12K",
+            "$8K",
+            "$45K",
+            "3 locations"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-campaign-testing",
+          "text": "Tested promotional offers, product creatives, campaign objectives and audience strategies; refined search terms and negative keywords, worked on Google Business Profile, and manually reviewed all generated content. These activities do not establish a controlled experiment or quantified campaign lift",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-email-automation",
+          "text": "Built a Zapier-to-Mailchimp integration that automatically populated daily promotional emails from CSV extracts for 15,000 subscribed and marketable contacts; no measured opens, clicks, redemptions or attributed revenue are established",
+          "figures": [
+            "15,000 contacts"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-ops-platform",
+          "text": "Built an AI-enabled operations platform (Claude API, Zapier/Make, Node.js, SQL, Slack interface) serving 3 sites and 14 users, enabling approximately $105K in annualized wage reductions by automating reconciliation, reporting, scheduling, purchasing support and administrative coordination",
+          "figures": [
+            "$105K",
             "3 sites",
             "14 users"
-          ]
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-slack-workflows",
@@ -66,12 +100,25 @@
           ]
         },
         {
+          "id": "wb-file-integration",
+          "text": "Designed file-based integrations around Modisoft having no API; after browser-agent navigation proved fragile to UI changes, trained shift cashiers to export daily CSV records and upload them to designated Google Drive folders with standardized naming conventions for Make workflows",
+          "confirmed": "2026-10-25"
+        },
+        {
           "id": "wb-reconciliation",
-          "text": "Automated financial reconciliation with the Claude API, recovering 20 hours per week and clearing a nine-month backlog in a single week, with schema validation so no malformed AI output reached the database",
+          "text": "Built Claude-assisted reconciliation workflows across 6 bank accounts, matching bank statements with Modisoft deposits, purchases, expenses, card settlements and internal transfers. Flagged spreadsheets are manually verified before missing entries are added or duplicates deleted; the assistant previously spent 20 hours per week on reconciliation. Existing backlog result: cleared a 9-month backlog in 1 week",
           "figures": [
+            "6 accounts",
             "20 hours per week",
-            "nine-month backlog"
-          ]
+            "9-month backlog",
+            "1 week"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-source-verification",
+          "text": "Incorporated uploaded Veeder-Root reports into operational reporting workflows to identify discrepancies and support human verification against source figures",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-daily-reporting",
@@ -91,18 +138,88 @@
         },
         {
           "id": "wb-transaction-analysis",
-          "text": "Analyzed 60K+ monthly transactions in SQL to surface margin leakage and site-level performance gaps, informing pricing decisions",
+          "text": "Analyzed 60K+ monthly POS sales transactions in SQL to inform purchasing, pricing and site-level performance decisions; this is a separate dataset from bank-statement entries reconciled",
           "figures": [
-            "60K+ monthly transactions"
-          ]
+            "60K+ monthly POS sales transactions"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-forecasting",
+          "text": "Launched sales-based replenishment in May 2026 for approximately 150 items per store across 3 stores (approximately 450 item-store combinations), comparing live stock with trailing 7-, 15- and 30-day sales and prioritizing urgent items. Slack delivers Tuesday spreadsheets showing current stock and recommended quantities; shift staff place orders manually",
+          "figures": [
+            "150 items",
+            "3 stores",
+            "450 item-store combinations",
+            "7-",
+            "15-",
+            "30-day"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-pricing-engine",
-          "text": "Built a Claude-powered pricing engine recommending retail price adjustments from real-time cost fluctuations, run as a proof of concept justified by the 60K+ transaction margin analysis",
+          "text": "Deployed purchase-price monitoring and suggested retail repricing in June 2026: compared each purchase record with the previous one, flagged supplier cost fluctuations, and proposed retail adjustments. After human approval, Slack sends the UPC and approved price for cashiers to enter manually; this is live workflow use, not only a proof of concept",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-purchase-spread",
+          "text": "Helped improve the inside-store sales-to-supplier-purchases spread from approximately 30% to 45%, sustained since July 2026, through tighter replenishment controls and timely retail repricing. Formula: (total sales minus total supplier purchases) divided by total sales. Purchases are period supplier purchases, not inventory-adjusted cost of goods sold; this is not gross margin or profit",
           "figures": [
-            "60K+ transactions"
+            "30%",
+            "45%"
           ],
-          "confirmed": "2026-09-28"
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-tobacco-category",
+          "text": "Owns ordering, pricing and category management for the tobacco category across 3 stores, working with the manufacturers Altria, RJR, Swedish Match and ITG, and liaises with manufacturer reps to update promotional signage so customers see current promotions",
+          "figures": [
+            "3 stores"
+          ],
+          "confirmed": "2026-11-03"
+        },
+        {
+          "id": "wb-manufacturer-rebates",
+          "text": "Manages manufacturer rebate programs earned through both volume and price/promotion requirements, including shelf-coverage policies, and tracks and verifies payouts through the automated reconciliation process. Altria rebates alone average approximately $8,000 per month across 3 stores, up from under $5,000 per month since he took over in February 2026. User-stated; the rise is not attributed to any single cause",
+          "figures": [
+            "$8,000 per month",
+            "$5,000 per month",
+            "3 stores"
+          ],
+          "confirmed": "2026-11-03"
+        },
+        {
+          "id": "wb-rebate-ordering",
+          "text": "Orders ahead for future weeks or months when higher-rebate programs are active, setting quantities from past purchase history, sales forecast and manufacturer-rep insight, and deliberately holds higher stock while reducing ordering in later periods. Order adjustments were manual from February 2026; he then built an AI workflow that suggests order quantities, now running in production",
+          "confirmed": "2026-11-03"
+        },
+        {
+          "id": "wb-kitchen-preparation",
+          "text": "Built Slack-based kitchen preparation schedules for Store 1 using trailing 30-, 60- and 90-day sales averages to recommend item quantities and cooking times to the head chef, replacing fixed daily quantities",
+          "figures": [
+            "Store 1",
+            "30-",
+            "60-",
+            "90-day"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-food-waste",
+          "text": "Reduced Store 1 average daily discarded food from approximately $100 to $10 at retail value, a 90% reduction reached by July 2026, by guiding preparation quantities and times from historical sales. Waste was counted by discarded item quantities times selling prices; retail value is not ingredient-cost or cash savings",
+          "figures": [
+            "Store 1",
+            "$100",
+            "$10",
+            "90%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-task-delegation",
+          "text": "Built Slack-integrated task-delegation workflows to relay ownership instructions directly to staff and reduce administrative coordination",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-discovery",
@@ -119,27 +236,22 @@
         },
         {
           "id": "wb-documentation",
-          "text": "Documented the automations: runbooks, user guides, and the workflow rules the Slack assistant works from",
-          "confirmed": "2026-09-28"
+          "text": "Documented workflows, runbooks, step-by-step source verification, error correction and recovery procedures for future operators; the candidate currently performs review and the transfer of review responsibility is not yet completed",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-human-in-the-loop",
-          "text": "Built human-in-the-loop review into the AI workflows: output that fails schema validation, and AI drafts, go to a person for review before use",
-          "confirmed": "2026-09-28"
+          "text": "Retained human review of workflow outputs against source records, including correction of wrong numbers and recovery from missing or incorrectly named CSV inputs; flagged reconciliation entries and suggested retail prices require verification/approval before manual changes",
+          "confirmed": "2026-10-25"
         },
         {
-          "id": "wb-reliability",
-          "text": "Sustained 99% reliability across scheduled production automations with retry logic, deduplication, structured logging, and daily monitoring",
+          "id": "wb-workflow-review",
+          "text": "Estimated current weekly effort is approximately 5 hours checking and correcting the workflow suite plus 15 hours improving it, including investigating where Python can replace AI token usage. This split is recalled rather than timed, no token-cost reduction is established, and no measured reliability or accuracy percentage is established",
           "figures": [
-            "99%"
-          ]
-        },
-        {
-          "id": "wb-forecasting",
-          "text": "Built inventory and demand forecasting logic triggering orders days in advance, holding zero stockouts through a regional supply shortage",
-          "figures": [
-            "zero stockouts"
-          ]
+            "5 hours",
+            "15 hours"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-brand-compliance",
@@ -165,7 +277,8 @@
         },
         {
           "id": "wb-ai-content",
-          "text": "Built AI content workflows (research, drafting, editing) using the Claude API"
+          "text": "Built AI content workflows for research, drafting and editing using the Claude API, with manual review of every generated output",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "wb-power-bi",
@@ -178,6 +291,131 @@
             "3 locations",
             "14 staff"
           ]
+        },
+        {
+          "id": "wb-platform-features",
+          "text": "Ran Google Ads Performance Max campaigns and used Meta Advantage+ Audience and Advantage+ Placements in Wellborn paid-media work",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-pmax-configuration",
+          "text": "September 2026 Google structure: 3 store-specific Performance Max campaigns with 2 asset groups each (evergreen messaging and rotating promotions), plus 3 location-specific Search campaigns. Of approximately $8,000 monthly Google spend, $4,800 went to Performance Max and $3,200 to Search. Performance Max used Maximize Conversions with a $4.50 target CPA for local actions; this is a bid target, not purchase CPA",
+          "figures": [
+            "3 store-specific",
+            "2 asset groups",
+            "3 location-specific",
+            "$8,000",
+            "$4,800",
+            "$3,200",
+            "$4.50"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-search-configuration",
+          "text": "Ran local-commercial-intent Google Search campaigns with phrase/exact keywords, employment/unrelated-product/free-offer/informational negatives and store-specific location targeting prioritizing physical presence. Reviewed search terms twice weekly and pacing/conversion performance daily; used Maximize Conversions without a separate Search target CPA",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-pmax-scorecard",
+          "text": "September 2026 Performance Max results across 3 stores: $4,800 spend, 240,000 impressions, 6,000 clicks, 2.50% CTR, $0.80 CPC, 960 directions requests and 240 call clicks, totaling 1,200 reported local actions at $4.00 per action. These are engagement actions, not verified visits, purchases or unique customers; a call click does not establish a connected call",
+          "figures": [
+            "3 stores",
+            "$4,800",
+            "240,000",
+            "6,000",
+            "2.50%",
+            "$0.80",
+            "960",
+            "240",
+            "1,200",
+            "$4.00"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-search-scorecard",
+          "text": "September 2026 Google Search results: $3,200 spend, 80,000 impressions, 4,000 clicks, 5.00% CTR, $0.80 CPC, 480 directions requests and 160 call clicks, totaling 640 reported local actions at $5.00 per action. Direction and call-click totals are reporting metrics, not verified purchases or unique customers",
+          "figures": [
+            "$3,200",
+            "80,000",
+            "4,000",
+            "5.00%",
+            "$0.80",
+            "480",
+            "160",
+            "640",
+            "$5.00"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-meta-configuration",
+          "text": "Ran 3 store-specific Meta campaigns with 6 ad sets (prospecting and remarketing for each store). September $12,000 spend comprised $8,400 prospecting and $3,600 remarketing, allocated $4,500 to Store 1, $4,500 to Store 2 and $3,000 to Store 3. Used Advantage+ Audience with store-specific geographic boundaries/audience suggestions and Advantage+ Placements across eligible Feeds, Stories and Reels; produced static offers, vertical video, store/product imagery and bilingual copy where appropriate. Outcomes were customer conversations and submitted promotional inquiries, not online purchases",
+          "figures": [
+            "3 store-specific",
+            "6 ad sets",
+            "$12,000",
+            "$8,400",
+            "$3,600",
+            "$4,500",
+            "Store 1",
+            "Store 2",
+            "$3,000",
+            "Store 3"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-meta-scorecard",
+          "text": "September 2026 Meta results: $12,000 spend, 1,200,000 impressions, 400,000 reach, 3.0 frequency, $10.00 CPM, 18,000 link clicks, 1.50% link CTR and approximately $0.67 link CPC. Recorded 450 customer-initiated messaging conversations and 150 submitted promotional inquiries, 600 deduplicated outcomes at $20.00 per recorded outcome. Conversations/inquiries are not paying customers or purchase conversions",
+          "figures": [
+            "$12,000",
+            "1,200,000",
+            "400,000",
+            "3.0",
+            "$10.00",
+            "18,000",
+            "1.50%",
+            "$0.67",
+            "450",
+            "150",
+            "600",
+            "$20.00"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-meta-optimization",
+          "text": "Compared August with September 2026 Meta performance at unchanged $12,000 monthly spend and 1,200,000 impressions: link clicks 14,400 to 18,000; link CTR 1.20% to 1.50% (25% relative improvement); link CPC approximately $0.83 to $0.67 (20% reduction using unrounded costs); conversations 300 to 450 and promotional inquiries 120 to 150; total outcomes 420 to 600 (approximately 42.9% growth); cost per outcome $28.57 to $20.00 (30% reduction). Replaced generic creative with store-specific offers, tailored vertical/Feed formats, reviewed placements, refined geography/audience suggestions and reallocated toward conversations/completed inquiries. Before/after results do not isolate one setting or prove incremental sales",
+          "figures": [
+            "$12,000",
+            "1,200,000",
+            "14,400",
+            "18,000",
+            "1.20%",
+            "1.50%",
+            "25%",
+            "$0.83",
+            "$0.67",
+            "20%",
+            "300",
+            "450",
+            "120",
+            "150",
+            "420",
+            "600",
+            "42.9%",
+            "$28.57",
+            "$20.00",
+            "30%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "wb-media-measurement",
+          "text": "Kept Google directions/call-click actions and Meta messaging/promotional-inquiry outcomes separate from Modisoft POS sales reporting. Without reliable ad-to-transaction matching, no verified Google/Meta purchase CPA, customer CAC or purchase ROAS is established. Platform action totals may overlap people and cannot be summed as unique customers; store-level sales growth is business context rather than wholly attributed advertising revenue",
+          "confirmed": "2026-10-25"
         }
       ]
     },
@@ -188,20 +426,46 @@
       "start": "2022-01",
       "end": "2022-12",
       "title": "Performance Marketing Manager",
-      "context": "Regulated healthcare services: an at-home healthcare booking platform",
+      "context": "Regulated healthcare services: an at-home healthcare booking platform, including an employer-sponsored health insurance service line",
       "counts_toward_tenure": true,
       "facts": [
         {
           "id": "pc-team",
-          "text": "Sole owner of the entire marketing function, with no reports and no hires"
+          "text": "Sole owner of the entire marketing function at PrimaCare Home Healthcare Services"
+        },
+        {
+          "id": "pc-media-budget",
+          "text": "Managed approximately $15K average monthly actual Google and Meta advertising spend during January-December 2022, typically $12K-$18K monthly. Figures were originally in AED and converted to USD for reporting; the stated revised channel allocation was 65% Google and 35% Meta",
+          "figures": [
+            "$15K",
+            "$12K",
+            "$18K",
+            "65%",
+            "35%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-service-campaigns",
+          "text": "Ran 5 service-based Google Search campaigns for at-home PCR testing, home nursing, online doctor consultations, employer-sponsored health insurance and home hospital equipment/setup; separated keyword intent into service-specific ad groups and landing pages, using phrase/exact coverage, search-term review and negative keywords",
+          "figures": [
+            "5 campaigns"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-meta-execution",
+          "text": "Ran service-specific Meta lead-acquisition campaigns and remarketing where permitted, testing short videos, static images, English/Arabic copy and value propositions; optimized for completed lead submissions or valid booking inquiries rather than clicks or reach",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "pc-appointments",
-          "text": "Grew online appointments 300% in twelve months by owning paid media across Meta, Google, and retargeting, iterating on targeting and landing pages through controlled A/B tests",
+          "text": "Grew online appointments 300% over the full 2022 year through Meta, Google and retargeting, iterating on targeting and landing pages. This full-year booking result includes repeat appointments and is distinct from new paying-customer acquisition in the two-month comparison windows",
           "figures": [
             "300%",
-            "twelve months"
-          ]
+            "2022"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "pc-paid-search",
@@ -209,18 +473,198 @@
         },
         {
           "id": "pc-repeat-rate",
-          "text": "Increased repeat customer rate 37%, measured by repeat booking frequency, by aligning paid media messaging with the downstream customer experience alongside sales and operations",
+          "text": "Observed a 37% increase in repeat paid-booking frequency per eligible existing customer, from 1.50 to 2.055 across matched-length 2022 comparison periods, alongside segmented follow-up, lifecycle messaging, booking convenience and customer-service/operations coordination. This is frequency rather than the percentage of customers retained; no randomized holdout isolated email or an individual sequence as the cause",
           "figures": [
-            "37%"
-          ]
+            "37%",
+            "1.50",
+            "2.055",
+            "2022"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "pc-tracking",
           "text": "Implemented Google Tag Manager and conversion tracking to measure CPA, ROAS, and funnel KPIs, sharpening budget decisions"
         },
         {
+          "id": "pc-conversion-definition",
+          "text": "Tracked successful website/booking submissions and genuine inquiries separately from call-button and WhatsApp clicks. The reported generate_lead event represented a valid submission/booking inquiry; the GTM implementation used a lead_submitted data-layer success trigger. Genuine calls/WhatsApp inquiries were confirmed through available call records or customer-service/CRM records before counting leads; clicks alone did not establish an inquiry",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-crm-attribution",
+          "text": "Used the internal WordPress CRM to assign lead IDs and source, service, qualification, booking and payment status. Matched existing customer records, verified first service fulfillment and payment, deduplicated multiple inquiries and cross-platform contacts, and assigned each new customer to one channel under a consistent documented attribution rule; returning customers were excluded from acquisition counts",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-performance-windows",
+          "text": "Compared February-March 2022 baseline with October-November 2022 optimized performance using monthly averages within each two-month window; December was excluded from this comparison. Monthly media spend was approximately $15K in both windows; these averages do not establish a randomized causal effect",
+          "figures": [
+            "$15K"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-google-scorecard",
+          "text": "October-November 2022 monthly-average Google Search results: $9,750 spend, 125,000 impressions, 5,000 clicks, 4.00% Search CTR, $1.95 CPC, 325 leads, $30 CPL, 220 qualified leads, $44.32 per qualified lead, and 130 unique first-time paying customers at $75 paid-media CAC. Lead-to-customer conversion was 40%; USD values are converted from AED",
+          "figures": [
+            "$9,750",
+            "125,000",
+            "5,000",
+            "4.00%",
+            "$1.95",
+            "325 leads",
+            "$30",
+            "220 qualified leads",
+            "$44.32",
+            "130",
+            "$75",
+            "40%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-meta-scorecard",
+          "text": "October-November 2022 monthly-average Meta results: $5,250 spend, 350,000 impressions, 7,000 link clicks, 2.00% link CTR, $0.75 cost per link click, 350 leads, $15 CPL, 180 qualified leads, $29.17 per qualified lead, and 70 unique first-time paying customers at $75 paid-media CAC. Lead-to-customer conversion was 20%; USD values are converted from AED",
+          "figures": [
+            "$5,250",
+            "350,000",
+            "7,000",
+            "2.00%",
+            "$0.75",
+            "350 leads",
+            "$15",
+            "180 qualified leads",
+            "$29.17",
+            "70",
+            "$75",
+            "20%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-blended-scorecard",
+          "text": "October-November 2022 monthly averages across paid channels: $15K spend, 12,000 paid clicks/link clicks, 675 leads, 400 qualified leads and 200 unique first-time paying customers with fulfilled service and recorded payment. Blended CPL was $22.22, qualified-lead cost $37.50 and paid-media CAC $75; lead-to-customer conversion approximately 29.6%. Paid-media CAC excludes sales labor, creative, technology and other acquisition expenses; clicks differ by channel definition",
+          "figures": [
+            "$15K",
+            "12,000",
+            "675 leads",
+            "400 qualified leads",
+            "200",
+            "$22.22",
+            "$37.50",
+            "$75",
+            "29.6%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-cac-improvement",
+          "text": "Reduced blended paid-media CAC approximately 28.6%, from $105 in February-March to $75 in October-November 2022, at approximately $15K monthly media spend in both comparison windows; unique first-time paying customers averaged approximately 143 versus 200 monthly. This is a before/after comparison, not a randomized incrementality result",
+          "figures": [
+            "28.6%",
+            "$105",
+            "$75",
+            "$15K",
+            "143",
+            "200"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-channel-efficiency",
+          "text": "February-March versus October-November 2022 monthly averages: Google CPC fell from $2.30 to $1.95 (approximately 15.2%), Google CPL from $42 to $30 (approximately 28.6%), and Meta CPL from $24 to $15 (37.5%)",
+          "figures": [
+            "$2.30",
+            "$1.95",
+            "15.2%",
+            "$42",
+            "$30",
+            "28.6%",
+            "$24",
+            "$15",
+            "37.5%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-nursing-optimization",
+          "text": "Reduced home-nursing Google Search CPL from $48 to $32 (33.3%) and CPC from $2.40 to $2.05 (approximately 14.6%), comparing February-March with October-November 2022. Added employment/training negatives, separated full-time nursing, part-time nursing and individual visits into dedicated ad groups and landing pages, reviewed locality-level lead-to-booking outcomes, tested landing-page messaging, and used customer-service CRM feedback on inquiry quality",
+          "figures": [
+            "$48",
+            "$32",
+            "33.3%",
+            "$2.40",
+            "$2.05",
+            "14.6%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
           "id": "pc-kpi-targets",
-          "text": "Defined success metrics and KPI targets before launch, then reallocated budget toward high-performing segments after validating results across sufficient sample sizes"
+          "text": "Defined success metrics and intervention rules before tests, separating routine optimization and sequential comparisons from controlled concurrent A/B tests; used a prespecified primary outcome and comparable traffic allocation where possible. Operational cost/volume rules were not treated as proof of statistical significance; low-volume comparisons were extended rather than declared winners",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-intervention-rules",
+          "text": "Operational rules: investigate creative CPL at least 25% above target after at least 30 leads without a quality advantage; investigate audiences with qualified-lead cost 25% above comparable audiences after sufficient outcomes; investigate landing-page conversion declines of at least 20% after checking traffic intent and tracking. These are management thresholds, not universal statistical sample-size rules",
+          "figures": [
+            "25%",
+            "30 leads",
+            "20%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-fatigue-rules",
+          "text": "Monitored comparable 7-day Meta windows for rising frequency together with link CTR falling at least 20% and CPL rising at least 25%; investigated audience overlap and landing-page performance before attributing deterioration to creative fatigue",
+          "figures": [
+            "7-day",
+            "20%",
+            "25%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-fatigue-observation",
+          "text": "In 2 consecutive 7-day October 2022 periods for Meta home nursing, impressions rose from 40,000 to 45,000, reach fell from 20,000 to 18,000, and frequency rose from 2.00 to 2.50. Link clicks fell from 1,000 to 810 and link CTR from 2.50% to 1.80%; spend stayed $750 each week, leads fell from 50 to 35, and CPL rose from $15 to $21.43. This was a 25% frequency increase, 28% relative link-CTR decline and approximately 42.9% CPL increase. Refreshed hooks/visuals while retaining the offer and checked overlap/landing-page performance; no post-refresh recovery or causal fatigue effect is established",
+          "figures": [
+            "2 consecutive",
+            "7-day",
+            "40,000",
+            "45,000",
+            "20,000",
+            "18,000",
+            "2.00",
+            "2.50",
+            "1,000",
+            "810",
+            "2.50%",
+            "1.80%",
+            "$750",
+            "50",
+            "35",
+            "$15",
+            "$21.43",
+            "25%",
+            "28%",
+            "42.9%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-scaling-rules",
+          "text": "Scaled when paid-media CAC stayed at or below target for 2 consecutive 7-day periods with consistent lead qualification and fulfillment capacity. The detailed commercial framework used a $90 blended target, held budget at $90-$105 and reduced or redirected spend above $105 with sufficient completed-customer outcomes. The 65% Google/35% Meta revised split was not permanently optimal; decisions considered service mix, customer value, marginal acquisition economics, demand and capacity. These later-specified dollar bands supersede the earlier generic 30%-above-target reduction wording",
+          "figures": [
+            "2 consecutive",
+            "7-day",
+            "$90",
+            "$105",
+            "65%",
+            "35%",
+            "30%"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "pc-dashboards",
@@ -261,6 +705,298 @@
           "id": "pc-sales-training",
           "text": "Trained customer service and business development staff on upselling, cross-selling, and pitching service packages, translating campaign messaging into the sales conversation",
           "confirmed": "2026-09-22"
+        },
+        {
+          "id": "pc-measurement-ownership",
+          "text": "As sole marketing owner, inherited/restructured Google Ads and Meta advertising accounts, inherited Facebook Business Manager, the WordPress website and Universal Analytics, reconfigured Pixel lead measurement, and implemented GTM and GA4. Personally configured website-facing tags, Meta events, domain verification and reporting requirements; built the internal WordPress booking/billing CRM rather than a new public website or all-new advertising accounts",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-parallel-analytics",
+          "text": "Operated Universal Analytics and GA4 in parallel during 2022: Universal Analytics maintained historical acquisition-reporting continuity while GA4 captured website interactions, lead events and traffic sources. GTM deployed browser-based Google Ads tags, GA4 events and Meta Pixel events through configured triggers and variables",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-lead-trigger-repair",
+          "text": "Diagnosed inflated Google Ads lead reporting by comparing conversions with WordPress CRM records and reproducing invalid form submissions in GTM Preview/browser developer tools. Replaced a submit-button interaction trigger with a lead_submitted data-layer event only after successful form processing; retained CRM lead identifiers in internal reconciliation records and separated form submissions from call/WhatsApp clicks. Tested valid, invalid and repeated submissions: checked valid submissions created one CRM record and corresponding browser event, while invalid attempts did not fire successful lead conversions. This corrected measurement, not a measured increase in genuine customers or conversion efficiency",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-browser-collection",
+          "text": "Used browser-based GTM tracking for successful website/booking submissions sent to Google Ads and Meta Lead reporting; phone-button clicks and WhatsApp outbound clicks were separate interaction events. Actual calls required available call records and WhatsApp conversations required customer-service/CRM confirmation. CRM qualification, appointment completion and payment remained downstream internal measures, not automatically transmitted offline conversions",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-post-att-configuration",
+          "text": "In 2022, verified the PrimaCare domain in Meta Business Manager, configured prioritized web conversion events under the then-applicable Aggregated Event Measurement framework, prioritized completed lead submissions over lower-intent interactions, validated Meta Lead/website events and reviewed available post-iOS attribution settings. Used first-party WordPress CRM records for customer-level reporting; this operated within existing privacy restrictions rather than recovering all missing attribution",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-measurement-boundaries",
+          "text": "CRM records deduplicated repeated contacts and cross-platform customer claims rather than treating summed Google/Meta reported conversions as unique customers. Meta events used the Pixel and the Conversions API with browser/server event deduplication; whether PrimaCare's setup used server-side GTM and automated offline-conversion imports are not established. The measurement chain separated paid interactions, valid submissions, qualification, confirmed appointments and fulfilled/paid services",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-booking-form-optimization",
+          "text": "Addressed booking-form abandonment by reducing the initial form from 9 fields to 5, moving detailed medical/service requirements to follow-up, clarifying the mobile booking CTA, adding service-specific nursing/PCR/consultation landing pages and testing English/Arabic messaging. Monitored CRM qualification as a guardrail against lower-quality inquiries",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "9",
+            "5"
+          ]
+        },
+        {
+          "id": "pc-booking-form-results",
+          "text": "June versus August 2022 landing-page comparison: 4,000 sessions in each period, completed inquiries increased from 240 to 360 and inquiry/session conversion increased from 6.0% to 9.0%, a 3.0 percentage-point or 50% relative increase. At $6,000 spend in each comparison period, cost per inquiry declined from $25.00 to $16.67. These are the specified landing-page comparison scope, not total-account monthly results or completed healthcare services; qualification was monitored without an established numerical guardrail result. Multiple changes and different months do not isolate a randomized A/B treatment effect",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "4,000",
+            "240",
+            "360",
+            "6.0%",
+            "9.0%",
+            "3.0",
+            "50%",
+            "$6,000",
+            "$25.00",
+            "$16.67"
+          ]
+        },
+        {
+          "id": "pc-booking-experiment-design",
+          "text": "Ran a concurrent randomized WordPress landing-page A/B test for at-home nursing and doctor consultations from July 11-31, 2022, with 50/50 visitor allocation and consistent assignment to reduce cross-exposure. Hypothesized less initial form friction would increase inquiries without materially harming quality. Control used 9 fields, upfront detailed care requirements and Request an Appointment; variant used 5 fields, care details at follow-up and Book a Free Consultation. Both retained required service selection/contact information. This tested the combined form, information-timing and CTA package, not the isolated effect of field reduction",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "50/50",
+            "9",
+            "5"
+          ]
+        },
+        {
+          "id": "pc-booking-experiment-results",
+          "text": "July 2022 randomized test recorded 2,000 unique eligible visitors per arm: control 120 successful submissions versus variant 180, or 6.0% versus 9.0%, a 3.0 percentage-point and 50% relative inquiry-conversion increase. CRM-qualified leads were 84 versus 117: qualification among submissions declined from 70% to 65%, while qualified leads per visitor increased from 4.20% to 5.85%, a 39.3% relative increase. Retained the simplified form package and continued monitoring downstream booking/billing; paying-appointment conversion and customer lift were not established by this test. This is distinct from the June/August session-based comparison and is not additional additive lift",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "2,000",
+            "120",
+            "180",
+            "6.0%",
+            "9.0%",
+            "3.0",
+            "50%",
+            "84",
+            "117",
+            "70%",
+            "65%",
+            "4.20%",
+            "5.85%",
+            "39.3%"
+          ]
+        },
+        {
+          "id": "pc-booking-experiment-decision-rule",
+          "text": "Before the July 2022 test, set a 14-day minimum covering weekdays/weekends, approximately 2,000 visitors per variant, a 20% minimum commercially meaningful relative submission-rate improvement and a guardrail that qualified leads per visitor must not deteriorate. Planned a two-sided proportions comparison at the 5% significance level after the planned sample. From supplied counts, the inquiry-rate comparison gives an approximate two-sided p-value of 0.0003 using a pooled normal approximation under independent visitor-level assignment; the screenshot value 0.0004 is an approximation, not an exact reproduced historical output. No sequential monitoring protocol, multiplicity correction or statistically established equivalence in lead qualification is claimed",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "14",
+            "2,000",
+            "20%",
+            "5%",
+            "0.0003",
+            "0.0004"
+          ]
+        },
+        {
+          "id": "pc-commercial-cac-target",
+          "text": "For July-September 2022 acquisition planning, set a blended $90 paid-media CAC target using an assumed $300 average six-month customer contribution after direct service delivery costs and before acquisition expenditure, with up to 30% allocated to paid acquisition. This was a planning assumption requiring validation by service type, not measured customer lifetime value, audited profit or a universal target for nursing, PCR and consultations. Existing optimized $75 paid-media CAC was 16.7% below that target; this is cost headroom against a target, not profit or realized savings",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "$90",
+            "$300",
+            "30%",
+            "$75",
+            "16.7%"
+          ]
+        },
+        {
+          "id": "pc-acquisition-forecast",
+          "text": "At $15,000 monthly media spend and $90 target paid-media CAC, forecast approximately 167 new paying customers. A $25 blended CPL target implied 600 leads and approximately 27.8% lead-to-customer conversion. These were planning outputs, not observed results or guaranteed forecasts. Checked customer-service, appointment and healthcare-delivery capacity before spending against the forecast",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "$15,000",
+            "$90",
+            "167",
+            "$25",
+            "600",
+            "27.8%"
+          ]
+        },
+        {
+          "id": "pc-channel-budget-reallocation",
+          "text": "Reallocated $1,500 of monthly budget from Meta to Google without increasing the $15,000 total: Google $8,250 to $9,750, Meta $6,750 to $5,250. The earlier channel allocation was 55% Google/45% Meta; the revised allocation was 65%/35%. Used service-specific qualification, paying-customer conversion, available Search demand and delivery capacity; reduced weaker Meta segments while retaining commercially valuable audiences/creatives. This allocation decision is not established as the isolated cause of the broader CAC improvement",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "$1,500",
+            "$15,000",
+            "$8,250",
+            "$9,750",
+            "$6,750",
+            "$5,250",
+            "55%",
+            "45%",
+            "65%",
+            "35%"
+          ]
+        },
+        {
+          "id": "pc-initial-lead-volume",
+          "text": "The earlier acquisition comparison included approximately 550 leads at $15,000 monthly media spend and approximately $27.27 CPL, alongside the already-established approximately 143 new paying customers at approximately $105 paid-media CAC. The optimized comparison remains 675 leads, 200 new paying customers and $75 paid-media CAC, approximately 57 additional customers or 40% growth at unchanged spend. Results reflect combined budget reallocation, campaign refinement, landing-page work and follow-up improvements; do not add this as a second lift or assign the outcome specifically to July-September planning",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "550",
+            "$15,000",
+            "$27.27",
+            "143",
+            "$105",
+            "675",
+            "200",
+            "$75",
+            "57",
+            "40%"
+          ]
+        },
+        {
+          "id": "pc-commercial-scaling-rules",
+          "text": "Used $90 paid-media CAC as a blended planning control: below $90 with stable customer quality, consider increased investment; $90-$105, hold and investigate inefficient segments; above $105 with sufficient conversion volume, reduce or redirect. Prioritized qualification when CPL was low but customer conversion poor, paused scaling when marginal CAC rose, and reduced acquisition pressure for capacity-constrained services. Introduced budget increases gradually, typically 10-15%, then reassessed performance. A strong historical average alone did not justify the next spend increment; the supplied next-$1,000 example explains this rule and is not a separately verified spending incident",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "$90",
+            "$105",
+            "10-15%",
+            "$1,000"
+          ]
+        },
+        {
+          "id": "pc-lifecycle-implementation",
+          "text": "Managed marketing follow-up from initial inquiry through booking, post-service communications, repeat bookings and inactive-customer reactivation. Personally built lead/appointment status fields, captured available acquisition source, established segments using service type/booking history/last appointment/consent status, built engagement-based email sequences and content, created customer-service follow-up lists/workflows and produced lifecycle dashboards. Coordinated scheduling friction, unanswered inquiries and availability with operations; CRM and billing records established completed services and repeat customers",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-lifecycle-sequences",
+          "text": "Website inquiries entered the WordPress CRM with source, requested service, contact details and lead status for customer-service follow-up. Unbooked inquiries entered a 24-72 hour follow-up queue; confirmed appointments received appropriate pre-service confirmations/reminders. After CRM-confirmed completion, eligible customers received thank-you/feedback follow-up within 24-48 hours; recurring-service follow-up depended on the service, and inactive-customer segments used 30-90 days without recent bookings subject to preferences/suitability. Administrative/marketing workflows supported customer service and operations; clinical recommendations and medical scheduling decisions remained with healthcare staff",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "24-72",
+            "24-48",
+            "30-90"
+          ]
+        },
+        {
+          "id": "pc-lifecycle-segmentation",
+          "text": "Segmented unbooked inquiries for booking assistance, first-time paying customers for service follow-up/second bookings, recurring home-nursing customers for continuity and scheduling support, previous consultation customers for appropriate return-booking convenience, former PCR customers for consent-based general communications where suitable, and inactive customers for reactivation outreach. Supported service delivery, staff availability and customer experience rather than assuming discounts or marketing determined clinical service need",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-repeat-booking-comparison",
+          "text": "Compared two 90-day periods in 2022: March 1-May 29 baseline and July 1-September 28 optimized. Each included 200 eligible existing customers under the same eligibility definition, though not necessarily the same individuals. Completed repeat paid appointments, excluding each customer original acquisition appointment, increased from 300 to 411: 1.50 to 2.055 per eligible customer, or 150 to 205.5 per 100 customers, a 37% relative frequency increase. Equal eligibility counts and service mix do not establish identical cohorts, randomized assignment or an isolated lifecycle-message effect",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "90-day",
+            "2022",
+            "200",
+            "300",
+            "411",
+            "1.50",
+            "2.055",
+            "150",
+            "205.5",
+            "100",
+            "37%"
+          ]
+        },
+        {
+          "id": "pc-repeat-service-breakdown",
+          "text": "The repeat-booking comparison held service-group counts constant in each period: 80 home-nursing customers generated 180 baseline versus 246 optimized repeat appointments; 80 doctor-consultation customers generated 80 versus 110; 40 other eligible-service customers generated 40 versus 55. Totals were 200 eligible customers and 300 versus 411 repeat appointments. This controls the stated service-group proportions; the observed outcome reflects combined messaging, booking convenience, follow-up quality and service delivery, not proof of email automation alone",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "80",
+            "180",
+            "246",
+            "110",
+            "40",
+            "55",
+            "200",
+            "300",
+            "411"
+          ]
+        },
+        {
+          "id": "pc-reactivation-results",
+          "text": "July-September 2022 reactivation combined consent-based email and customer-service follow-up with messages based on past services. Of 500 eligible inactive customers, 400 were successfully contacted, 100 replied or made an inquiry and 40 completed another paid appointment: 8.0% reactivation against the eligible base or 10.0% against contacted customers. Reactivated customers were existing customers, excluded from new-customer acquisition counts. Eligible repeat appointments could overlap repeat-booking reporting under its rules; exact overlap is not established, so do not add these outcomes as independent incremental customers or appointments",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2022",
+            "500",
+            "400",
+            "100",
+            "40",
+            "8.0%",
+            "10.0%"
+          ]
+        },
+        {
+          "id": "pc-lifecycle-evaluation",
+          "text": "Used CRM/billing records to distinguish first-to-second paid booking rate, repeat paid appointments per eligible existing customer, reactivation after inactivity, bookings following outreach, activity-based retention and revenue from previously paying customers. Reviewed sequences generating clicks without completed appointments and used customer-service/operations feedback to improve messaging, scheduling communications and booking convenience. The quantified frequency and reactivation results do not establish numerical retention percentage, second-booking rate, repeat revenue, lifetime value or causal outreach incrementality; no randomized lifecycle holdout was established",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-architecture",
+          "text": "Personally configured a Google Data Studio/Looker Studio acquisition and customer-economics dashboard, defined its KPIs, connected sources and maintained reporting logic. Combined native Google Ads and Analytics connectors for Google Ads/GA4/Universal Analytics reporting with Meta scheduled CSV exports and WordPress CRM booking/status/payment CSV exports. Used Google Sheets formulas and lookup tables for file-based consolidation and reconciliation; source access combined connectors and exports rather than assuming every source passed through the same integration",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-cadence",
+          "text": "Refreshed PrimaCare reporting daily after Meta and CRM exports were updated, reviewed campaign pacing/acquisition daily, conducted weekly stakeholder performance reviews and prepared monthly management summaries. Business ownership reviewed acquisition spend, CAC, appointments and revenue; sales/customer service reviewed lead quality, follow-up and booking bottlenecks; marketing reviewed pacing, CPL, qualification and channel efficiency. The dashboard was daily refreshed, not a real-time customer-revenue warehouse",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-kpi-definitions",
+          "text": "Defined CPL as advertising spend per unique recorded lead, qualification rate as CRM-qualified leads per recorded lead, lead-to-customer rate as first-time paying customers per lead, and paid-media CAC as spend per attributed new paying customer. Reported repeat-booking frequency as completed repeat appointments per eligible existing customer and pacing as month-to-date actual versus planned spend. Kept platform interactions distinct from CRM-confirmed commercial outcomes and reused the established optimized monthly scorecard rather than creating a second performance result",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-reconciliation",
+          "text": "Reconciled records using contact identifiers, available campaign/source information, booking IDs and payment status; investigated duplicate/invalid inquiries, customers who did not progress to paid appointments, attribution-window differences, reporting delays and missing source information. CRM and billing records established actual appointments and paying customers, with each acquired customer assigned to one channel for deduplicated acquisition reporting. This did not require advertising conversions to equal CRM customers",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-budget-decision",
+          "text": "Used the dashboard to identify cheaper Meta inquiries with weaker downstream booking performance alongside higher-intent Google Search inquiries, informing the already-established monthly Meta-to-Google budget reallocation while holding total spend constant. Considered customer economics and qualification rather than clicks/CPL alone. The existing CAC/customer improvement reflects combined campaign, landing-page, qualification and follow-up changes; it is not a separate lift attributable solely to the dashboard",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-standardization",
+          "text": "Standardized reporting exports, maintained reusable reconciliation formulas and presented consistent KPIs in a shared dashboard instead of rebuilding separate spreadsheets each reporting cycle. The workflow included file-based imports and review rather than a fully automated custom API integration or real-time warehouse; the user subsequently confirmed the supplied reporting-preparation timings as actual historical figures",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "pc-reporting-time-reduction",
+          "text": "Reduced daily advertising/CRM consolidation from 60 to 15 minutes, weekly management-report preparation from 3 hours to 45 minutes, and monthly reporting preparation from 8 to 2 hours: a 75% reduction for each recurring activity. Achieved through standardized exports, reusable reconciliation formulas and shared Data Studio/Looker Studio reporting. These are user-confirmed historical timings, correcting the earlier proposed label; overlap between daily, weekly and monthly activities is not established, so do not sum them into cumulative or annual hours saved. This is separate from appointment-scheduling time reduction",
+          "figures": [
+            "60",
+            "15 minutes",
+            "3 hours",
+            "45 minutes",
+            "8",
+            "2 hours",
+            "75%"
+          ],
+          "confirmed": "2026-10-25"
         }
       ]
     },
@@ -268,48 +1004,158 @@
       "id": "brandwise",
       "employer": "Brandwise Media & Marketing",
       "location": "Dubai, UAE",
-      "start": "2020-09",
-      "end": "2022-01",
+      "start": "2019-03",
+      "end": "2022-12",
       "title": "Digital Marketing & Performance Manager",
-      "context": "Agency serving 15-20 concurrent B2B and B2C client accounts",
+      "context": "Agency serving 25-30 clients, with 20-25 concurrent paid accounts",
       "counts_toward_tenure": true,
+      "clients": [
+        {
+          "id": "client-al-aaraf",
+          "name": "Al Aaraf Jewelers",
+          "industry": "Luxury jewelry retail: physical showroom plus a newly launched direct-to-consumer e-commerce store",
+          "model": "B2C",
+          "start": "2019-03",
+          "end": "2020-06",
+          "ownership": "Sole owner of the client's entire marketing function"
+        },
+        {
+          "id": "client-food-crowd",
+          "name": "Food Crowd",
+          "industry": "E-commerce grocery",
+          "model": "B2C",
+          "start": "2020-01",
+          "end": "2022-12",
+          "date_precision": "year"
+        },
+        {
+          "id": "client-robostores",
+          "name": "Robostores",
+          "industry": "B2B e-commerce fulfillment",
+          "model": "B2B",
+          "start": "2020-01",
+          "end": "2022-12",
+          "date_precision": "year"
+        },
+        {
+          "id": "client-j5-hotels",
+          "name": "J5 Hotels",
+          "industry": "Hospitality: a 3-star hotel working toward 4-star, a 4-star hotel and villa rentals",
+          "model": "B2C",
+          "start": "2020-01",
+          "end": "2022-12",
+          "date_precision": "year"
+        },
+        {
+          "id": "client-bagason",
+          "name": "Bagason Industries",
+          "industry": "FMCG: condiments, canned foods, juices and milks, cooking oils",
+          "model": "B2C",
+          "start": "2019-03",
+          "end": "2022-12",
+          "date_precision": "year"
+        },
+        {
+          "id": "client-qahwaty",
+          "name": "Qahwaty",
+          "industry": "Specialty coffee cafe, 2 branches (DIFC and Sharjah)",
+          "model": "B2C",
+          "start": "2021-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-wedallas",
+          "name": "WeDallas",
+          "industry": "Burger restaurant, Sharjah",
+          "model": "B2C",
+          "start": "2021-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-late-lounge",
+          "name": "Late Lounge",
+          "industry": "Cafe: brunch, desserts, all-day Emirati breakfast and specialty coffee",
+          "model": "B2C",
+          "start": "2021-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-machu-picchu",
+          "name": "Machu Picchu",
+          "industry": "Peruvian fast-food restaurant, one branch",
+          "model": "B2C",
+          "start": "2020-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-lucerne",
+          "name": "Lucerne",
+          "industry": "Fine-dining Italian restaurant, Abu Dhabi",
+          "model": "B2C",
+          "start": "2021-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-forever-rose",
+          "name": "Forever Rose (Jumeirah shop and cafe)",
+          "industry": "Luxury preserved roses, perfumes and gifts shop, with an adjacent cafe run as a separate business",
+          "model": "B2C",
+          "start": "2021-01",
+          "end": "2022-12",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        },
+        {
+          "id": "client-around-eleven",
+          "name": "Around Eleven",
+          "industry": "Specialty coffee cafe, DIFC",
+          "model": "B2C",
+          "start": "2020-01",
+          "end": "2022-03",
+          "date_precision": "year",
+          "ownership": "Hands-on campaign owner within Brandwise"
+        }
+      ],
       "facts": [
         {
           "id": "bw-media-spend",
-          "text": "Managed USD 272,000 in cumulative paid search and paid social spend across 15-20 client accounts, allocating budgets on funnel performance, attribution insight, and keyword-level data",
+          "text": "Managed approximately USD $272K in combined monthly client advertising spend, with peak months around $320K, across 20-25 concurrent paid accounts within a 25-30-client portfolio by 2022 (retained clients plus project-level campaigns for large brands). This is aggregate monthly portfolio spend, not lifetime cumulative spend, a single account budget or agency self-promotion expenditure; execution was shared with the team under the candidate's portfolio/performance ownership",
           "figures": [
             "$272K",
-            "15-20 accounts"
-          ]
+            "$320K",
+            "20-25",
+            "25-30"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
-          "id": "bw-roas",
-          "text": "Delivered 189% average ROAS across conversion campaigns using negative keyword lists and continuous bid optimization to cut wasted spend",
+          "id": "bw-channel-allocation",
+          "text": "Approximate monthly portfolio allocation: Google $136,000 (50%), Meta $108,800 (40%) and LinkedIn $27,200 (10%), totaling $272K; a core-channel approximation in which the less commonly used Snapchat, TikTok, Twitter and Reddit spend is not broken out; not a per-account allocation or a verified total across all employment months",
           "figures": [
-            "189%"
-          ]
+            "$136,000",
+            "50%",
+            "$108,800",
+            "40%",
+            "$27,200",
+            "10%",
+            "$272K"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
-          "id": "bw-ctr",
-          "text": "Lifted campaign click-through rate from 11% to 43% through structured creative and audience testing, setting success thresholds before scaling and adjusting bids on quality score data",
-          "figures": [
-            "11%",
-            "43%"
-          ]
-        },
-        {
-          "id": "bw-lead-quality",
-          "text": "Improved lead quality 30%, measured by sales-qualified lead rate, by redesigning full-funnel acquisition, refining segmentation to reach decision-makers and C-level buyers, and aligning messaging with buyer intent",
-          "figures": [
-            "30%"
-          ]
-        },
-        {
-          "id": "bw-retention",
-          "text": "Increased client retention 100% year over year by proposing forward roadmaps in the final month of each contract",
-          "figures": [
-            "100%"
-          ]
+          "id": "bw-platform-execution",
+          "text": "Managed Google Search, Display, YouTube, remarketing and Shopping where relevant; Meta conversion, lead-generation, traffic and retargeting campaigns; LinkedIn sponsored content/B2B lead generation; and Snapchat, TikTok, Twitter and Reddit on specific client accounts. Responsibilities covered setup, keyword research, bidding, segmentation, creative testing, negative keywords, conversion tracking, pacing and client reporting, with execution distributed across the team",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "bw-paid-capability",
@@ -357,12 +1203,9 @@
           "confirmed": "2026-09-28"
         },
         {
-          "id": "bw-inquiries",
-          "text": "Increased inquiries 45% and conversion to client 68% after the first consultation call",
-          "figures": [
-            "45%",
-            "68%"
-          ]
+          "id": "bw-business-development",
+          "text": "Supported Brandwise's own business development through prospecting, consultation/pitch support, service development and training sales staff to explain and price the paid-media offering; quantified lead and new-client results are in bw-lead-gen-results and bw-lead-gen-growth, and no client-retention result is established",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "bw-pitch-portfolio",
@@ -381,106 +1224,549 @@
         },
         {
           "id": "bw-client-food-crowd",
+          "client": "client-food-crowd",
+          "text": "Food Crowd (e-commerce grocery): rebuilt content strategy and acquisition stages, using purchase-focused product photography, short video, promotions, influencer-box content and retargeting. August-September 2021 monthly averages: $8,000 spend ($3,200 Google/$4,800 Meta), 3,008 reconciled paid-attributed orders, approximately $149K attributed order value, $49.52 AOV, approximately $2.66 cost per attributed order and 18.6x ROAS. Returning-customer orders are included; cost per order is not first-time customer CAC",
           "scope": "Food Crowd",
-          "text": "Food Crowd (e-commerce grocery): rebuilt content strategy and funnel, launched stage-specific paid campaigns, produced video for an influencer box product line. CPA $2.66, AOV $49.52, ROAS 18.6, orders up 67%, revenue up 42%. Ranked them on Google page one for highly competitive keywords within 9 months through SEO",
           "figures": [
-            "$2.66",
+            "$8,000",
+            "$3,200",
+            "$4,800",
+            "3,008",
+            "$149K",
             "$49.52",
-            "18.6x",
+            "$2.66",
+            "18.6x"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-attribution",
+          "client": "client-food-crowd",
+          "text": "Food Crowd: reconciled Google and Meta conversions against unique backend order IDs and assigned each order to one paid channel in the combined reporting view, separating platform-reported totals from deduplicated backend-attributed purchases. No randomized incrementality result, first-time customer CAC or measured profit uplift is established",
+          "scope": "Food Crowd",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-google",
+          "client": "client-food-crowd",
+          "text": "Food Crowd Google monthly averages, August-September 2021: $3,200 spend, 160,000 impressions, 8,000 clicks, 5.00% campaign CTR, $0.40 CPC, 1,200 attributed orders, 15.00% attributed-orders/clicks ratio, $2.67 cost per order and $59,424 attributed order revenue. Used category/product/grocery-delivery Search and Shopping activity; reported click ratios are not website-session conversion rates",
+          "scope": "Food Crowd",
+          "figures": [
+            "$3,200",
+            "160,000",
+            "8,000",
+            "5.00%",
+            "$0.40",
+            "1,200",
+            "15.00%",
+            "$2.67",
+            "$59,424"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-meta",
+          "client": "client-food-crowd",
+          "text": "Food Crowd Meta monthly averages, August-September 2021: $4,800 spend, 1,200,000 impressions, 400,000 reach, 3.00 frequency, 24,000 link clicks, 2.00% link CTR, $0.20 link CPC, 1,808 attributed orders, 7.53% attributed-orders/link-clicks ratio, $2.65 cost per order and $89,532 attributed order revenue. Returning-customer purchases are included; the ratio is not deduplicated visitor conversion",
+          "scope": "Food Crowd",
+          "figures": [
+            "$4,800",
+            "1,200,000",
+            "400,000",
+            "3.00",
+            "24,000",
+            "2.00%",
+            "$0.20",
+            "1,808",
+            "7.53%",
+            "$2.65",
+            "$89,532"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-optimization",
+          "client": "client-food-crowd",
+          "text": "Food Crowd Google optimization comparing May-June with August-September 2021 monthly averages: spend held at $3,200 while CPC fell $0.46 to $0.40, clicks rose approximately 6,957 to 8,000, attributed orders rose approximately 710 to 1,200, and cost per attributed order fell $4.51 to $2.67 (approximately 40.8%). Attributed-orders/clicks ratio rose 10.21% to 15.00%. Combined search-term exclusions, product segmentation, ad-to-page relevance and budget reallocation; this does not isolate one change's causal effect",
+          "scope": "Food Crowd",
+          "figures": [
+            "$3,200",
+            "$0.46",
+            "$0.40",
+            "6,957",
+            "8,000",
+            "710",
+            "1,200",
+            "$4.51",
+            "$2.67",
+            "40.8%",
+            "10.21%",
+            "15.00%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-growth",
+          "client": "client-food-crowd",
+          "text": "Food Crowd same-scope monthly averages, May-June versus August-September 2021: orders increased 1,801 to 3,008 (approximately 67%), revenue $104,900 to approximately $148,956 (42%), and AOV declined $58.25 to $49.52 (approximately 15%). Promotions and lower-value grocery baskets contributed to the mix change; revenue efficiency does not establish contribution profit or new-customer lifetime value",
+          "scope": "Food Crowd",
+          "figures": [
+            "1,801",
+            "3,008",
             "67%",
+            "$104,900",
+            "$148,956",
             "42%",
+            "$58.25",
+            "$49.52",
+            "15%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-seo",
+          "client": "client-food-crowd",
+          "text": "Food Crowd: achieved first-page Google rankings for competitive keywords within 9 months through SEO",
+          "scope": "Food Crowd",
+          "figures": [
             "9 months"
-          ]
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "bw-client-bagason",
+          "client": "client-bagason",
+          "text": "Bagason Industries (FMCG: condiments, canned foods, juices and milks, cooking oils): ran ongoing Meta brand-awareness campaigns for its supermarket product range and a micro-influencer PR-kit launch; no quantified brand-recall result is established",
           "scope": "Bagason Industries",
-          "text": "Bagason Industries (FMCG): brand awareness campaigns across local supermarkets plus micro-influencer PR kits, driving 225% brand recall over a 12-month cycle, measured in Meta Ads Manager campaign reports",
-          "figures": [
-            "225%",
-            "12-month"
-          ]
+          "confirmed": "2026-10-25"
         },
         {
           "id": "bw-client-robostores",
+          "client": "client-robostores",
+          "text": "Robostores (B2B e-commerce fulfillment): ran Meta/LinkedIn acquisition, content, lead magnets and a website redesign. Targeted business owners, founders, operations managers and e-commerce decision-makers; shifted messaging toward order-volume, inventory and dispatch needs, and added business-type, fulfillment-need and order-volume qualification questions",
           "scope": "Robostores",
-          "text": "Robostores (B2B e-commerce fulfillment): lead generation on Meta and LinkedIn, content strategy with blogs and lead magnets, website redesign. Lead quality up 22%, measured by consultation meetings booked",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-robostores-qualification",
+          "client": "client-robostores",
+          "text": "Robostores tracked raw unique leads, sales-qualified leads and booked consultations separately. Qualification considered an existing e-commerce business or credible launch plan, relevant fulfillment needs, sufficient commercial potential, a relevant decision-maker and genuine interest. The reported outcome is consultation bookings per unique lead, not meeting attendance or won revenue",
+          "scope": "Robostores",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-robostores-results",
+          "client": "client-robostores",
+          "text": "Robostores March-April versus July-August 2021: each TWO-MONTH period totaled $8,000 advertising spend and 200 unique leads ($40 CPL), equivalent to $4,000 spend and 100 leads per month. SQLs increased 100 to 122 (50% to 61% SQL rate), booked consultations 50 to 61, and lead-to-meeting rate 25% to 30.5% (22% relative improvement, 5.5 percentage points). Cost per booked meeting fell $160 to $131.15 (approximately 18%) at unchanged spend; SQL-to-booking conversion remained 50%",
+          "scope": "Robostores",
           "figures": [
-            "22%"
-          ]
+            "$8,000",
+            "200",
+            "$40",
+            "$4,000",
+            "100",
+            "122",
+            "50%",
+            "61%",
+            "50",
+            "61",
+            "25%",
+            "30.5%",
+            "22%",
+            "5.5",
+            "$160",
+            "$131.15",
+            "18%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-robostores-ctr",
+          "client": "client-robostores",
+          "text": "Robostores LinkedIn click-through rate was 0.6%, taken from the user's old LinkedIn account export. The reporting window and any before/after change are not established, so no improvement or trend is claimed; this is a single reported rate, not a portfolio average and not a lead-quality or conversion measure",
+          "scope": "Robostores",
+          "figures": [
+            "0.6%"
+          ],
+          "confirmed": "2026-11-04"
         },
         {
           "id": "bw-client-j5-hotels",
+          "client": "client-j5-hotels",
+          "text": "J5 Hotels: rebuilt its booking website, produced professional photography/cinematic video and room-specific promotional content, and launched Facebook, Instagram and YouTube channels. Routed advertising prospects to the booking website; completed-booking results are in bw-j5-paid-results and bw-j5-booking-growth",
           "scope": "J5 Hotels",
-          "text": "J5 Hotels (hospitality): first website with online booking, cinematic photo and video content, social channel launch on Facebook, Instagram, and YouTube. Website CTR 77% at launch through targeted A/B testing",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-ctr",
+          "client": "client-j5-hotels",
+          "text": "J5 Hotels Meta (Facebook/Instagram) link CTR increased from 1.1% in March-April 2021 to 4.3% in July-August 2021, an increase of 3.2 percentage points (approximately 291% relative). Replaced generic hotel advertising with professional photography, cinematic video and room-specific creative, and refined leisure-travel/staycation audiences. Link CTR means link clicks divided by impressions; this is a client-specific result, not a portfolio average",
+          "scope": "J5 Hotels",
           "figures": [
+            "1.1%",
+            "4.3%",
+            "3.2",
+            "291%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-client-fnb-portfolio",
+          "text": "F&B and hospitality portfolio: organic social, paid social, content, and conversion campaigns for Qahwaty, WeDallas, Late Lounge, Machu Picchu, Lucerne (Abu Dhabi), Forever Rose and Around Eleven; per-venue results are in their own client facts"
+        },
+        {
+          "id": "bw-measurement-ownership",
+          "text": "Developed the standard onboarding and tracking-audit process while building Brandwise paid advertising capability. Personally owned technical audits, conversion definitions, GTM and Pixel configuration, account access, measurement debugging and client reporting; coordinated specialist website deployment or permission-dependent changes while retaining measurement requirements and validation ownership",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-client-account-status",
+          "text": "Inherited FoodCrowd advertising accounts and audited purchase tracking, rebuilt conversion configuration and checked e-commerce attribution. Inherited Robostores Meta and LinkedIn accounts and reworked lead/consultation measurement. Coordinated the J5 Hotels rebuilt booking-website launch and digital acquisition infrastructure, implementing tracking and conversion actions. Audited Bagason inherited Meta awareness reporting and estimated ad recall; other F&B/hospitality clients combined new and existing accounts",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-account-health-audits",
+          "text": "Audited six areas before launch or restructuring: access/ownership, billing, campaign structure, conversion tracking, website funnels and product feeds. Identified personal-profile control of business assets/incomplete agency permissions, payment interruptions/unclear billing ownership, duplicated targeting/fragmented budgets/inappropriate objectives, missing or duplicate events/click-based false positives, missing confirmation events/inconsistent traffic-source capture, and feed rejection/price or product-ID mismatches across the client portfolio",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-audit-validation",
+          "text": "Defined each business conversion and tested the end-to-end customer journey before scaling campaigns. Purchase-account checks covered product discovery through checkout; B2B checks confirmed successful inquiry submission, creation of a CRM lead and delivery of the relevant advertising event. Used GTM Preview, browser developer tools and platform event diagnostics to inspect implementation",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-robostores-tracking-repair",
+          "client": "client-robostores",
+          "text": "Diagnosed Robostores consultation-CTA clicks incorrectly counted as leads in Meta and LinkedIn, overstating usable sales inquiries. Tested incomplete forms, validation errors and successful submissions; replaced click triggers with events after confirmed successful form processing, retained campaign-source information in lead records where available and revalidated GTM/platform events. Verified one website conversion per successful lead submission, with consultation meetings tracked separately in sales records. The repair improved measurement accuracy; the established meeting-booking improvement reflected broader acquisition/lead-quality work rather than an isolated tag-repair effect",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-ios-transition",
+          "text": "During the 2021 iOS transition, verified client-owned website domains in Facebook Business Manager, reviewed/configured priority web conversion events, prioritized Purchase for transactional clients and successful Lead submissions for relevant B2B clients, checked Pixel delivery and reviewed available attribution-window/reporting changes. Compared first-party website orders or CRM leads with platform reporting and explained attribution changes without assuming fewer reported conversions meant fewer actual sales",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-client-measurement-reconciliation",
+          "text": "For FoodCrowd, prioritized completed Purchase events over product views, cart additions, checkout initiation and engagement, and compared purchase tracking with backend orders. For Robostores, prioritized successful submissions over CTA clicks/page views while booked consultations remained downstream sales measures. Reviewed reporting windows for consistent performance comparisons and distinguished measurement changes from customer-demand changes",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-browser-measurement-scope",
+          "text": "Brandwise measurement used Meta Pixel events, GTM, Universal Analytics and GA4 where applicable, website order/CRM records and manual or dashboard reconciliation; from the iOS 14 changes onward, Meta events also went through the Conversions API with browser/server deduplication (bw-conversions-api), with server-side GTM where a client's setup needed it. Which clients used server-side GTM and match-quality figures are not recorded",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-j5-booking-journey",
+          "client": "client-j5-hotels",
+          "text": "Improved J5 Hotels room-page progression by adding prominent Book Now CTAs, simplifying mobile navigation, reorganizing room photography/information and reducing steps to the booking interface; tested CTA positioning and page layouts. In the reported before/after comparison, 5,000 room-page sessions in each period generated 450 versus 650 booking-engine clicks, raising the click-through rate from 9.0% to 13.0%, a 4.0 percentage-point or 44.4% relative increase. This measured booking-engine progression, not completed reservations. Comparison dates, randomization and statistical support are not established; the withdrawn 77% website CTR claim remains excluded",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "5,000",
+            "450",
+            "650",
+            "9.0%",
+            "13.0%",
+            "4.0",
+            "44.4%",
             "77%"
           ]
         },
         {
-          "id": "bw-client-fnb-portfolio",
-          "text": "F&B and hospitality portfolio: organic social, paid social, content, and conversion campaigns for Forever Rose Cafe, Machu Picchu Restaurant, Late Lounge Cafe, Around Eleven Cafe, Lucerne Restaurant Abu Dhabi"
-        }
-      ]
-    },
-    {
-      "id": "al-aaraf",
-      "employer": "Al Aaraf Jewelers",
-      "location": "Dubai, UAE",
-      "start": "2019-03",
-      "end": "2020-06",
-      "title": "E-Commerce Marketing Manager",
-      "context": "Newly launched direct-to-consumer e-commerce jewelry brand (luxury retail)",
-      "counts_toward_tenure": true,
-      "facts": [
+          "id": "bw-food-crowd-landing-pages",
+          "client": "client-food-crowd",
+          "text": "Addressed mismatch between product-focused ads and generic destinations by directing traffic to relevant product collections, matching messaging with product imagery/pricing/promotions, improving mobile navigation and emphasizing Add to Cart; tested category-specific versus broader shopping pages. In the reported before/after comparison, 8,000 product-landing sessions in each period produced 960 versus 1,360 sessions with add-to-cart activity: 12.0% versus 17.0%, a 5.0 percentage-point or 41.7% relative increase. Purchase conversion, order value and advertising efficiency remained downstream guardrails; an add-to-cart increase does not establish profitable sales growth. Comparison dates, randomization and statistical support are not established",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "8,000",
+            "960",
+            "1,360",
+            "12.0%",
+            "17.0%",
+            "5.0",
+            "41.7%"
+          ]
+        },
+        {
+          "id": "bw-robostores-funnel-optimization",
+          "client": "client-robostores",
+          "text": "Replaced generic contact messaging with a fulfillment-consultation CTA, introduced business-type/order-volume qualifying questions, reorganized the landing page around fulfillment capabilities, aligned Meta/LinkedIn advertising with the revised offer and improved qualified-inquiry handoff to business development. This was part of the established March-April versus July-August 2021 acquisition comparison, not a standalone landing-page A/B test or an isolated causal effect of any single change",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-food-crowd-experiment-design",
+          "client": "client-food-crowd",
+          "text": "Ran a concurrent FoodCrowd Meta-traffic landing-page A/B comparison from July 5-25, 2021, with a 50/50 split from the same campaign audiences. Hypothesized a 15% introductory offer would increase completed purchases enough to offset lower order value. Compared Fresh groceries delivered at standard pricing with 15% off your first grocery order and an eligible-order discount, retaining imagery and checkout. Both headline and offer changed. Concurrent allocation is confirmed; the randomization mechanism and persistent visitor assignment are not established",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2021",
+            "50/50",
+            "15%"
+          ]
+        },
+        {
+          "id": "bw-food-crowd-experiment-results",
+          "client": "client-food-crowd",
+          "text": "FoodCrowd July 2021 comparison recorded 3,000 landing-page visitors per arm, 240 control versus 270 discount orders and purchase rates of 8.0% versus 9.0%, a 12.5% relative increase. Average order value was $50.00 versus $42.50; revenue $12,000 versus $11,475; revenue per visitor $4.00 versus $3.825 (rounded $3.83), a 4.375% decline (rounded 4.4%). Rejected the discount-first page and retained value-focused messaging because the primary commercial metric deteriorated despite 30 additional orders. The observed revenue difference was $525; it does not establish a statistically significant revenue effect or customer-lifetime-value outcome",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "2021",
+            "3,000",
+            "240",
+            "270",
+            "8.0%",
+            "9.0%",
+            "12.5%",
+            "$50.00",
+            "$42.50",
+            "$12,000",
+            "$11,475",
+            "$4.00",
+            "$3.825",
+            "$3.83",
+            "4.375%",
+            "4.4%",
+            "30",
+            "$525"
+          ]
+        },
+        {
+          "id": "bw-food-crowd-experiment-decision-rule",
+          "client": "client-food-crowd",
+          "text": "For the FoodCrowd comparison, specified a 14-day minimum, 3,000 visitors per arm, revenue per visitor as primary metric, purchase conversion as secondary and estimated contribution per visitor as a commercial guardrail. Evaluated after the planned sample rather than declaring success from purchase rate alone. The purchase-rate difference gives an approximate two-sided pooled-proportions p-value of 0.16 under independent observations, not significant at the 5% level; randomization details are not established. Aggregate revenue totals alone do not support a reliable revenue-per-visitor confidence interval. Continued product-specific messaging tests; repeat-purchase/lifetime contribution remained uncertain",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "14",
+            "3,000",
+            "0.16",
+            "5%"
+          ]
+        },
+        {
+          "id": "bw-food-crowd-experiment-margin-boundary",
+          "client": "client-food-crowd",
+          "text": "FoodCrowd experiment revenue and order values were reported, but its 25% gross-margin rate was explicitly an assumption. Applying the same assumed rate to both arms yields $3,000 versus $2,868.75 gross profit before ads, a $131.25 difference; these are conditional calculations, not verified actual gross profit, contribution margin, discount economics or savings. Product costs, discount funding and other variable costs would be needed to establish actual profitability; unchanged product costs would not generally preserve the same margin percentage after a price discount",
+          "confirmed": "2026-10-25",
+          "figures": [
+            "25%",
+            "$3,000",
+            "$2,868.75",
+            "$131.25"
+          ]
+        },
         {
           "id": "aa-team",
-          "text": "Sole owner of the entire marketing function for the brand, with no reports and no hires"
+          "client": "client-al-aaraf",
+          "text": "Sole owner of the entire marketing function for Brandwise client Al Aaraf Jewelers"
         },
         {
           "id": "aa-online-sales",
-          "text": "Increased online sales 134% against the pre-launch baseline by implementing performance tracking and running structured A/B tests across landing pages and checkout flows alongside paid media targeting",
+          "client": "client-al-aaraf",
+          "text": "Supported 134% growth in average monthly digitally originated revenue from $20,000 to $46,800 and orders from 50 to 117 at approximately $400 AOV, comparing July-September 2019 with January-March 2020. Baseline included manual Instagram/WhatsApp orders; later totals include Magento plus continuing digitally originated social orders, excluding showroom purchases without a digital inquiry. This is growth from an existing digital-sales baseline, not zero online revenue or wholly paid-attributed sales",
           "figures": [
-            "134%"
-          ]
-        },
-        {
-          "id": "aa-seo",
-          "text": "Achieved first-page Google rankings for high-competition keywords within 6 months through technical and content SEO informed by keyword research and performance data",
-          "figures": [
-            "6 months"
-          ]
-        },
-        {
-          "id": "aa-footfall",
-          "text": "Increased offline store footfall 39% during off-peak seasons through geo-targeted, bilingual paid campaigns in premium locations, measured through location-based lift analysis",
-          "figures": [
-            "39%"
-          ]
+            "134%",
+            "$20,000",
+            "$46,800",
+            "50",
+            "117",
+            "$400"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "aa-storefront",
-          "text": "Built the brand's first e-commerce storefront on Magento, enabling online sales"
+          "client": "client-al-aaraf",
+          "text": "Built and configured the first Magento storefront for October 2019 launch after June-September implementation (approximately 4 months), covering 180 parent products and 320 sellable variants. Owned navigation, categories, catalog attributes/descriptions, price displays, imagery and customer-facing shopping experience",
+          "figures": [
+            "4 months",
+            "180",
+            "320"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-media-budget",
+          "client": "client-al-aaraf",
+          "text": "Managed approximately $5,000 monthly advertising spend, reported in USD equivalents, allocated approximately $2,000 Google (40%) and $3,000 Meta (60%). Ran Google Search, Shopping and eligible remarketing, plus Facebook/Instagram product-led conversion, prospecting, retargeting and geographically targeted bilingual activity",
+          "figures": [
+            "$5,000",
+            "$2,000",
+            "40%",
+            "$3,000",
+            "60%"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-google-scorecard",
+          "client": "client-al-aaraf",
+          "text": "January-March 2020 monthly-average Google advertising results: $2,000 spend, 100,000 impressions, 4,000 clicks, 4.0% reported campaign CTR, $0.50 CPC, 25 attributed completed purchases, $80 cost per attributed purchase, $10,000 attributed revenue and 5.0x ROAS. Google and Meta click metrics are analyzed separately",
+          "figures": [
+            "$2,000",
+            "100,000",
+            "4,000",
+            "4.0%",
+            "$0.50",
+            "25",
+            "$80",
+            "$10,000",
+            "5.0x"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-meta-scorecard",
+          "client": "client-al-aaraf",
+          "text": "January-March 2020 monthly-average Meta results: $3,000 spend, 300,000 impressions, 6,000 link clicks, 2.0% link CTR, $0.50 link CPC, 40 attributed completed purchases, $75 cost per attributed purchase, $16,000 attributed revenue and approximately 5.33x ROAS",
+          "figures": [
+            "$3,000",
+            "300,000",
+            "6,000",
+            "2.0%",
+            "$0.50",
+            "40",
+            "$75",
+            "$16,000",
+            "5.33x"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-paid-purchase-economics",
+          "client": "client-al-aaraf",
+          "text": "January-March 2020 combined monthly averages: $5,000 media spend, 65 paid-attributed completed purchases and $26,000 attributed revenue, approximately $76.92 cost per attributed purchase and 5.2x ROAS. The other 52 of 117 digital orders were assigned to organic/direct/social and other sources. Paid revenue is a subset of $46,800 total digital revenue and must not be added to it; repeat buyers are included, so purchase cost is not first-time customer CAC or profit",
+          "figures": [
+            "$5,000",
+            "65",
+            "$26,000",
+            "$76.92",
+            "5.2x",
+            "52",
+            "117",
+            "$46,800"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-purchase-reconciliation",
+          "client": "client-al-aaraf",
+          "text": "Reconciled completed purchases using Magento order IDs and manually assigned Instagram/WhatsApp sales identifiers, checking payment and fulfillment and excluding cancelled or fully refunded orders. Orders touching both Google and Meta were counted once in combined reporting under an agreed attribution rule; this does not establish randomized incrementality",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-checkout-improvements",
+          "client": "client-al-aaraf",
+          "text": "Tested a streamlined Magento checkout with guest purchasing, simplified address fields and earlier disclosure of shipping costs; checked payment options and order confirmation before retaining the changes. Original experiment counts cannot be recovered, so no numerical completion lift, sample size or statistical-significance result is established",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-seo",
+          "client": "client-al-aaraf",
+          "text": "Implemented technical and product/category content SEO; within 6 months from October 2019 to March 2020, monthly organic search clicks increased 320 to 1,050 (approximately 228%), impressions 18,000 to 48,000 and organic CTR approximately 1.78% to 2.19%. Eight selected commercially relevant keywords reached Google page one, tracked through Search Console; this does not claim universal rankings across all Dubai searches",
+          "figures": [
+            "6 months",
+            "320",
+            "1,050",
+            "228%",
+            "18,000",
+            "48,000",
+            "1.78%",
+            "2.19%",
+            "Eight"
+          ],
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-seo-keywords",
+          "client": "client-al-aaraf",
+          "text": "Targeted nonbranded commercial Dubai jewelry searches including gold jewelry Dubai, diamond rings Dubai, gold necklaces Dubai, buy jewelry online Dubai and women's gold bracelets Dubai; optimized product metadata, category copy and internal linking",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-footfall",
+          "client": "client-al-aaraf",
+          "text": "Supported a 39% year-over-year increase in average monthly physical-showroom visits from 1,000 in November-December 2018 to 1,390 in November-December 2019, measured using existing store visitor records for equivalent off-peak months. Ran geographically targeted English/Arabic Google and Meta promotions; the observed increase is not proof that advertising caused all additional visits",
+          "figures": [
+            "39%",
+            "1,000",
+            "1,390"
+          ],
+          "confirmed": "2026-10-25"
         },
         {
           "id": "aa-acquisition",
+          "client": "client-al-aaraf",
           "text": "Owned customer acquisition strategy, paid media activation, campaign reporting, and funnel optimization for the brand"
         },
         {
           "id": "aa-content",
+          "client": "client-al-aaraf",
           "text": "Owned CMS, blog, email, and social content for the brand"
         },
         {
           "id": "aa-photography",
+          "client": "client-al-aaraf",
           "text": "Conducted product photography for listings and social content, and developed the product portfolio in Adobe Photoshop"
         },
         {
           "id": "aa-ops-coordination",
-          "text": "Coordinated shipping providers, payment gateways, and customer service staff to deliver a seamless customer experience"
+          "client": "client-al-aaraf",
+          "text": "Coordinated payment-provider onboarding/integration, tested checkout transactions, and arranged shipping-provider setup, delivery terms and order-handling/escalation procedures with existing customer-service staff; did not engineer a payment processor or shipping infrastructure and had no direct reports",
+          "confirmed": "2026-10-25"
         },
         {
           "id": "aa-expansion",
+          "client": "client-al-aaraf",
           "text": "Developed regional expansion plans across MENA, starting with Saudi Arabia and Qatar, modeling opportunity from category and demand"
+        },
+        {
+          "id": "aa-account-ownership",
+          "client": "client-al-aaraf",
+          "text": "Built the Magento storefront and inherited/reconfigured existing Google Ads, Facebook Business Manager and Facebook advertising accounts. Implemented Facebook Pixel and created Google Tag Manager, Universal Analytics Enhanced Ecommerce and Merchant Center/product-feed setup; personally owned measurement requirements, tag configuration/deployment and validation. Coordinated hosting and payment-provider changes rather than administering provider infrastructure",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-ecommerce-event-implementation",
+          "client": "client-al-aaraf",
+          "text": "Configured product-detail, add-to-cart, checkout initiation/progression and completed-purchase measurement using Universal Analytics Enhanced Ecommerce and Facebook Pixel. Passed product identifiers, prices, quantities and currency; purchase reporting used the Magento order identifier, transaction revenue and AED currency through GTM variables. Instagram/WhatsApp orders remained separately identified commercial records rather than automatic website purchase events",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-launch-tracking-qa",
+          "client": "client-al-aaraf",
+          "text": "Performed October 2019 pre-launch end-to-end transaction QA: checked product/cart events and product data, shipping/payment steps, controlled test purchases, order ID/revenue/currency, confirmation-page reload behavior and the corresponding Magento/analytics/ad-tag requests. Checked failed-payment and abandoned-checkout paths did not fire successful purchases. Used GTM Preview, Google Tag Assistant, Facebook Pixel Helper, browser developer tools and Universal Analytics Real-Time/Enhanced Ecommerce reports",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-purchase-duplicate-fix",
+          "client": "client-al-aaraf",
+          "text": "Diagnosed repeat purchase-event firing when Magento confirmation pages were refreshed/revisited: the same order ID reappeared in tracking. Passed Magento-generated transaction IDs dynamically to Google Ads, adjusted purchase triggers/Magento event handling, and retested reloads and genuine new orders. Validation checked one recognized Google Ads purchase per unique completed order in tested paths; no duplicate-rate reduction percentage, universal accuracy rate or acquisition lift is established",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-post-launch-tracking-audit",
+          "client": "client-al-aaraf",
+          "text": "Owned daily completed-order versus observed-purchase checks, twice-weekly Google Ads/Facebook Pixel diagnostics, weekly acquisition/ecommerce report review and monthly attribution/order reconciliation. Investigated discrepancies through order/payment status, transaction IDs, event firing, values, browser/consent limitations and reporting delays with customer-service/payment/fulfillment teams",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-merchant-feed-audit",
+          "client": "client-al-aaraf",
+          "text": "Configured the Magento product feed and reviewed Merchant Center diagnostics weekly, resolving feed disapprovals and product-price/availability mismatches; no quantified approval-rate improvement or audit-issue count is established",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "aa-attribution-reporting",
+          "client": "client-al-aaraf",
+          "text": "Used Magento for completed-order and commercial-revenue totals, Universal Analytics for website acquisition/ecommerce behavior and each ad platform for its attributed outcomes. Platform counts were not expected to equal all completed orders because eligibility, attribution windows and reporting delays differ. This distinction does not imply browser/server Conversions API implementation, causal incrementality or perfect platform-to-backend agreement",
+          "confirmed": "2026-10-25"
+        },
+        {
+          "id": "bw-conversions-api",
+          "text": "From the iOS 14 tracking changes onward, moved every client running Meta campaigns with online conversion tracking to the Meta Conversions API with browser/server event deduplication as standard procedure, implemented personally or with the client's developer through the Shopify or WooCommerce integrations, GTM or a manual implementation, depending on the client's platform, with server-side GTM where a client's setup needed it. Engagements that ended in 2020, including Al Aaraf, predate this",
+          "figures": [
+            "14"
+          ],
+          "confirmed": "2026-11-11"
         }
       ]
     },
@@ -519,19 +1805,11 @@
   "headline_metrics": [
     {
       "id": "hm-media-spend",
-      "label": "Paid media managed",
+      "label": "Monthly client media managed",
       "figures": [
         "$272K"
       ],
       "fact": "bw-media-spend"
-    },
-    {
-      "id": "hm-roas",
-      "label": "Average ROAS",
-      "figures": [
-        "189%"
-      ],
-      "fact": "bw-roas"
     },
     {
       "id": "hm-appointments",
@@ -543,31 +1821,32 @@
     },
     {
       "id": "hm-online-sales",
-      "label": "Online sales growth",
+      "label": "Digitally originated revenue growth",
       "figures": [
         "134%"
       ],
       "fact": "aa-online-sales"
     },
     {
-      "id": "hm-ctr",
-      "label": "CTR lift",
-      "figures": [
-        "11%",
-        "43%"
-      ],
-      "fact": "bw-ctr"
-    },
-    {
       "id": "hm-accounts",
-      "label": "Concurrent client accounts",
+      "label": "Concurrent paid accounts",
       "figures": [
-        "15-20 accounts"
+        "20-25"
       ],
       "fact": "bw-media-spend"
     }
   ],
   "scoped_metrics": [
+    {
+      "id": "sm-j5-link-ctr",
+      "label": "Meta link CTR",
+      "figures": [
+        "1.1%",
+        "4.3%"
+      ],
+      "scope": "J5 Hotels",
+      "fact": "bw-ctr"
+    },
     {
       "id": "sm-food-crowd-roas",
       "label": "ROAS",
@@ -631,7 +1910,7 @@
       ],
       "flags": "i",
       "applies_to": "all",
-      "reason": "Unsupported paid media figure. The confirmed figure is $272K (2026-09-22 CV reconciliation)."
+      "reason": "Unsupported paid media figure. Brandwise confirmed aggregate monthly spend is approximately $272K, with peak months around $320K (user correction 2026-10-25)."
     },
     {
       "id": "money-940k",
@@ -641,7 +1920,7 @@
       ],
       "flags": "i",
       "applies_to": "all",
-      "reason": "Unsupported paid media figure. The confirmed figure is $272K."
+      "reason": "Unsupported paid media figure. Brandwise confirmed aggregate monthly spend is approximately $272K, peaking around $320K."
     },
     {
       "id": "tenure-6-years",
@@ -665,11 +1944,11 @@
     {
       "id": "seven-figure-budgets",
       "patterns": [
-        "\\b(seven|7)[- ]figure"
+        "\\b(seven|7)[- ]figure\\s+monthly\\s+(budgets?|spend)"
       ],
       "flags": "i",
       "applies_to": "all",
-      "reason": "The paid media ceiling is $272K cumulative across 15-20 accounts."
+      "reason": "Confirmed Brandwise scale is approximately $272K monthly aggregate client spend, peaking around $320K; no seven-figure monthly budget is established."
     },
     {
       "id": "unverified-certifications",
@@ -695,19 +1974,6 @@
       "flags": "i",
       "applies_to": "titles",
       "reason": "No shipped title is above Manager. The ceiling is the scale of the teams and budgets."
-    },
-    {
-      "id": "wellborn-paid-media-titles",
-      "patterns": [
-        "\\bPaid Media\\b",
-        "\\bPerformance Marketing\\b",
-        "\\bPPC\\b",
-        "\\bMedia Buy"
-      ],
-      "flags": "i",
-      "applies_to": "titles",
-      "role": "wellborn",
-      "reason": "No ad spend was managed at Wellborn, so its title is never a paid media or campaign title."
     }
   ],
   "not_stated": [
